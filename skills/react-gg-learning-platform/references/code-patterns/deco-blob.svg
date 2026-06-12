@@ -1,9 +1,0 @@
-<!-- RULE: Extract decorative SVGs from the HTML, not just CSS.
-     Save them to code-patterns as reusable shape snippets. -->
-<!-- Example: decorative blob shape from react.gg hero area -->
-<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M956.36 276.95c-1.51-38.88-17.55-76.85-44.37-104.72-29.05-30.19-77.18-53.48-143.04-69.21L765 119.56c61.76 14.76 108.35 37.05 134.74 64.47 23.81 24.74 38.1 58.41 39.61 92.94h-12.88l20.78 23 22.25-23h-13.14Z" fill="var(--color-brand-orange, #fc7428)"/>
-</svg>
-<!-- Usage: This shape was extracted directly from the HTML source.
-     It represents a decorative organic blob that the brand uses throughout.
-     Color can be changed via CSS variable. -->

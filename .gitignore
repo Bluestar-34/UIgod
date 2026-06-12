@@ -1,0 +1,8 @@
+.codegraph/
+.claude/
+.reasonix/
+inputs/
+prototypes/
+tools/
+node_modules/
+.DS_Store
