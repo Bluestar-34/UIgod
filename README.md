@@ -1,8 +1,8 @@
 # UIgod
 
-> Turn website design references into reusable style skill packages.
+> 从参考网站中提取设计令牌与插画资产，生成可复用的风格子技能包。
 
-UIgod extracts design tokens (colors, fonts, shapes, spacing, interactions) and inline illustration assets from reference websites, producing standardized child skill packages for future web generation.
+**UIgod** extracts design tokens (colors, fonts, shapes, spacing, interactions) and inline illustration assets from reference websites, producing standardized, reusable child skill packages. Each child skill contains a canonical `DESIGN.md`, token specimen page, code patterns, and a style-transfer example — usable by AI agents for future web generation without re-reading the original reference.
 
 ## Skill Gallery
 
