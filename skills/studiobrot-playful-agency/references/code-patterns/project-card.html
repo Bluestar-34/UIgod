@@ -1,0 +1,109 @@
+<section class="spa-project-list" style="background:var(--pink,#FFBEF1)">
+  <div class="spa-wrapper">
+    <article class="spa-project">
+      <a class="spa-project__media" href="#">
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80" alt="Project preview" loading="lazy" />
+      </a>
+      <h2 class="spa-project__title">Cam, saw, conquered.</h2>
+      <p class="spa-project__desc">In this case we pushed the film — with a new corporate identity for the film collective. We gave the brand the basics that now come into play everywhere.</p>
+      <a class="spa-project__cta" href="#">zur Story</a>
+    </article>
+  </div>
+</section>
+
+<style>
+  :root {
+    --red: #ff2a00;
+    --pink: #FFBEF1;
+    --ink: #000000;
+    --font-display: "FK Screamer", "FKScreamer", Helvetica, Arial, sans-serif;
+  }
+
+  .spa-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .spa-project-list {
+    padding: 2rem 0;
+  }
+
+  .spa-project {
+    width: calc(33.3% - 0.66rem);
+    margin-bottom: 6rem;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.66rem;
+  }
+
+  @supports (gap: 1em) {
+    .spa-project-list .spa-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    .spa-project { margin-right: 0; }
+  }
+
+  .spa-project__media {
+    display: block;
+    overflow: hidden;
+    border-radius: 0;
+    transition: border-radius 0.5s;
+  }
+
+  .spa-project__media:hover {
+    border-radius: 16px;
+  }
+
+  .spa-project__media img,
+  .spa-project__media video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    transition: border-radius 0.5s;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-project__media img,
+    .spa-project__media video {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  .spa-project__title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(60px, 9vw, 140px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    margin: 1rem 0 0;
+  }
+
+  .spa-project__desc {
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin: 15px 0;
+  }
+
+  .spa-project__cta {
+    font-weight: 500;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 17px;
+  }
+
+  .spa-project__cta:hover {
+    border-color: var(--red);
+    color: var(--red);
+  }
+
+  @media (max-width: 1023px) {
+    .spa-project { width: 100%; }
+  }
+</style>

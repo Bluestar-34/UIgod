@@ -1,0 +1,63 @@
+<!-- Component: feature-grid
+     Warm off-white band with a row of soft rounded cards: pastel icon tile, title, calm copy.
+     Gentle hover lift. Collapses to one column on small screens. -->
+<style>
+  :root {
+    --ink-strong: rgba(0,0,0,0.95);
+    --ink-muted: #615d59;
+    --canvas-warm: #f6f5f4;
+    --hairline: rgba(0,0,0,0.09);
+    --primary: #455dd3;
+    --block-blue: #62aef0;
+    --block-yellow: #ffc95e;
+    --block-teal: #2a9d99;
+    --sans: Inter, NotionInter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --shadow-soft: 0 1px 2px rgba(0,0,0,0.06), 0 6px 20px rgba(0,0,0,0.06);
+    --shadow-lift: 0 2px 4px rgba(0,0,0,0.06), 0 12px 32px rgba(0,0,0,0.09);
+  }
+  .wf-grid-section { font-family: var(--sans); background: var(--canvas-warm); padding: 88px 24px; }
+  .wf-grid-head { max-width: 680px; margin: 0 auto 48px; text-align: center; }
+  .wf-grid-head .eyebrow { font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px; }
+  .wf-grid-head h2 { font-size: 44px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink-strong); }
+  .wf-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .wf-card {
+    background: #fff; border: 1px solid var(--hairline); border-radius: 12px; padding: 28px;
+    box-shadow: var(--shadow-soft); transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .wf-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+  .wf-card .ico { width: 44px; height: 44px; border-radius: 8px; display: grid; place-items: center; font-size: 22px; margin-bottom: 18px; }
+  .ico.b { background: color-mix(in srgb, var(--block-blue) 30%, #fff); }
+  .ico.y { background: color-mix(in srgb, var(--block-yellow) 40%, #fff); }
+  .ico.t { background: color-mix(in srgb, var(--block-teal) 28%, #fff); }
+  .wf-card h4 { font-size: 19px; font-weight: 600; color: var(--ink-strong); margin-bottom: 8px; }
+  .wf-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.6; }
+
+  @media (max-width: 860px) {
+    .wf-grid { grid-template-columns: 1fr; }
+    .wf-grid-head h2 { font-size: 32px; }
+  }
+</style>
+
+<section class="wf-grid-section">
+  <div class="wf-grid-head">
+    <div class="eyebrow">Built to feel good</div>
+    <h2>Small details, big calm.</h2>
+  </div>
+  <div class="wf-grid">
+    <div class="wf-card">
+      <div class="ico b">✦</div>
+      <h4>Friendly by default</h4>
+      <p>Sensible starting points and gentle guidance, so the blank page never feels intimidating.</p>
+    </div>
+    <div class="wf-card">
+      <div class="ico y">◷</div>
+      <h4>Fast and quiet</h4>
+      <p>Everything responds instantly and gets out of your way the moment you start working.</p>
+    </div>
+    <div class="wf-card">
+      <div class="ico t">◇</div>
+      <h4>Yours to shape</h4>
+      <p>Bend any page to fit how your team thinks — no rigid templates, no fuss.</p>
+    </div>
+  </div>
+</section>

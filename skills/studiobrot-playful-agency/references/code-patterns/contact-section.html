@@ -1,0 +1,140 @@
+<!-- Contact section: pink background, pill buttons with shadow -->
+<section class="spa-contact" style="background:var(--pink,#FFBEF1)">
+  <div class="spa-wrapper">
+    <div class="spa-contact__inner">
+      <div class="spa-contact__image">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" alt="Team" loading="lazy" />
+      </div>
+      <div class="spa-contact__content">
+        <div class="spa-contact__text">
+          <p>We are Marina and Predrag, a designer-copywriter team and founders of studio brot. We believe that smart brands turn good content into even better communication. Best case: with us and our team, who not only believe it but give everything for it every day.</p>
+        </div>
+        <h3 class="spa-contact__cta-headline">Let's get it on! <br>Per mail or telephone:</h3>
+
+        <a href="mailto:hello@studio.com" class="spa-btn">
+          <span>hello@studio.com</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 12h16M14 6l6 6-6 6" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </a>
+
+        <a href="tel:+49123456789" class="spa-btn spa-btn--small">
+          <span>+49 123 456 789</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 12h16M14 6l6 6-6 6" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --pink: #FFBEF1;
+    --red: #ff2a00;
+    --ink: #000000;
+  }
+
+  .spa-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .spa-contact {
+    padding: 0;
+  }
+
+  .spa-contact .spa-wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-contact .spa-wrapper {
+      flex-direction: row;
+      align-items: center;
+    }
+    .spa-contact .spa-wrapper > * {
+      width: 50%;
+    }
+  }
+
+  .spa-contact__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .spa-contact__content {
+    max-width: 778px;
+    padding: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-contact__content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+
+  .spa-contact__text p {
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.5rem;
+  }
+
+  .spa-contact__cta-headline {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 24px;
+  }
+
+  /* Signature pill button with shadow */
+  .spa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20px 35px;
+    border: 3.5px solid #000;
+    border-radius: 45px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+    text-decoration: none;
+    box-shadow: 6px 8px #000;
+    transition: transform 0.15s, box-shadow 0.15s;
+    margin-bottom: 20px;
+  }
+
+  .spa-btn:hover {
+    transform: translate(6px, 8px);
+    box-shadow: 0 0 #000;
+    cursor: pointer;
+  }
+
+  .spa-btn--small {
+    padding: 10px 30px;
+  }
+
+  .spa-btn svg {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-btn { min-width: 340px; }
+  }
+</style>

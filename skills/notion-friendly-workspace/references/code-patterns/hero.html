@@ -1,0 +1,193 @@
+<!-- Component: campaign-hero
+     Dark AI campaign hero with centered headline, CTA pair, blue track motif, sticker agents,
+     and a large white product-window focal point. -->
+<style>
+  :root {
+    --primary: #455dd3;
+    --primary-strong: #213183;
+    --hero-midnight: #000530;
+    --hero-midnight-soft: #030b46;
+    --track-blue: #2f4ee9;
+    --ink: rgba(0, 0, 0, 0.898);
+    --ink-strong: rgba(0, 0, 0, 0.95);
+    --hairline: rgba(0, 0, 0, 0.09);
+    --block-yellow: #ffc95e;
+    --sticker-purple: #9b6df0;
+    --sans: NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .nf-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 720px;
+    padding: 92px 24px 0;
+    background:
+      radial-gradient(circle at 50% 8%, rgba(77, 92, 177, 0.62), transparent 28rem),
+      linear-gradient(180deg, var(--hero-midnight-soft), var(--hero-midnight));
+    color: #fff;
+    font-family: var(--sans);
+    text-align: center;
+  }
+
+  .nf-hero::before {
+    content: "";
+    position: absolute;
+    left: -18%;
+    top: 310px;
+    width: 136%;
+    height: 160px;
+    border-top: 10px solid var(--track-blue);
+    border-radius: 50%;
+    transform: rotate(7deg);
+    opacity: 0.84;
+  }
+
+  .nf-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .nf-copy h1 {
+    margin: 0;
+    font-size: clamp(56px, 7.8vw, 92px);
+    font-weight: 780;
+    line-height: 1.01;
+    letter-spacing: -0.04em;
+  }
+
+  .nf-copy p {
+    max-width: 640px;
+    margin: 18px auto 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 21px;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .nf-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .nf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font: 650 16px/1 var(--sans);
+    text-decoration: none;
+  }
+
+  .nf-btn.primary { background: var(--primary); color: #fff; }
+  .nf-btn.secondary { background: color-mix(in srgb, var(--primary) 70%, var(--hero-midnight)); color: #fff; }
+
+  .nf-window {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    width: min(960px, calc(100% - 32px));
+    min-height: 360px;
+    margin: 54px auto 0;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.36);
+  }
+
+  .nf-window-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 42px;
+    padding: 0 15px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .nf-window-bar span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #d9d6d2;
+  }
+
+  .nf-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    padding: 68px 42px 34px;
+  }
+
+  .nf-lane {
+    min-height: 190px;
+    padding: 10px;
+    border-radius: 9px;
+    background: #f7f6f3;
+  }
+
+  .nf-lane h3 {
+    margin: 0 0 9px;
+    font-size: 12px;
+    color: var(--ink-strong);
+  }
+
+  .nf-task {
+    margin-top: 8px;
+    padding: 10px 9px;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .nf-sticker {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    color: var(--ink-strong);
+    font-size: 28px;
+    font-weight: 850;
+  }
+
+  .nf-sticker.left { left: 13%; top: 250px; background: var(--block-yellow); transform: rotate(12deg); }
+  .nf-sticker.right { right: 12%; top: 265px; background: var(--sticker-purple); color: #fff; transform: rotate(-8deg); }
+
+  @media (max-width: 820px) {
+    .nf-copy h1 { font-size: 48px; }
+    .nf-copy p { font-size: 16px; }
+    .nf-board { grid-template-columns: 1fr 1fr; padding: 38px 18px 24px; }
+    .nf-sticker { display: none; }
+  }
+</style>
+
+<section class="nf-hero">
+  <span class="nf-sticker left">☾</span>
+  <span class="nf-sticker right">✓</span>
+  <div class="nf-copy">
+    <h1>Meet the night shift.</h1>
+    <p>Notion agents keep work moving 24/7. They capture knowledge, answer questions, and push projects forward.</p>
+    <div class="nf-actions">
+      <a class="nf-btn primary" href="#">Get Notion free</a>
+      <a class="nf-btn secondary" href="#">Request a demo</a>
+    </div>
+  </div>
+  <div class="nf-window">
+    <div class="nf-window-bar"><span></span><span></span><span></span></div>
+    <div class="nf-board">
+      <div class="nf-lane"><h3>To-do</h3><div class="nf-task">Review metrics</div><div class="nf-task">Plan goals</div></div>
+      <div class="nf-lane"><h3>In progress</h3><div class="nf-task">Sales demo</div><div class="nf-task">Launch video</div></div>
+      <div class="nf-lane"><h3>In review</h3><div class="nf-task">Status report</div><div class="nf-task">Campaign design</div></div>
+      <div class="nf-lane"><h3>Complete</h3><div class="nf-task">Onboarding</div><div class="nf-task">Daily summary</div></div>
+    </div>
+  </div>
+</section>

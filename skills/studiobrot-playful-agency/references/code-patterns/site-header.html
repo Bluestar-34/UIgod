@@ -1,0 +1,105 @@
+<header class="spa-header">
+  <div class="spa-wrapper">
+    <a class="spa-logo" href="#">
+      <svg width="200" height="36" viewBox="0 0 200 36" fill="none">
+        <text x="0" y="28" font-family="'FK Screamer','FKScreamer',Helvetica,Arial,sans-serif" font-weight="800" font-size="28" fill="#000">studio <tspan fill="#ff2a00">brot</tspan></text>
+      </svg>
+    </a>
+    <div class="spa-side">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#" aria-current="page">Start</a></li>
+          <li><a href="#">Arbeiten</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="spa-mascot" aria-hidden="true">🍞</div>
+    </div>
+  </div>
+</header>
+
+<style>
+  :root {
+    --red: #ff2a00;
+    --pink: #FFBEF1;
+    --ink: #000000;
+  }
+
+  .spa-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .spa-header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    padding: 30px 0;
+    background: #fff;
+  }
+
+  .spa-header .spa-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .spa-logo svg {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-logo svg { width: 200px; }
+  }
+
+  .spa-side {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .spa-side nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .spa-side nav li {
+    display: inline-block;
+  }
+
+  .spa-side nav li:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .spa-side nav a {
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 17px;
+  }
+
+  .spa-side nav a:hover {
+    text-decoration: underline;
+  }
+
+  .spa-mascot {
+    font-size: 40px;
+    margin-left: 60px;
+    line-height: 1;
+    cursor: default;
+    transition: transform 0.3s;
+  }
+
+  .spa-mascot:hover {
+    transform: scale(1.2) rotate(15deg);
+  }
+
+  @media (max-width: 1023px) {
+    .spa-side nav { display: none; }
+    .spa-mascot { margin-left: 20px; font-size: 30px; }
+  }
+</style>

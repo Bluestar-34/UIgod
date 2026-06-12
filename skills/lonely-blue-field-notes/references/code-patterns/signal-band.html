@@ -1,0 +1,73 @@
+<section class="lbf-band" aria-label="Signal band">
+  <div class="lbf-band__track">
+    <span>BLUE FIELD NOTES / SECURITY / AI / PRIVATE SIGNAL / LONG-FORM WRITING / </span>
+    <span>BLUE FIELD NOTES / SECURITY / AI / PRIVATE SIGNAL / LONG-FORM WRITING / </span>
+    <span>BLUE FIELD NOTES / SECURITY / AI / PRIVATE SIGNAL / LONG-FORM WRITING / </span>
+  </div>
+  <p>01: a private signal across the dark screen</p>
+</section>
+
+<style>
+  :root {
+    --bg: #060708;
+    --ink: #f1e8d8;
+    --soft: #8e846f;
+    --line: rgba(242, 234, 220, 0.13);
+    --accent-soft: rgba(191, 150, 65, 0.11);
+    --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  }
+
+  .lbf-band {
+    position: relative;
+    overflow: hidden;
+    margin-top: clamp(46px, 7vw, 88px);
+    padding: clamp(28px, 5vw, 54px) 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    color: color-mix(in srgb, var(--ink) 36%, transparent);
+    background: var(--bg);
+    font-family: var(--font-mono);
+  }
+
+  .lbf-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, var(--bg), transparent 18%, transparent 82%, var(--bg)),
+      linear-gradient(180deg, transparent, var(--accent-soft), transparent);
+    pointer-events: none;
+  }
+
+  .lbf-band__track {
+    position: relative;
+    display: flex;
+    width: max-content;
+    font-size: clamp(34px, 7vw, 104px);
+    font-weight: 850;
+    line-height: 0.92;
+    white-space: nowrap;
+    animation: lbf-band-slide 46s linear infinite;
+  }
+
+  .lbf-band__track span {
+    padding-right: 0.42em;
+  }
+
+  .lbf-band p {
+    position: relative;
+    margin: 16px 0 0;
+    color: var(--soft);
+    font-size: 12px;
+  }
+
+  @keyframes lbf-band-slide {
+    from {
+      transform: translateZ(0);
+    }
+
+    to {
+      transform: translate3d(-33.333%, 0, 0);
+    }
+  }
+</style>

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mira Chen — Systems Portfolio</title>
+<style>
+  :root {
+    --canvas: #000;
+    --surface-1: #080808;
+    --surface-2: #0d0d0d;
+    --ink: #fff;
+    --ink-muted: #a1a1a1;
+    --ink-soft: #737373;
+    --hairline: rgba(255,255,255,.13);
+    --hairline-soft: rgba(255,255,255,.08);
+    --blue: #0099ff;
+    --cyan: #00d4ff;
+    --green: #00ff88;
+    --amber: #ffcc00;
+    --red: #ff3300;
+    --sans: Geist, Inter, Arial, sans-serif;
+    --mono: "Geist Mono", SFMono-Regular, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .shell {
+    width: min(1160px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, #000 88%, transparent);
+    border-bottom: 1px solid var(--hairline-soft);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -0.04em;
+  }
+
+  .tri {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid currentColor;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    color: var(--ink-muted);
+    font-size: 14px;
+    font-weight: 520;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+  }
+
+  .nav-btn,
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+
+  .nav-btn {
+    min-height: 34px;
+    padding: 0 14px;
+    border: 1px solid var(--hairline);
+    background: var(--surface-1);
+    font-size: 14px;
+  }
+
+  .nav-btn.primary,
+  .btn.primary {
+    background: #fff;
+    color: #000;
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 0 24px;
+    border: 1px solid var(--hairline);
+    background: var(--surface-1);
+  }
+
+  .status-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 30px 0 18px;
+    font-size: 14px;
+    font-weight: 560;
+  }
+
+  .status-row .tag {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--green) 20%, #000);
+    color: #61ffad;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--hairline);
+    background:
+      linear-gradient(var(--hairline-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hairline-soft) 1px, transparent 1px),
+      #000;
+    background-size: 92px 92px;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 280px;
+    background:
+      repeating-radial-gradient(ellipse at 50% 100%, rgba(255,255,255,.22) 0 1px, transparent 1px 7px),
+      radial-gradient(circle at 24% 100%, rgba(0,153,255,.66), transparent 25%),
+      radial-gradient(circle at 52% 100%, rgba(0,255,136,.3), transparent 24%),
+      radial-gradient(circle at 82% 100%, rgba(255,51,0,.55), transparent 30%);
+    opacity: .9;
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) 420px;
+    gap: 54px;
+    min-height: 690px;
+    padding: 88px 64px 64px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--ink-soft);
+    font: 500 13px/1.45 var(--mono);
+  }
+
+  h1 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(54px, 7vw, 94px);
+    font-weight: 650;
+    line-height: .96;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-copy p {
+    max-width: 610px;
+    margin: 28px 0 0;
+    color: var(--ink-muted);
+    font-size: clamp(18px, 1.55vw, 21px);
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+  }
+
+  .ops-panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--surface-1) 88%, transparent);
+  }
+
+  .ops-panel::before {
+    content: "";
+    position: absolute;
+    inset: auto -30% -30% -30%;
+    height: 180px;
+    background:
+      radial-gradient(circle at 28% 100%, rgba(0,153,255,.35), transparent 34%),
+      radial-gradient(circle at 50% 100%, rgba(0,255,136,.18), transparent 30%),
+      radial-gradient(circle at 72% 100%, rgba(255,51,0,.32), transparent 36%);
+    pointer-events: none;
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 18px 14px;
+    border-bottom: 1px solid var(--hairline-soft);
+    color: var(--ink-muted);
+    font: 500 12px/1 var(--mono);
+  }
+
+  .lights {
+    display: inline-flex;
+    gap: 6px;
+  }
+
+  .lights span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+  }
+
+  .lights span:nth-child(1) { background: var(--red); }
+  .lights span:nth-child(2) { background: var(--amber); }
+  .lights span:nth-child(3) { background: var(--green); }
+
+  .panel-body {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  .readout {
+    display: grid;
+    gap: 12px;
+    font: 500 13px/1.5 var(--mono);
+    color: var(--ink-muted);
+  }
+
+  .readout code {
+    display: block;
+    padding: 14px;
+    border: 1px solid var(--hairline-soft);
+    border-radius: 10px;
+    background: #050505;
+  }
+
+  .signal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 18px;
+    border: 1px solid var(--hairline-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .signal div {
+    min-height: 96px;
+    padding: 16px;
+    border-right: 1px solid var(--hairline-soft);
+  }
+
+  .signal div:last-child { border-right: 0; }
+  .signal strong {
+    display: block;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+  }
+  .signal span {
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  .section {
+    border-inline: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+    gap: 48px;
+    padding: 88px 64px 42px;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(36px, 4.5vw, 62px);
+    line-height: 1.04;
+    font-weight: 650;
+    letter-spacing: -0.045em;
+  }
+
+  .section-head p {
+    margin: 8px 0 0;
+    color: var(--ink-muted);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+  }
+
+  .case-card {
+    min-height: 360px;
+    padding: 42px;
+    border-right: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .case-card:nth-child(2n) { border-right: 0; }
+  .case-card.wide { grid-row: span 2; }
+
+  .case-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .case-card h3 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .chip {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    color: var(--ink-muted);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .case-card p {
+    max-width: 560px;
+    margin: 18px 0 0;
+    color: var(--ink-muted);
+  }
+
+  .terminal {
+    margin-top: 34px;
+    padding: 18px;
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    background: var(--surface-1);
+    color: var(--ink-muted);
+    font: 500 13px/1.55 var(--mono);
+  }
+
+  .bars {
+    display: grid;
+    gap: 10px;
+    margin-top: 34px;
+  }
+
+  .bar {
+    height: 38px;
+    border: 1px solid var(--hairline-soft);
+    border-radius: 8px;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.18), transparent var(--stop)),
+      #050505;
+  }
+
+  .system-map {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    min-height: 580px;
+  }
+
+  .map-visual {
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid var(--hairline);
+    background:
+      linear-gradient(var(--hairline-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hairline-soft) 1px, transparent 1px),
+      #000;
+    background-size: 72px 72px;
+  }
+
+  .map-visual::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 230px;
+    background:
+      repeating-radial-gradient(ellipse at 50% 100%, rgba(255,255,255,.17) 0 1px, transparent 1px 8px),
+      radial-gradient(circle at 50% 100%, rgba(0,212,255,.24), transparent 34%);
+  }
+
+  .node {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 74px;
+    height: 58px;
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    background: var(--surface-1);
+    color: var(--ink-muted);
+    font: 500 12px/1 var(--mono);
+  }
+
+  .node.main {
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    background: #fff;
+    color: #000;
+  }
+
+  .node.a { left: 18%; top: 22%; }
+  .node.b { right: 16%; top: 18%; }
+  .node.c { left: 16%; bottom: 20%; }
+  .node.d { right: 18%; bottom: 18%; }
+
+  .map-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px;
+  }
+
+  .map-copy h2 { max-width: 640px; }
+  .map-copy p {
+    max-width: 610px;
+    color: var(--ink-muted);
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .capabilities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--hairline);
+  }
+
+  .cap {
+    min-height: 190px;
+    padding: 30px;
+    border-right: 1px solid var(--hairline);
+  }
+
+  .cap:last-child { border-right: 0; }
+  .cap h3 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: -0.025em;
+  }
+  .cap p {
+    margin: 12px 0 0;
+    color: var(--ink-muted);
+    font-size: 15px;
+  }
+
+  .log {
+    padding: 64px;
+  }
+
+  .log-list {
+    display: grid;
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .log-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 180px;
+    gap: 24px;
+    padding: 24px;
+    border-bottom: 1px solid var(--hairline-soft);
+    align-items: start;
+  }
+
+  .log-row:last-child { border-bottom: 0; }
+  .log-row time,
+  .log-row span {
+    color: var(--ink-soft);
+    font: 500 12px/1.5 var(--mono);
+  }
+  .log-row strong {
+    display: block;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+  .log-row p {
+    margin: 6px 0 0;
+    color: var(--ink-muted);
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 48px;
+    padding: 88px 64px;
+    align-items: center;
+  }
+
+  .contact h2 { max-width: 720px; }
+
+  .contact-card {
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    background: var(--surface-1);
+    padding: 22px;
+  }
+
+  .contact-card code {
+    display: block;
+    color: var(--ink-muted);
+    font: 500 13px/1.65 var(--mono);
+  }
+
+  @media (max-width: 900px) {
+    .shell { width: min(100% - 28px, 680px); }
+    .nav-links { display: none; }
+    .hero-grid,
+    .section-head,
+    .system-map,
+    .contact {
+      grid-template-columns: 1fr;
+    }
+    .hero-grid { padding: 64px 28px 42px; }
+    h1 { font-size: clamp(46px, 15vw, 72px); }
+    .ops-panel { max-width: 100%; }
+    .case-grid,
+    .capabilities {
+      grid-template-columns: 1fr;
+    }
+    .case-card,
+    .map-visual,
+    .cap {
+      border-right: 0;
+    }
+    .section-head,
+    .map-copy,
+    .log,
+    .contact {
+      padding: 54px 28px;
+    }
+    .map-visual { min-height: 420px; }
+    .log-row { grid-template-columns: 1fr; }
+    .status-row { flex-wrap: wrap; text-align: center; }
+  }
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#"><span class="tri"></span>Mira Chen</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#system">System</a>
+        <a href="#log">Log</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-btn" href="#log">Status</a>
+        <a class="nav-btn primary" href="#contact">Hire Me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <div class="status-row">
+      <span class="tag">Available</span>
+      <span>Designing resilient product surfaces for AI teams</span>
+    </div>
+
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">independent product designer / front-end systems engineer</p>
+          <h1 id="intro-title">Interfaces that behave like infrastructure.</h1>
+          <p>I help technical teams turn complex workflows into fast, legible web products: launch pages, internal consoles, onboarding systems, and developer-facing interfaces.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#work">View Work -></a>
+            <a class="btn" href="#contact">Start a Project</a>
+          </div>
+        </div>
+
+        <aside class="ops-panel" aria-label="Portfolio telemetry">
+          <div class="panel-head">
+            <span class="lights"><span></span><span></span><span></span></span>
+            <span>portfolio.deploy</span>
+          </div>
+          <div class="panel-body">
+            <div class="readout">
+              <code>$ profile --focus ai-products</code>
+              <code>shipments: 42 production surfaces</code>
+              <code>stack: design-systems / react / motion / docs</code>
+            </div>
+            <div class="signal">
+              <div><strong>1.8s</strong><span>target interaction ready</span></div>
+              <div><strong>11</strong><span>systems stabilized</span></div>
+              <div><strong>24x</strong><span>handoff clarity gain</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2>Selected work, packaged as deployable systems.</h2>
+        <p>Each project is framed like infrastructure: constraints first, interface contracts next, then production-grade screens that can survive real users and real teams.</p>
+      </div>
+
+      <div class="case-grid">
+        <article class="case-card wide">
+          <div class="case-top">
+            <h3>AgentOps Control Plane</h3>
+            <span class="chip">AI workflow console</span>
+          </div>
+          <p>Redesigned a monitoring surface for autonomous workflows with queue health, fallback routing, and incident replay in one compact operator view.</p>
+          <div class="terminal">deploy agentops --region global<br />latency p95: 118ms<br />handoff defects: -64%</div>
+          <div class="bars">
+            <div class="bar" style="--stop: 84%"></div>
+            <div class="bar" style="--stop: 61%"></div>
+            <div class="bar" style="--stop: 72%"></div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-top">
+            <h3>LaunchGrid Cloud</h3>
+            <span class="chip">platform site</span>
+          </div>
+          <p>A technical homepage and onboarding path for an edge compute startup preparing public beta.</p>
+          <div class="terminal">build completed in 39s<br />edge functions: 18</div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-top">
+            <h3>VectorLab Studio</h3>
+            <span class="chip">developer tool</span>
+          </div>
+          <p>Workflow builder for retrieval evaluations, dataset versioning, and model comparison reports.</p>
+          <div class="terminal">eval run #8472<br />precision: 94.2%</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="system">
+      <div class="system-map">
+        <div class="map-visual" aria-hidden="true">
+          <span class="node a">UX</span>
+          <span class="node b">API</span>
+          <span class="node main"><span class="tri"></span></span>
+          <span class="node c">DOCS</span>
+          <span class="node d">QA</span>
+        </div>
+        <div class="map-copy">
+          <p class="eyebrow">operating model</p>
+          <h2>From ambiguous product idea to reliable production surface.</h2>
+          <p>I connect brand direction, information architecture, component contracts, performance budgets, and engineering handoff before the first public launch.</p>
+        </div>
+      </div>
+      <div class="capabilities">
+        <div class="cap"><h3>Interface strategy</h3><p>Translate fuzzy technical products into crisp navigation, conversion paths, and screen systems.</p></div>
+        <div class="cap"><h3>Design systems</h3><p>Build component rules that feel premium while staying practical for product engineers.</p></div>
+        <div class="cap"><h3>Frontend craft</h3><p>Implement responsive pages with precise layout, restrained motion, and production-safe CSS.</p></div>
+        <div class="cap"><h3>Launch support</h3><p>Polish docs, onboarding, dashboards, and marketing surfaces around the same visual logic.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="log">
+      <div class="section-head">
+        <h2>Experience log.</h2>
+        <p>A compact record of where the system thinking came from: product teams, infrastructure constraints, and front-end delivery.</p>
+      </div>
+      <div class="log">
+        <div class="log-list">
+          <div class="log-row">
+            <time>2024-now</time>
+            <div><strong>Independent systems designer</strong><p>Partnering with AI and developer-tool startups on launch surfaces, consoles, and design systems.</p></div>
+            <span>remote / global</span>
+          </div>
+          <div class="log-row">
+            <time>2021-2024</time>
+            <div><strong>Senior product designer, infrastructure SaaS</strong><p>Led dashboard redesigns, adoption funnels, and cross-team component standards.</p></div>
+            <span>growth + platform</span>
+          </div>
+          <div class="log-row">
+            <time>2018-2021</time>
+            <div><strong>Front-end engineer, product studio</strong><p>Built high-performance marketing sites and app shells for technical products.</p></div>
+            <span>react / systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="eyebrow">next deployment</p>
+        <h2>Have a technical product that needs to feel inevitable?</h2>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:hello@example.com">hello@example.com</a>
+          <a class="btn" href="#work">Review case studies</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <code>$ start-project --scope "portfolio, platform, console"</code>
+        <code>response_time: within 2 business days</code>
+        <code>best_fit: AI tools, cloud infra, B2B SaaS</code>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

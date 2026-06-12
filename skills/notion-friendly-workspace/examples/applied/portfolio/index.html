@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Iris Lin — Workspace Systems Portfolio</title>
+<style>
+  :root {
+    --primary: #455dd3;
+    --primary-strong: #213183;
+    --link: #0075de;
+    --ink: rgba(0,0,0,.9);
+    --ink-muted: #615d59;
+    --ink-soft: #a39e98;
+    --canvas: #fff;
+    --canvas-warm: #f6f5f4;
+    --canvas-warm-2: #f7f7f5;
+    --hero-midnight: #000530;
+    --hero-midnight-soft: #030b46;
+    --hero-glow: #151f66;
+    --track-blue: #2f4ee9;
+    --surface-dark: #02093a;
+    --hairline: rgba(0,0,0,.09);
+    --dark-hairline: rgba(255,255,255,.14);
+    --block-blue: #62aef0;
+    --block-yellow: #ffc95e;
+    --block-coral: #f77463;
+    --block-teal: #2a9d99;
+    --sticker-purple: #9b6df0;
+    --sticker-orange: #ff8a34;
+    --font: NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--canvas-warm);
+    color: var(--ink);
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 820px;
+    background:
+      radial-gradient(circle at 50% 20%, rgba(69,93,211,.44), transparent 34%),
+      linear-gradient(180deg, var(--hero-midnight-soft), var(--hero-midnight));
+    color: #fff;
+  }
+
+  .shell {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .top-note {
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    border-bottom: 1px solid var(--dark-hairline);
+  }
+
+  .nav {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 740;
+    letter-spacing: -.02em;
+  }
+
+  .mark {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: #fff;
+    color: var(--hero-midnight);
+    font-weight: 800;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    color: rgba(255,255,255,.72);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .btn.secondary {
+    background: color-mix(in srgb, var(--primary) 70%, var(--hero-midnight));
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 70px auto 0;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: rgba(255,255,255,.68);
+    font-size: 15px;
+    font-weight: 650;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(54px, 8vw, 94px);
+    line-height: .98;
+    letter-spacing: -.045em;
+  }
+
+  .hero-copy p:last-of-type {
+    max-width: 720px;
+    margin: 24px auto 0;
+    color: rgba(255,255,255,.78);
+    font-size: 20px;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .stage {
+    position: relative;
+    z-index: 2;
+    width: min(980px, calc(100% - 48px));
+    margin: 58px auto 0;
+  }
+
+  .track {
+    position: absolute;
+    inset: -60px -80px 90px;
+    pointer-events: none;
+  }
+
+  .track::before,
+  .track::after {
+    content: "";
+    position: absolute;
+    border: 8px solid var(--track-blue);
+    border-radius: 999px;
+    opacity: .86;
+    transform: rotate(-7deg);
+  }
+
+  .track::before {
+    left: 2%;
+    top: 18%;
+    width: 62%;
+    height: 68%;
+    border-right-color: transparent;
+  }
+
+  .track::after {
+    right: 2%;
+    top: 6%;
+    width: 48%;
+    height: 76%;
+    border-left-color: transparent;
+    transform: rotate(9deg);
+  }
+
+  .product-window {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 34px 90px rgba(0,0,0,.42);
+  }
+
+  .window-bar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink-muted);
+    font-size: 13px;
+    font-weight: 650;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--block-coral);
+  }
+  .dot:nth-child(2) { background: var(--block-yellow); }
+  .dot:nth-child(3) { background: var(--block-teal); }
+
+  .window-body {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    min-height: 370px;
+  }
+
+  .sidebar {
+    padding: 22px;
+    background: #f8f8f6;
+    border-right: 1px solid var(--hairline);
+  }
+
+  .side-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 34px;
+    padding: 0 10px;
+    border-radius: 7px;
+    color: var(--ink-muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .side-item.active {
+    background: #ecebea;
+    color: var(--ink);
+  }
+
+  .board {
+    padding: 26px;
+  }
+
+  .board h2 {
+    margin: 0 0 18px;
+    font-size: 28px;
+    letter-spacing: -.025em;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .mini-card {
+    min-height: 172px;
+    padding: 16px;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .mini-card strong {
+    display: block;
+    font-size: 17px;
+    letter-spacing: -.01em;
+  }
+
+  .mini-card p {
+    margin: 10px 0 0;
+    color: var(--ink-muted);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .sticker {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    border: 5px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.24);
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .sticker.one { left: -36px; top: 84px; background: var(--sticker-purple); transform: rotate(-9deg); }
+  .sticker.two { right: -30px; top: 150px; background: var(--sticker-orange); transform: rotate(7deg); }
+  .sticker.three { right: 90px; bottom: -28px; background: var(--block-yellow); color: #111; transform: rotate(-5deg); }
+
+  .belt {
+    margin-top: -1px;
+    padding: 18px 0;
+    background: var(--surface-dark);
+    color: rgba(255,255,255,.76);
+    border-top: 1px solid var(--dark-hairline);
+    border-bottom: 1px solid var(--dark-hairline);
+  }
+
+  .belt .shell {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .section {
+    padding: 92px 0;
+  }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 34px;
+  }
+
+  .section h2 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+  }
+
+  .section-head p {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .bento {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 16px;
+  }
+
+  .tile {
+    min-height: 260px;
+    padding: 30px;
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 14px 40px rgba(0,0,0,.04);
+  }
+
+  .tile.yellow { background: var(--block-yellow); }
+  .tile.blue { background: color-mix(in srgb, var(--block-blue) 78%, white); }
+  .tile.coral { background: color-mix(in srgb, var(--block-coral) 78%, white); }
+
+  .tile h3 {
+    margin: 0;
+    max-width: 520px;
+    font-size: 28px;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+  }
+
+  .tile p {
+    max-width: 540px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  .tile.yellow p,
+  .tile.blue p,
+  .tile.coral p {
+    color: rgba(0,0,0,.68);
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .timeline .tile {
+    min-height: 220px;
+  }
+
+  .contact {
+    padding: 72px 0 92px;
+    text-align: center;
+  }
+
+  .contact-card {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgba(0,0,0,.06);
+  }
+
+  .contact-card h2 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 64px);
+    letter-spacing: -.035em;
+    line-height: 1.04;
+  }
+
+  .contact-card p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: var(--ink-muted);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .shell { width: min(100% - 28px, 680px); }
+    .hero { min-height: auto; padding-bottom: 56px; }
+    .nav-links { display: none; }
+    .hero-copy { margin-top: 44px; }
+    .window-body,
+    .section-head,
+    .bento,
+    .timeline {
+      grid-template-columns: 1fr;
+    }
+    .sidebar { display: none; }
+    .sticker { width: 58px; height: 58px; font-size: 22px; border-width: 4px; }
+    .sticker.one { left: 8px; top: 84px; }
+    .sticker.two { right: 8px; top: 152px; }
+    .sticker.three { right: 30px; bottom: -20px; }
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="top-note">Currently shaping AI workspaces, docs systems, and product onboarding</div>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#"><span class="mark">I</span>Iris Lin</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#systems">Systems</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn secondary" href="#work">View work</a>
+        <a class="btn" href="#contact">Start project</a>
+      </div>
+    </nav>
+
+    <div class="hero-copy">
+      <p class="eyebrow">Workspace designer for teams that live inside tools.</p>
+      <h1>Designing calm AI workspaces for messy human work.</h1>
+      <p>I help product teams turn automations, docs, dashboards, and onboarding flows into friendly systems people actually keep using.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#work">Selected projects</a>
+        <a class="btn secondary" href="#systems">How I work</a>
+      </div>
+    </div>
+
+    <div class="stage" aria-label="Portfolio product window">
+      <span class="track"></span>
+      <span class="sticker one">AI</span>
+      <span class="sticker two">✓</span>
+      <span class="sticker three">↗</span>
+      <div class="product-window">
+        <div class="window-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:auto">iris-workspace.design</span></div>
+        <div class="window-body">
+          <aside class="sidebar">
+            <div class="side-item active">Portfolio OS</div>
+            <div class="side-item">Case studies</div>
+            <div class="side-item">Design systems</div>
+            <div class="side-item">Research notes</div>
+            <div class="side-item">Availability</div>
+          </aside>
+          <div class="board">
+            <h2>Current project board</h2>
+            <div class="cards">
+              <div class="mini-card"><strong>Agent onboarding</strong><p>Reduced first-run confusion for a workflow automation product.</p></div>
+              <div class="mini-card"><strong>Docs workspace</strong><p>Built a searchable knowledge hub for product and support teams.</p></div>
+              <div class="mini-card"><strong>AI review queue</strong><p>Designed human-in-the-loop controls for generated work.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="belt">
+    <div class="shell">
+      <span>AI WORKSPACES</span>
+      <span>PRODUCT SYSTEMS</span>
+      <span>DOCS UX</span>
+      <span>ONBOARDING</span>
+      <span>DESIGN OPS</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="section shell" id="work">
+      <div class="section-head">
+        <h2>Selected work that feels like a useful room.</h2>
+        <p>Each project turns a scattered workflow into a friendly product surface: clear entry points, visible state, lightweight automation, and crisp handoff details.</p>
+      </div>
+      <div class="bento">
+        <article class="tile yellow">
+          <h3>Atlas AI onboarding</h3>
+          <p>A guided workspace for teams adopting AI assistants, with starter templates, risk labels, and human review moments that feel natural.</p>
+        </article>
+        <article class="tile">
+          <h3>Fielddesk knowledge hub</h3>
+          <p>Search, docs, ownership, and update rituals merged into one Notion-like operating surface.</p>
+        </article>
+        <article class="tile blue">
+          <h3>OpsFlow review queue</h3>
+          <p>A compact board for triaging generated outputs, assigning owners, and tracing decisions.</p>
+        </article>
+        <article class="tile coral">
+          <h3>Launch room system</h3>
+          <p>Reusable launch rooms with timeline, blockers, assets, and customer proof all in one shared place.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="systems">
+      <div class="section-head">
+        <h2>Systems, not one-off screens.</h2>
+        <p>I design the small rituals around the interface too: naming, empty states, handoff notes, content blocks, permissions, and team habits.</p>
+      </div>
+      <div class="timeline">
+        <article class="tile"><h3>Map the work</h3><p>Identify actors, documents, decisions, and failure modes before pushing pixels.</p></article>
+        <article class="tile"><h3>Prototype the room</h3><p>Turn the workflow into a navigable workspace with realistic content and states.</p></article>
+        <article class="tile"><h3>Ship the habit</h3><p>Polish onboarding, templates, and reusable components so the system keeps working.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="timeline">
+      <div class="section-head">
+        <h2>Experience timeline.</h2>
+        <p>Eight years across product design, documentation systems, and front-end collaboration for B2B teams.</p>
+      </div>
+      <div class="timeline">
+        <article class="tile"><h3>2024-now</h3><p>Independent workspace designer for AI tooling, ops software, and internal platforms.</p></article>
+        <article class="tile"><h3>2020-2024</h3><p>Product design lead for a collaboration SaaS team, focused on onboarding and knowledge systems.</p></article>
+        <article class="tile"><h3>2017-2020</h3><p>Front-end designer building launch pages, docs hubs, and design-system foundations.</p></article>
+      </div>
+    </section>
+
+    <section class="contact shell" id="contact">
+      <div class="contact-card">
+        <h2>Have a workspace that needs to feel obvious?</h2>
+        <p>Send the messy workflow. I will help turn it into a calm, shared product surface your team can actually maintain.</p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
+          <a class="btn secondary" href="#work">Review projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!-- Component: hero
+     Centered AI Cloud hero with event pill, CTA pair, grid frame, triangle mark, and spectral rays. -->
+<style>
+  :root {
+    --canvas: #000;
+    --ink: #fff;
+    --ink-muted: #a1a1a1;
+    --hairline: rgba(255,255,255,.13);
+    --hairline-soft: rgba(255,255,255,.08);
+    --blue: #0099ff;
+    --green: #00ff88;
+    --red: #ff3300;
+    --sans: Geist, Inter, Arial, sans-serif;
+  }
+  .vc-hero {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    text-align: center;
+    padding: 34px 24px 0;
+  }
+  .vc-event {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 560;
+  }
+  .vc-event .tag {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--blue) 22%, #000);
+    color: #4dafff;
+  }
+  .vc-event .ticket {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #fff;
+    color: #000;
+  }
+  .vc-frame {
+    position: relative;
+    overflow: hidden;
+    max-width: 1080px;
+    min-height: 650px;
+    margin: 0 auto;
+    border: 1px solid var(--hairline);
+    background:
+      linear-gradient(var(--hairline-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hairline-soft) 1px, transparent 1px),
+      #000;
+    background-size: 96px 96px;
+  }
+  .vc-copy {
+    position: relative;
+    z-index: 5;
+    max-width: 760px;
+    margin: 150px auto 0;
+  }
+  .vc-copy h1 {
+    margin: 0;
+    font-size: clamp(46px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+  .vc-copy p {
+    max-width: 620px;
+    margin: 22px auto 0;
+    color: var(--ink-muted);
+    font-size: 20px;
+    line-height: 1.65;
+  }
+  .vc-actions {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .vc-btn {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .vc-btn.primary { background: #fff; color: #000; }
+  .vc-btn.secondary { background: #080808; color: #fff; border: 1px solid var(--hairline); }
+  .vc-rays {
+    position: absolute;
+    inset: auto 0 0;
+    height: 300px;
+    background:
+      repeating-radial-gradient(ellipse at 50% 100%, rgba(255,255,255,.27) 0 1px, transparent 1px 7px),
+      radial-gradient(circle at 35% 100%, rgba(0,153,255,.72), transparent 26%),
+      radial-gradient(circle at 52% 100%, rgba(0,255,136,.42), transparent 25%),
+      radial-gradient(circle at 67% 100%, rgba(255,51,0,.7), transparent 34%);
+  }
+  .vc-mark {
+    position: absolute;
+    left: 50%;
+    bottom: -46px;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: 106px solid transparent;
+    border-right: 106px solid transparent;
+    border-bottom: 194px solid #fff;
+    filter: drop-shadow(0 0 26px rgba(255,255,255,.46));
+    transform: translateX(-50%);
+  }
+  .vc-mark::after {
+    content: "";
+    position: absolute;
+    left: -88px;
+    top: 72px;
+    width: 176px;
+    height: 122px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), #000 78%);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+</style>
+
+<section class="vc-hero">
+  <div class="vc-event">
+    <span class="tag">Events</span>
+    <span>Ship is coming to your city</span>
+    <span class="ticket">Get your ticket -></span>
+  </div>
+  <div class="vc-frame">
+    <div class="vc-copy">
+      <h1>Build and deploy on the AI Cloud.</h1>
+      <p>Developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.</p>
+      <div class="vc-actions">
+        <a class="vc-btn primary" href="#">Start Deploying</a>
+        <a class="vc-btn secondary" href="#">Get a Demo</a>
+      </div>
+    </div>
+    <span class="vc-rays"></span>
+    <span class="vc-mark"></span>
+  </div>
+</section>

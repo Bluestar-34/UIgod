@@ -1,0 +1,80 @@
+<!-- Component: product-grid
+     Hairline-separated infrastructure cards with technical UI fragments. -->
+<style>
+  :root {
+    --canvas: #000;
+    --surface-1: #080808;
+    --ink: #fff;
+    --ink-muted: #a1a1a1;
+    --hairline: rgba(255,255,255,.13);
+    --sans: Geist, Inter, Arial, sans-serif;
+  }
+  .vc-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--hairline);
+    border-left: 1px solid var(--hairline);
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+  }
+  .vc-card {
+    min-height: 280px;
+    padding: 42px;
+    border-right: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .vc-card h3 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+  }
+  .vc-card p {
+    margin: 12px 0 28px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+  }
+  .vc-arrow {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid var(--hairline);
+    border-radius: 50%;
+    color: var(--ink);
+  }
+  .vc-terminal {
+    margin-top: 32px;
+    padding: 16px;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: var(--surface-1);
+    color: var(--ink-muted);
+    font: 500 13px/1.45 "Geist Mono", SFMono-Regular, Consolas, monospace;
+  }
+  @media (max-width: 860px) {
+    .vc-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="vc-grid">
+  <article class="vc-card">
+    <h3>Agents</h3>
+    <p>Deliver more value to users by executing complex workflows.</p>
+    <span class="vc-arrow">-></span>
+    <div class="vc-terminal">Thinking...<br />deploy --agent workflow</div>
+  </article>
+  <article class="vc-card">
+    <h3>AI Apps</h3>
+    <p>Enrich any product or feature with the latest models and tools.</p>
+    <span class="vc-arrow">-></span>
+  </article>
+  <article class="vc-card">
+    <h3>Web Apps</h3>
+    <p>Ship beautiful interfaces that do not compromise speed.</p>
+    <span class="vc-arrow">-></span>
+  </article>
+</section>

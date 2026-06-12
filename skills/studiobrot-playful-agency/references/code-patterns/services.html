@@ -1,0 +1,155 @@
+<!-- Services carousel: white bg, thick-border cards, swiper pagination -->
+<section class="spa-services">
+  <div class="spa-wrapper">
+    <div class="spa-services__swiper">
+      <div class="spa-services__slide">
+        <div class="spa-service-card">
+          <h3 class="spa-service-card__title">Markenaufbau</h3>
+          <div class="spa-service-card__icon">
+            <svg width="180" height="180" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#000" stroke-width="6"/><text x="50" y="55" text-anchor="middle" font-size="32" font-weight="700" fill="#000">🛠</text></svg>
+          </div>
+          <div class="spa-service-card__body">
+            <p>We build on holistic processes that start with a suitable strategy. Together we look at the essentials of a brand: from positioning to values, USPs, and messaging.</p>
+          </div>
+        </div>
+      </div>
+      <div class="spa-services__slide">
+        <div class="spa-service-card">
+          <h3 class="spa-service-card__title">Design</h3>
+          <div class="spa-service-card__icon">
+            <svg width="180" height="180" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#000" stroke-width="6" rx="8"/><text x="50" y="55" text-anchor="middle" font-size="32" font-weight="700" fill="#000">✦</text></svg>
+          </div>
+          <div class="spa-service-card__body">
+            <p>We believe design must be both beautiful and substantial. We work deep into the material so that every brand character is expressed uniquely.</p>
+          </div>
+        </div>
+      </div>
+      <div class="spa-services__slide">
+        <div class="spa-service-card">
+          <h3 class="spa-service-card__title">Kommunikation</h3>
+          <div class="spa-service-card__icon">
+            <svg width="180" height="180" viewBox="0 0 100 100"><path d="M20 50 L45 35 L45 65 Z" fill="none" stroke="#000" stroke-width="6"/><text x="50" y="55" text-anchor="middle" font-size="32" font-weight="700" fill="#000">⚡</text></svg>
+          </div>
+          <div class="spa-service-card__body">
+            <p>Creative campaigns with strong headlines and visual punch. Our standard: surprisingly unseen. We develop communicative solutions that hit hard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spa-services__dots" aria-hidden="true">
+      <span class="is-active"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --red: #ff2a00;
+    --pink: #FFBEF1;
+    --ink: #000000;
+  }
+
+  .spa-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .spa-services {
+    background: #fff;
+    padding: 2rem 0;
+    overflow: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-services { padding: 6rem 0; }
+  }
+
+  .spa-services__swiper {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+
+  .spa-services__slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  @media (min-width: 768px) {
+    .spa-services__slide { flex: 0 0 calc(50% - 0.5rem); }
+  }
+
+  @media (min-width: 1024px) {
+    .spa-services__slide { flex: 0 0 calc(33.33% - 0.66rem); }
+  }
+
+  .spa-service-card {
+    border: 6px solid #000;
+    border-radius: 30px;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-service-card { padding: 40px; }
+  }
+
+  .spa-service-card__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0 0 1rem;
+  }
+
+  .spa-service-card__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+  }
+
+  @media (min-width: 1024px) {
+    .spa-service-card__icon { height: 320px; }
+  }
+
+  .spa-service-card__icon svg {
+    max-width: 200px;
+    max-height: 230px;
+    display: block;
+  }
+
+  .spa-service-card__body p {
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin-bottom: 0;
+  }
+
+  .spa-services__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .spa-services__dots span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  .spa-services__dots .is-active {
+    opacity: 1;
+  }
+</style>
