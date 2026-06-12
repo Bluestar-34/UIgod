@@ -1,0 +1,55 @@
+<section class="timer-stage" aria-label="Interval timer">
+  <div class="timer-value">00:45</div>
+  <div class="timer-label">A C T I V E</div>
+</section>
+
+<style>
+  .timer-stage {
+    min-height: 64vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 2rem;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .timer-value {
+    color: #ff2d00;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 14rem;
+    font-weight: 900;
+    line-height: 0.9;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .timer-label {
+    padding-top: 1rem;
+    border-top: 4px solid #ff2d00;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .timer-value {
+      font-size: 9rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .timer-stage {
+      min-height: 56vh;
+    }
+
+    .timer-value {
+      font-size: 5.25rem;
+    }
+
+    .timer-label {
+      font-size: 1.15rem;
+    }
+  }
+</style>

@@ -1,0 +1,63 @@
+<section class="status-panel">
+  <header>
+    <h2>Where help is ready</h2>
+    <p>Use dot, hatch, and solid fills to explain civic coverage without relying only on color.</p>
+  </header>
+  <div class="status-map" aria-hidden="true">
+    <span class="region full"></span>
+    <span class="region hatch"></span>
+    <span class="region dots"></span>
+    <span class="region dots small"></span>
+  </div>
+  <div class="legend">
+    <span><b></b> Full guide</span>
+    <span><b></b> Next up</span>
+    <span><b></b> Not ready yet</span>
+  </div>
+</section>
+
+<style>
+  .status-panel {
+    display: grid;
+    gap: var(--space-l);
+    max-width: 975px;
+    margin: var(--space-3xl) auto;
+    text-align: center;
+  }
+
+  .status-map {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+  }
+
+  .region {
+    position: absolute;
+    border: 1.5px solid var(--canvas);
+    background: var(--ink);
+    clip-path: polygon(4% 20%, 80% 4%, 96% 60%, 52% 96%, 12% 70%);
+  }
+
+  .region.full { inset: 80px 38% 80px 43%; }
+  .region.hatch {
+    inset: 60px 14% 100px 68%;
+    background: repeating-linear-gradient(135deg, var(--ink) 0 4px, transparent 4px 9px);
+  }
+  .region.dots {
+    inset: 20px 42% 30px 7%;
+    opacity: .28;
+    background: radial-gradient(var(--ink) 1.5px, transparent 1.5px) 0 0 / 8px 8px;
+  }
+  .region.small { inset: 190px 8% 60px 82%; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-m);
+    font-size: var(--step--1);
+  }
+
+  .legend span { display: inline-flex; align-items: center; gap: var(--space-xs); }
+  .legend b { width: 16px; height: 16px; border-radius: 4.5px; background: var(--ink); }
+</style>

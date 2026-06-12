@@ -1,0 +1,59 @@
+<div class="brutal-actions">
+  <a class="btn btn-primary" href="#start">Start Protocol</a>
+  <a class="btn btn-secondary" href="#plan">View Rounds</a>
+</div>
+
+<style>
+  .brutal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    min-width: 220px;
+    min-height: 64px;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3rem;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-primary {
+    border: 0;
+    background: #ff2d00;
+    color: #000000;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px #000000;
+  }
+
+  .btn-secondary {
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    color: #000000;
+  }
+
+  @media (max-width: 720px) {
+    .brutal-actions,
+    .btn {
+      width: 100%;
+    }
+  }
+</style>

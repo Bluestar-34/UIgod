@@ -1,0 +1,64 @@
+<footer class="civic-footer">
+  <div class="slow-motif" aria-hidden="true">forms -> forms -> forms -></div>
+  <div class="civic-footer__inner">
+    <form>
+      <label for="email">Keep in touch</label>
+      <div>
+        <input id="email" type="email" placeholder="Your email" />
+        <button type="button">Subscribe -></button>
+      </div>
+    </form>
+    <nav>
+      <a href="#">Guides</a>
+      <a href="#">Forms</a>
+      <a href="#">Status</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .civic-footer {
+    position: relative;
+    margin-top: var(--space-3xl);
+    padding: var(--space-xl) var(--space-l) var(--space-2xl);
+    background: var(--ink);
+    color: var(--canvas);
+  }
+
+  .slow-motif {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    white-space: nowrap;
+    font-weight: 700;
+    animation: slow-crossing 300s linear infinite;
+  }
+
+  @keyframes slow-crossing {
+    to { transform: translateX(calc(-100% - 100vw)); }
+  }
+
+  .civic-footer__inner {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .civic-footer input,
+  .civic-footer button {
+    border: 0;
+    border-radius: 5px;
+    background: var(--canvas);
+    color: var(--ink);
+    padding: var(--space-xs) var(--space-s);
+  }
+
+  .civic-footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+</style>

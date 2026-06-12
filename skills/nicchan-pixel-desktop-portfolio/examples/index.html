@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mira Vale - Pixel Desktop Portfolio</title>
+  <style>
+    @font-face {
+      font-family: W95fa;
+      src: url("https://www.nicchan.me/fonts/w95fa.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Sysfont;
+      src: url("https://www.nicchan.me/fonts/SysfontC.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Departure Mono";
+      src: url("https://www.nicchan.me/fonts/DepartureMono-Regular.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: light;
+      --color-bg: #716eba;
+      --color-magenta-darkest: #581e5e;
+      --color-magenta-darker: #853680;
+      --color-magenta: #a75293;
+      --color-magenta-lighter: #cb96cc;
+      --color-teal-darkest: #18656e;
+      --color-teal-darker: #52a2a7;
+      --color-teal: #9ddacb;
+      --color-teal-lighter: #c1edc7;
+      --color-teal-lightest: #f1fae9;
+      --color-mauve-darker: #5f4c65;
+      --color-mauve: #9c7a9d;
+      --color-mauve-lighter: #c6b0c6;
+      --color-mauve-lightest: #eee7ee;
+      --color-violet-darker: #17162b;
+      --color-violet: #2c2b4b;
+      --color-violet-lighter: #4f4d7e;
+      --color-lavender: #a3a3c7;
+      --color-lavender-lighter: #c6c6dc;
+      --color-gray: #bdb6c4;
+      --color-gray-lighter: #d7dde1;
+      --color-gray-darker: #878894;
+      --color-off-white: #fafafa;
+      --color-white: #fff;
+      --color-black: #000;
+      --border-thickness: .1875rem;
+      --header-width: 5rem;
+      --footer-height: 2.75rem;
+      --font-pixel: W95fa, "Seravek Fallback", "Gill Sans Nova Fallback", Ubuntu, Calibri, sans-serif;
+      --font-accent: Sysfont, "Seravek Fallback", "Gill Sans Nova Fallback", Ubuntu, Calibri, sans-serif;
+      --font-code: "Departure Mono", monospace;
+      --title-font-size: clamp(2.5rem, 7vw + 1rem, 4.5rem);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scrollbar-gutter: stable;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--color-violet);
+      font-family: var(--font-pixel);
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--color-bg);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    p + p {
+      margin-block-start: 1rem;
+    }
+
+    .wallpaper {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-color: var(--color-bg);
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(198, 198, 220, .95) 0 1px, transparent 1px),
+        radial-gradient(circle at 78% 18%, rgba(157, 218, 203, .95) 0 1px, transparent 1px),
+        linear-gradient(145deg, #8280ca 0 28%, #af96d5 28% 38%, #716eba 38% 66%, #4f4d7e 100%);
+      background-size: 12px 12px, 18px 18px, cover;
+      image-rendering: pixelated;
+    }
+
+    .wallpaper::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 42%;
+      background:
+        linear-gradient(90deg, transparent 0 8%, #4f4d7e 8% 16%, transparent 16% 25%, #2c2b4b 25% 36%, transparent 36% 48%, #5f4c65 48% 58%, transparent 58% 70%, #4f4d7e 70% 78%, transparent 78%),
+        linear-gradient(90deg, transparent 0 14%, #c6c6dc 14% 16%, transparent 16% 42%, #9ddacb 42% 45%, transparent 45%),
+        linear-gradient(0deg, #17162b 0, rgba(23, 22, 43, .76) 48%, transparent 100%);
+      background-size: 120px 100%, 160px 100%, 100% 100%;
+      clip-path: polygon(0 60%, 9% 52%, 17% 64%, 27% 49%, 39% 58%, 50% 42%, 63% 57%, 76% 40%, 88% 55%, 100% 48%, 100% 100%, 0 100%);
+      opacity: .9;
+    }
+
+    .wallpaper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(23, 22, 43, .34) 1px, transparent 1px);
+      background-size: 4px 4px;
+      mix-blend-mode: multiply;
+      opacity: .5;
+    }
+
+    .skip-link {
+      position: fixed;
+      inset: .5rem auto auto .5rem;
+      z-index: 100;
+      transform: translateY(-140%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .layout {
+      min-height: 100dvh;
+      padding: .5rem .5rem calc(var(--footer-height) + .75rem) var(--header-width);
+    }
+
+    .desktop-nav {
+      position: fixed;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      z-index: 10;
+      width: var(--header-width);
+      max-height: calc(100dvh - var(--footer-height));
+      padding: .5rem;
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    .desktop-nav__item {
+      display: block;
+      text-decoration: none;
+    }
+
+    .desktop-nav__item + .desktop-nav__item {
+      margin-block-start: 1rem;
+    }
+
+    .desktop-nav__label {
+      display: inline-block;
+      margin-block-start: .25rem;
+      padding: 0 .25rem;
+      color: var(--color-violet);
+      background: var(--color-mauve-lightest);
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .pixel-icon {
+      position: relative;
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      background: var(--color-gray-lighter);
+      border: var(--border-thickness) solid var(--color-violet-darker);
+      box-shadow: inset -.1875rem -.1875rem var(--color-gray-darker), inset .1875rem .1875rem var(--color-white);
+      image-rendering: pixelated;
+    }
+
+    .pixel-icon::before,
+    .pixel-icon::after {
+      content: "";
+      position: absolute;
+      inset: .5rem;
+      background: var(--color-teal);
+      box-shadow: .375rem .375rem 0 var(--color-violet), -.25rem .75rem 0 var(--color-magenta-lighter);
+    }
+
+    .pixel-icon--work::before {
+      inset: .5rem .4rem 1rem;
+      background: var(--color-white);
+      box-shadow: 0 .5rem 0 var(--color-teal), .5rem .75rem 0 var(--color-magenta);
+    }
+
+    .pixel-icon--notes::before {
+      inset: .4rem .8rem;
+      background: var(--color-mauve-darker);
+      box-shadow: .25rem .25rem 0 var(--color-lavender), -.25rem .7rem 0 var(--color-violet);
+    }
+
+    .pixel-icon--contact::before {
+      inset: .8rem .45rem;
+      background: var(--color-white);
+      box-shadow: 0 -.25rem 0 var(--color-violet), .4rem .35rem 0 var(--color-lavender);
+    }
+
+    .page-title {
+      display: inline-block;
+      width: fit-content;
+      margin-block-end: .5rem;
+      color: transparent;
+      background: linear-gradient(135deg, var(--color-violet-darker) 50%, var(--color-magenta-darkest));
+      background-clip: text;
+      filter: drop-shadow(.0625em .0625em 0 var(--color-teal-darker));
+      font-family: var(--font-accent);
+      font-size: var(--title-font-size);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .desktop {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(18rem, 30rem) minmax(22rem, 1fr);
+      grid-template-areas:
+        "intro cases"
+        "process cases"
+        "notes contact";
+      gap: .5rem;
+      align-items: start;
+      max-width: 1260px;
+    }
+
+    .window {
+      color: var(--color-violet);
+      background: var(--color-white);
+      border: var(--border-thickness) solid var(--color-black);
+      padding: var(--border-thickness);
+    }
+
+    .window--intro {
+      grid-area: intro;
+    }
+
+    .window--cases {
+      grid-area: cases;
+      margin-block-start: .25rem;
+    }
+
+    .window--process {
+      grid-area: process;
+    }
+
+    .window--notes {
+      grid-area: notes;
+    }
+
+    .window--contact {
+      grid-area: contact;
+    }
+
+    .window__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: var(--border-thickness) calc(var(--border-thickness) * 2);
+      color: var(--color-violet);
+      background: linear-gradient(to right, var(--color-lavender), var(--color-teal));
+    }
+
+    .window__title {
+      overflow: hidden;
+      font: inherit;
+      font-size: 1.375rem;
+      line-height: 1.4;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .window__controls {
+      display: flex;
+      gap: .25rem;
+      flex: 0 0 auto;
+    }
+
+    .control,
+    .button-ui__content {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2rem;
+      min-height: 2rem;
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      color: var(--color-violet);
+      background: var(--color-gray-lighter);
+      box-shadow:
+        inset calc(var(--border-thickness) * -1) calc(var(--border-thickness) * -1) var(--color-gray-darker),
+        inset var(--border-thickness) var(--border-thickness) var(--color-white);
+    }
+
+    .window__body {
+      padding: 1rem;
+      font-size: clamp(1.1rem, 1vw + 1rem, 1.5rem);
+    }
+
+    .portrait {
+      float: right;
+      width: 9rem;
+      height: 9rem;
+      margin: 0 0 1rem 1rem;
+      border: var(--border-thickness) solid var(--color-black);
+      background:
+        radial-gradient(circle at 48% 36%, #cb96cc 0 16%, transparent 17%),
+        radial-gradient(circle at 42% 34%, #17162b 0 5%, transparent 6%),
+        radial-gradient(circle at 56% 34%, #17162b 0 5%, transparent 6%),
+        linear-gradient(90deg, transparent 0 26%, #26202c 26% 72%, transparent 72%),
+        linear-gradient(0deg, #4f4d7e 0 32%, #2c2b4b 32% 100%);
+      background-size: 100% 100%;
+      image-rendering: pixelated;
+    }
+
+    .button-ui {
+      display: inline-block;
+      color: var(--color-violet);
+      text-decoration: none;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      padding: 0;
+    }
+
+    .button-ui:hover,
+    .button-ui:focus-visible {
+      transform: translate3d(1px, 1px, 0);
+    }
+
+    .button-ui:hover .button-ui__content,
+    .button-ui:focus-visible .button-ui__content {
+      background: var(--color-mauve-lighter);
+      box-shadow:
+        inset calc(var(--border-thickness) * -1) calc(var(--border-thickness) * -1) var(--color-gray-lighter),
+        inset var(--border-thickness) var(--border-thickness) var(--color-gray-darker);
+    }
+
+    .stack > * + * {
+      margin-block-start: 1rem;
+    }
+
+    .case-list,
+    .note-list,
+    .process-list {
+      display: grid;
+      gap: .5rem;
+    }
+
+    .case-card,
+    .note-card,
+    .process-step {
+      display: block;
+      color: var(--color-violet);
+      background: var(--color-gray-lighter);
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      padding: .75rem;
+      box-shadow: inset -.1875rem -.1875rem var(--color-gray-darker), inset .1875rem .1875rem var(--color-white);
+      text-decoration: none;
+    }
+
+    .case-card:hover,
+    .note-card:hover {
+      transform: translate3d(1px, 1px, 0);
+      background: var(--color-mauve-lighter);
+      box-shadow: inset -.1875rem -.1875rem var(--color-gray-lighter), inset .1875rem .1875rem var(--color-gray-darker);
+    }
+
+    .case-card__meta,
+    .note-card__meta,
+    .process-step__meta {
+      display: inline-block;
+      margin-block-end: .25rem;
+      padding: 0 .25rem;
+      background: var(--color-lavender);
+      color: var(--color-black);
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .case-card__title,
+    .note-card__title {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      text-decoration: underline;
+      text-decoration-thickness: .125rem;
+      text-decoration-color: var(--color-magenta);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .375rem;
+      margin-block-start: .75rem;
+    }
+
+    .badge {
+      padding: 0 .375rem;
+      color: var(--color-black);
+      background: var(--color-teal-lighter);
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .taskbar {
+      position: fixed;
+      inset-inline: 0;
+      inset-block-end: 0;
+      z-index: 20;
+      display: flex;
+      gap: .1875rem;
+      align-items: center;
+      min-height: var(--footer-height);
+      padding: 0 var(--border-thickness);
+      background: var(--color-gray);
+      border-block-start: var(--border-thickness) solid var(--color-violet-lighter);
+    }
+
+    .taskbar__windows {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .taskbar .button-ui__content {
+      min-height: 2.375rem;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    :focus-visible {
+      outline: var(--border-thickness) dotted var(--color-white);
+      outline-offset: .25rem;
+    }
+
+    @media (min-width: 62em) and (min-height: 36em) and (orientation: landscape) {
+      :root {
+        --header-width: 6rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .desktop {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "cases"
+          "process"
+          "notes"
+          "contact";
+      }
+
+      .window--cases {
+        margin-block-start: 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      :root {
+        --header-width: 4.25rem;
+      }
+
+      .layout {
+        padding-inline-end: .25rem;
+      }
+
+      .desktop-nav {
+        padding-inline: .25rem;
+      }
+
+      .pixel-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+      }
+
+      .desktop-nav__label {
+        font-size: .9rem;
+      }
+
+      .window__body {
+        padding: .75rem;
+        font-size: 1.05rem;
+      }
+
+      .portrait {
+        float: none;
+        display: block;
+        width: 7.75rem;
+        height: 7.75rem;
+        margin: 0 0 .75rem;
+      }
+
+      .taskbar .button-ui__content {
+        padding-inline: .35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wallpaper" aria-hidden="true"></div>
+  <a class="skip-link button-ui" href="#main"><span class="button-ui__content">Skip to main</span></a>
+
+  <nav class="desktop-nav" aria-label="Main">
+    <a class="desktop-nav__item" href="#home" aria-current="page">
+      <span class="pixel-icon pixel-icon--home" aria-hidden="true"></span>
+      <span class="desktop-nav__label">Home</span>
+    </a>
+    <a class="desktop-nav__item" href="#work">
+      <span class="pixel-icon pixel-icon--work" aria-hidden="true"></span>
+      <span class="desktop-nav__label">Work</span>
+    </a>
+    <a class="desktop-nav__item" href="#notes">
+      <span class="pixel-icon pixel-icon--notes" aria-hidden="true"></span>
+      <span class="desktop-nav__label">Notes</span>
+    </a>
+    <a class="desktop-nav__item" href="#contact">
+      <span class="pixel-icon pixel-icon--contact" aria-hidden="true"></span>
+      <span class="desktop-nav__label">Contact</span>
+    </a>
+  </nav>
+
+  <main class="layout" id="main">
+    <h1 class="page-title" id="home">Mira Vale</h1>
+
+    <div class="desktop">
+      <section class="window window--intro" aria-labelledby="intro-title">
+        <header class="window__header">
+          <h2 class="window__title" id="intro-title">Introduction</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body stack">
+          <div class="portrait" aria-hidden="true"></div>
+          <p>Hi, I'm Mira Vale, an independent front-end engineer building fast, accessible interfaces for teams that care about the small details.</p>
+          <p>I turn complex product surfaces into friendly systems: semantic markup, careful CSS, and visual design that remembers people actually have to use it.</p>
+          <a class="button-ui" href="#work"><span class="button-ui__content">Open recent work -&gt;</span></a>
+        </div>
+      </section>
+
+      <section class="window window--cases" id="work" aria-labelledby="cases-title">
+        <header class="window__header">
+          <h2 class="window__title" id="cases-title">Selected Work</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body">
+          <div class="case-list">
+            <a class="case-card" href="#contact">
+              <span class="case-card__meta">2026 / Design System</span>
+              <span class="case-card__title">Atlas Admin Shell</span>
+              <p>A dense operations console rebuilt around keyboard paths, live regions, and compact reusable panels.</p>
+              <span class="badge-row"><span class="badge">React</span><span class="badge">A11y</span><span class="badge">CSS</span></span>
+            </a>
+            <a class="case-card" href="#contact">
+              <span class="case-card__meta">2025 / Commerce</span>
+              <span class="case-card__title">Lumen Checkout</span>
+              <p>A calmer purchase flow with resilient forms, low-motion states, and measurable conversion gains.</p>
+              <span class="badge-row"><span class="badge">Forms</span><span class="badge">Perf</span><span class="badge">UX</span></span>
+            </a>
+            <a class="case-card" href="#contact">
+              <span class="case-card__meta">2025 / Editorial Tooling</span>
+              <span class="case-card__title">Branch Room</span>
+              <p>A publishing workspace for notes, drafts, and media cards that stays readable at small viewport sizes.</p>
+              <span class="badge-row"><span class="badge">Astro</span><span class="badge">Content</span><span class="badge">Motion</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="window window--process" aria-labelledby="process-title">
+        <header class="window__header">
+          <h2 class="window__title" id="process-title">Process</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body">
+          <div class="process-list">
+            <div class="process-step"><span class="process-step__meta">01</span> Audit the interface with keyboard, screen reader, and slow network passes.</div>
+            <div class="process-step"><span class="process-step__meta">02</span> Build a small component contract before styling the entire surface.</div>
+            <div class="process-step"><span class="process-step__meta">03</span> Ship with measurement hooks, fallback states, and documentation.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="window window--notes" id="notes" aria-labelledby="notes-title">
+        <header class="window__header">
+          <h2 class="window__title" id="notes-title">Recent Notes</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body">
+          <div class="note-list">
+            <a class="note-card" href="#contact"><span class="note-card__meta">June 2026</span><span class="note-card__title">Designing taskbars for real workflows</span></a>
+            <a class="note-card" href="#contact"><span class="note-card__meta">May 2026</span><span class="note-card__title">Why reduced motion is a product feature</span></a>
+            <a class="note-card" href="#contact"><span class="note-card__meta">April 2026</span><span class="note-card__title">A practical checklist for focus rings</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="window window--contact" id="contact" aria-labelledby="contact-title">
+        <header class="window__header">
+          <h2 class="window__title" id="contact-title">Contact</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body stack">
+          <p>Available for accessibility-minded front-end systems, design engineering, and interface audits.</p>
+          <a class="button-ui" href="mailto:hello@example.com"><span class="button-ui__content">hello@example.com -&gt;</span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="taskbar" aria-label="Open windows">
+    <a class="button-ui" href="#home"><span class="button-ui__content">Home</span></a>
+    <div class="taskbar__windows">
+      <a class="button-ui" href="#intro-title"><span class="button-ui__content">Introduction</span></a>
+      <a class="button-ui" href="#work"><span class="button-ui__content">Selected Work</span></a>
+      <a class="button-ui" href="#notes"><span class="button-ui__content">Recent Notes</span></a>
+    </div>
+    <a class="button-ui" href="#contact"><span class="button-ui__content">Settings</span></a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<footer class="taskbar" aria-label="Open windows">
+  <a class="taskbar__button" href="#home"><span class="taskbar__button-content">Home</span></a>
+  <div class="taskbar__windows">
+    <button class="taskbar__button" type="button"><span class="taskbar__button-content">Intro</span></button>
+    <button class="taskbar__button" type="button"><span class="taskbar__button-content">Cases</span></button>
+    <button class="taskbar__button" type="button"><span class="taskbar__button-content">Notes</span></button>
+  </div>
+  <button class="taskbar__button taskbar__button--settings" type="button"><span class="taskbar__button-content">Settings</span></button>
+</footer>
+
+<style>
+  .taskbar {
+    position: fixed;
+    inset-inline: 0;
+    inset-block-end: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: .1875rem;
+    padding: 0 .1875rem;
+    background: #bdb6c4;
+    border-block-start: .1875rem solid #4f4d7e;
+    font-family: "W95fa", sans-serif;
+  }
+
+  .taskbar__windows {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .taskbar__button {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    color: #2c2b4b;
+    background: transparent;
+    text-decoration: none;
+    font: inherit;
+    white-space: nowrap;
+  }
+
+  .taskbar__button-content {
+    display: flex;
+    align-items: center;
+    min-height: 2.375rem;
+    padding: .25rem .5rem;
+    background: #d7dde1;
+    border: .1875rem solid #4f4d7e;
+    box-shadow: inset -.1875rem -.1875rem #878894, inset .1875rem .1875rem #fff;
+  }
+
+  .taskbar__button:hover {
+    transform: translate3d(1px, 1px, 0);
+  }
+</style>

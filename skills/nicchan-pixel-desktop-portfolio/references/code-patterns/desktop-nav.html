@@ -1,0 +1,61 @@
+<nav class="desktop-nav" aria-label="Main">
+  <a class="desktop-nav__item" href="#home" aria-current="page">
+    <span class="pixel-icon pixel-icon--monitor" aria-hidden="true"></span>
+    <span class="desktop-nav__label">Home</span>
+  </a>
+  <a class="desktop-nav__item" href="#work">
+    <span class="pixel-icon pixel-icon--window" aria-hidden="true"></span>
+    <span class="desktop-nav__label">Work</span>
+  </a>
+  <a class="desktop-nav__item" href="#notes">
+    <span class="pixel-icon pixel-icon--book" aria-hidden="true"></span>
+    <span class="desktop-nav__label">Notes</span>
+  </a>
+</nav>
+
+<style>
+  .desktop-nav {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 10;
+    width: 5rem;
+    padding: .5rem;
+    text-align: center;
+  }
+
+  .desktop-nav__item {
+    display: block;
+    color: #2c2b4b;
+    text-decoration: none;
+  }
+
+  .desktop-nav__item + .desktop-nav__item {
+    margin-block-start: 1rem;
+  }
+
+  .desktop-nav__label {
+    display: inline-block;
+    margin-block-start: .25rem;
+    padding: 0 .25rem;
+    background: #eee7ee;
+    color: #2c2b4b;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .pixel-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background: #d7dde1;
+    border: .1875rem solid #17162b;
+    box-shadow: inset -.1875rem -.1875rem #878894, inset .1875rem .1875rem #fff;
+    image-rendering: pixelated;
+  }
+
+  .desktop-nav__item:focus-visible {
+    outline: .1875rem dotted #fff;
+    outline-offset: .1875rem;
+  }
+</style>

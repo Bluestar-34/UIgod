@@ -1,0 +1,47 @@
+:root {
+  --color-bg: #716eba;
+  --violet-deep: #17162b;
+  --violet: #2c2b4b;
+  --violet-mid: #4f4d7e;
+  --lavender: #a3a3c7;
+  --teal: #9ddacb;
+  --magenta: #a75293;
+}
+
+.pixel-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(transparent 0 60%, rgba(23, 22, 43, .22) 60% 100%),
+    radial-gradient(circle at 20% 18%, rgba(198, 198, 220, .9) 0 1px, transparent 1px),
+    radial-gradient(circle at 78% 12%, rgba(157, 218, 203, .9) 0 1px, transparent 1px),
+    linear-gradient(135deg, #8381ca 0 28%, #b397d5 28% 36%, #716eba 36% 64%, #4f4d7e 64% 100%);
+  background-size: auto, 12px 12px, 18px 18px, cover;
+  image-rendering: pixelated;
+}
+
+.pixel-wallpaper::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background:
+    linear-gradient(90deg, transparent 0 12%, var(--violet-mid) 12% 22%, transparent 22% 30%, #5f4c65 30% 44%, transparent 44% 56%, var(--violet) 56% 70%, transparent 70%),
+    linear-gradient(90deg, transparent 0 18%, #c6c6dc 18% 20%, transparent 20% 45%, #9ddacb 45% 48%, transparent 48%),
+    linear-gradient(0deg, var(--violet-deep), transparent 70%);
+  background-size: 96px 100%, 140px 100%, 100% 100%;
+  clip-path: polygon(0 56%, 9% 51%, 16% 64%, 24% 50%, 32% 57%, 42% 45%, 50% 62%, 61% 42%, 75% 59%, 85% 44%, 100% 52%, 100% 100%, 0 100%);
+  opacity: .92;
+}
+
+.pixel-wallpaper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(23, 22, 43, .35) 1px, transparent 1px);
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+  opacity: .45;
+}

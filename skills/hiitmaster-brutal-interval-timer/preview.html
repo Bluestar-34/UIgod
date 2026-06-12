@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff2d00" />
+    <title>Hiitmaster Brutal Interval Timer - Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --canvas: #000000;
+        --canvas-soft: #0d0d0d;
+        --surface: #141414;
+        --surface-strong: #111111;
+        --ink: #ffffff;
+        --muted: rgba(255, 255, 255, 0.74);
+        --soft: rgba(255, 255, 255, 0.48);
+        --signal: #ff2d00;
+        --success: #00ff2a;
+        --line: rgba(255, 255, 255, 0.1);
+        --line-faint: rgba(255, 255, 255, 0.05);
+        --red-shadow: #ff2d004d;
+        --font-main: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-timer: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        overflow-x: clip;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        overflow-x: clip;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: var(--font-main);
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      :where(header, section, .shell, .swatch, .type-row, .timer-stage, .spec-card, .btn, h1, h2, h3, p, a, span, strong) {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .progress-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 42%;
+        height: 5px;
+        background: var(--signal);
+      }
+
+      .grid-overlay,
+      .noise-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .grid-overlay {
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+
+      .noise-overlay {
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .shell {
+        position: relative;
+        z-index: 1;
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 28px 0 18px;
+        border-bottom: 1px solid var(--line-faint);
+        text-transform: uppercase;
+      }
+
+      header strong {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      header a {
+        color: var(--signal);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      main {
+        padding: 34px 0 72px;
+      }
+
+      section {
+        margin-bottom: 64px;
+      }
+
+      .section-head {
+        margin-bottom: 24px;
+      }
+
+      .section-head h1,
+      .section-head h2 {
+        margin: 0;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 0.92;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-transform: uppercase;
+      }
+
+      .section-head p {
+        max-width: 720px;
+        margin: 14px 0 0;
+        color: var(--muted);
+      }
+
+      .section-head::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 8px;
+        margin-top: 22px;
+        background: var(--signal);
+      }
+
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 14px;
+      }
+
+      .swatch {
+        border: 1px solid var(--line);
+        border-radius: 0;
+        background: var(--surface);
+      }
+
+      .tone {
+        height: 86px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .swatch dl {
+        margin: 0;
+        padding: 14px;
+      }
+
+      .swatch dt {
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .swatch dd {
+        margin: 4px 0 0;
+        color: var(--soft);
+        font-family: var(--font-timer);
+        font-size: 0.78rem;
+      }
+
+      .type-specimen {
+        border-top: 1px solid var(--line);
+      }
+
+      .type-row {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 22px;
+        align-items: baseline;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .meta {
+        color: var(--soft);
+        font-family: var(--font-timer);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .display-xl {
+        font-size: 5.75rem;
+        font-weight: 900;
+        line-height: 0.9;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-transform: uppercase;
+      }
+
+      .display-lg {
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 0.92;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-transform: uppercase;
+      }
+
+      .body-sample {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.2rem;
+      }
+
+      .timer-stage {
+        display: grid;
+        min-height: 520px;
+        place-items: center;
+        align-content: center;
+        gap: 2rem;
+        border: 1px solid var(--line-faint);
+        background: var(--canvas);
+        text-align: center;
+      }
+
+      .timer-value {
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 13rem;
+        font-weight: 900;
+        line-height: 0.9;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .timer-label {
+        padding-top: 1rem;
+        border-top: 4px solid var(--signal);
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .component-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .spec-card {
+        min-height: 260px;
+        padding: 2rem;
+        border: 1px solid var(--line);
+        border-radius: 0;
+        background: var(--surface);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .spec-card:hover {
+        border-color: var(--signal);
+        box-shadow: 10px 10px var(--red-shadow);
+        transform: translateY(-10px);
+      }
+
+      .spec-card b {
+        display: block;
+        margin-bottom: 24px;
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 3.5rem;
+        line-height: 1;
+      }
+
+      .spec-card h3 {
+        display: inline-block;
+        margin: 0 0 16px;
+        padding-bottom: 12px;
+        border-bottom: 4px solid var(--signal);
+        font-size: 1.55rem;
+        font-weight: 900;
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .spec-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      .btn {
+        display: inline-flex;
+        min-width: 220px;
+        min-height: 64px;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem 2.2rem;
+        border-radius: 0;
+        font-size: 1.05rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+
+      .btn-primary {
+        border: 0;
+        background: var(--signal);
+        color: #000000;
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 5px #000000;
+        transform: translateY(-5px);
+      }
+
+      .btn-secondary {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+      }
+
+      .btn-secondary:hover {
+        background: #ffffff;
+        color: #000000;
+        transform: translateY(-5px);
+      }
+
+      .shape-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      .shape {
+        min-height: 132px;
+        padding: 18px;
+        border: 4px solid var(--signal);
+        border-radius: 0;
+        background: var(--surface-strong);
+        box-shadow: -16px 16px #000000;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .shape small {
+        display: block;
+        margin-top: 10px;
+        color: var(--soft);
+        font-family: var(--font-timer);
+      }
+
+      @media (max-width: 900px) {
+        .section-head h1,
+        .section-head h2,
+        .display-lg {
+          font-size: 2.6rem;
+        }
+
+        .display-xl {
+          font-size: 4rem;
+        }
+
+        .timer-value {
+          font-size: 8.5rem;
+        }
+
+        .component-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(358px, calc(100% - 32px));
+        }
+
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        section {
+          margin-bottom: 48px;
+        }
+
+        .section-head h1,
+        .section-head h2 {
+          font-size: 2.2rem;
+        }
+
+        .display-xl,
+        .display-lg {
+          font-size: 2.45rem;
+        }
+
+        .type-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .swatches {
+          grid-template-columns: 1fr;
+        }
+
+        .timer-stage {
+          min-height: 360px;
+        }
+
+        .timer-value {
+          font-size: 5.2rem;
+        }
+
+        .timer-label {
+          font-size: 1.05rem;
+        }
+
+        .actions,
+        .btn {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-line" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <div class="shell">
+      <header>
+        <strong>Hiitmaster Brutal Interval Timer</strong>
+        <a href="examples/index.html">Open transfer example -&gt;</a>
+      </header>
+
+      <main>
+        <section>
+          <div class="section-head">
+            <h1>Token System</h1>
+            <p>
+              Black timer stage, red-orange signal, hard slabs, uppercase command type, grid/noise overlays,
+              and motion built from cuts, glitches, and timer states.
+            </p>
+          </div>
+
+          <div class="swatches">
+            <div class="swatch"><div class="tone" style="background:#000000"></div><dl><dt>canvas</dt><dd>#000000</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#0d0d0d"></div><dl><dt>canvas-soft</dt><dd>#0d0d0d</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#141414"></div><dl><dt>surface</dt><dd>#141414</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#111111"></div><dl><dt>surface-strong</dt><dd>#111111</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#ffffff"></div><dl><dt>ink</dt><dd>#ffffff</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#ff2d00"></div><dl><dt>signal</dt><dd>#ff2d00</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#00ff2a"></div><dl><dt>success</dt><dd>#00ff2a</dd></dl></div>
+            <div class="swatch"><div class="tone" style="background:#ff2d004d"></div><dl><dt>red-shadow</dt><dd>#ff2d004d</dd></dl></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Typography</h2>
+          </div>
+          <div class="type-specimen">
+            <div class="type-row">
+              <span class="meta">display / 900 / uppercase</span>
+              <span class="display-xl">Interval Command</span>
+            </div>
+            <div class="type-row">
+              <span class="meta">section / 900</span>
+              <span class="display-lg">Rounds, output, recovery.</span>
+            </div>
+            <div class="type-row">
+              <span class="meta">body / 1.2rem</span>
+              <span class="body-sample">Short copy. High contrast. Every line should feel like it belongs on a training wallboard.</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Timer Stage</h2>
+          </div>
+          <div class="timer-stage">
+            <div class="timer-value">00:45</div>
+            <div class="timer-label">A C T I V E</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Components</h2>
+          </div>
+          <div class="component-grid">
+            <article class="spec-card">
+              <b>30</b>
+              <h3>Work Block</h3>
+              <p>Zero-radius slab, red underline, dark surface, and an immediate metric read.</p>
+            </article>
+            <article class="spec-card">
+              <b>10</b>
+              <h3>Recovery</h3>
+              <p>Rest states stay brutal and readable instead of becoming soft or spa-like.</p>
+            </article>
+            <article class="spec-card">
+              <b>04</b>
+              <h3>Rounds</h3>
+              <p>Use red borders and hover lift only where the user can act or inspect.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Actions And Shapes</h2>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="#">Start Protocol</a>
+            <a class="btn btn-secondary" href="#">Inspect Rounds</a>
+          </div>
+          <div class="shape-grid" style="margin-top:28px">
+            <div class="shape">Zero Radius<small>border-radius: 0</small></div>
+            <div class="shape">Hard Shadow<small>-20px 20px #000</small></div>
+            <div class="shape">Signal Border<small>4px solid #ff2d00</small></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

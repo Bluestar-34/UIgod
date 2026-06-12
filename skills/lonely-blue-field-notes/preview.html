@@ -24,12 +24,23 @@
         box-sizing: border-box;
       }
 
+      html {
+        overflow-x: clip;
+      }
+
       body {
         margin: 0;
         padding: 28px 22px 60px;
+        overflow-x: clip;
         background: var(--bg);
         color: var(--ink);
         font-family: var(--font-ui);
+      }
+
+      :where(header, .tokens-section, .swatch, .type-row, .type-row > *, .sample-display-xl, .sample-display-lg, .sample-headline, .sample-body-lg, .sample-body, a, dt, dd) {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
       }
 
       header,
@@ -183,9 +194,40 @@
       }
 
       @media (max-width: 720px) {
+        body {
+          padding-inline: 18px;
+        }
+
+        header,
+        .tokens-section {
+          width: min(342px, calc(100vw - 36px));
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        header a {
+          margin-left: 0;
+        }
+
+        .swatches {
+          grid-template-columns: 1fr;
+        }
+
         .type-row {
           grid-template-columns: 1fr;
           gap: 6px;
+        }
+
+        .sample-display-xl {
+          font-size: 3rem;
+        }
+
+        .sample-display-lg {
+          font-size: 2.5rem;
+        }
+
+        .sample-headline {
+          font-size: 1.8rem;
         }
       }
     </style>
@@ -194,7 +236,7 @@
     <header>
       <strong>Lonely Blue Field Notes</strong>
       <span>token specimens / design.md</span>
-      <a href="examples/applied/portfolio/index.html">Open applied example →</a>
+      <a href="examples/index.html">Open transfer example →</a>
     </header>
 
     <div class="tokens-section">

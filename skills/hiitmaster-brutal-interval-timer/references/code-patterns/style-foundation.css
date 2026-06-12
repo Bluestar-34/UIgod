@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --canvas: #000000;
+  --canvas-soft: #0d0d0d;
+  --surface: #141414;
+  --surface-strong: #111111;
+  --ink: #ffffff;
+  --signal: #ff2d00;
+  --success: #00ff2a;
+  --line: rgba(255, 255, 255, 0.1);
+  --line-faint: rgba(255, 255, 255, 0.05);
+  --grid: rgba(255, 255, 255, 0.03);
+  --red-shadow: #ff2d004d;
+  --black-shadow: #000000;
+  --font-main: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-timer: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-main);
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+:where(h1, h2, h3, p, a, button, .slab, .timer-stage, .command-label) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 900;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+a,
+button {
+  cursor: crosshair;
+}
+
+.shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 8px;
+  margin-top: 1.5rem;
+  background: var(--signal);
+}

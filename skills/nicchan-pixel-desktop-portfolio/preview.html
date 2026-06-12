@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicchan Pixel Desktop Portfolio - Token Preview</title>
+  <style>
+    @font-face {
+      font-family: W95fa;
+      src: url("https://www.nicchan.me/fonts/w95fa.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Sysfont;
+      src: url("https://www.nicchan.me/fonts/SysfontC.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Departure Mono";
+      src: url("https://www.nicchan.me/fonts/DepartureMono-Regular.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    :root {
+      --color-bg: #716eba;
+      --color-magenta-darkest: #581e5e;
+      --color-magenta-darker: #853680;
+      --color-magenta: #a75293;
+      --color-magenta-lighter: #cb96cc;
+      --color-teal-darkest: #18656e;
+      --color-teal-darker: #52a2a7;
+      --color-teal: #9ddacb;
+      --color-teal-lighter: #c1edc7;
+      --color-mauve-darker: #5f4c65;
+      --color-mauve: #9c7a9d;
+      --color-mauve-lighter: #c6b0c6;
+      --color-mauve-lightest: #eee7ee;
+      --color-violet-darker: #17162b;
+      --color-violet: #2c2b4b;
+      --color-violet-lighter: #4f4d7e;
+      --color-lavender: #a3a3c7;
+      --color-lavender-lighter: #c6c6dc;
+      --color-gray: #bdb6c4;
+      --color-gray-lighter: #d7dde1;
+      --color-gray-darker: #878894;
+      --color-off-white: #fafafa;
+      --color-white: #fff;
+      --color-black: #000;
+      --border-thickness: .1875rem;
+      --font-pixel: W95fa, "Seravek Fallback", "Gill Sans Nova Fallback", Ubuntu, Calibri, sans-serif;
+      --font-accent: Sysfont, "Seravek Fallback", "Gill Sans Nova Fallback", Ubuntu, Calibri, sans-serif;
+      --font-code: "Departure Mono", monospace;
+      --title-font-size: clamp(2.5rem, 7vw + 1rem, 4.5rem);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--color-violet);
+      font-family: var(--font-pixel);
+      line-height: 1.6;
+      background-color: var(--color-bg);
+      background-image:
+        radial-gradient(circle at 16% 14%, rgba(198, 198, 220, .9) 0 1px, transparent 1px),
+        radial-gradient(circle at 72% 20%, rgba(157, 218, 203, .9) 0 1px, transparent 1px),
+        linear-gradient(145deg, #817fca 0 26%, #b195d4 26% 38%, #716eba 38% 64%, #4f4d7e 100%);
+      background-size: 12px 12px, 18px 18px, cover;
+      image-rendering: pixelated;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: auto 0 0;
+      height: 34vh;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, transparent 0 10%, #4f4d7e 10% 18%, transparent 18% 27%, #2c2b4b 27% 38%, transparent 38% 52%, #5f4c65 52% 62%, transparent 62%),
+        linear-gradient(0deg, #17162b 0, rgba(23, 22, 43, .72) 42%, transparent 100%);
+      background-size: 120px 100%, 100% 100%;
+      clip-path: polygon(0 58%, 12% 50%, 24% 62%, 35% 47%, 45% 60%, 58% 42%, 74% 56%, 86% 41%, 100% 52%, 100% 100%, 0 100%);
+      opacity: .8;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(23, 22, 43, .35) 1px, transparent 1px);
+      background-size: 4px 4px;
+      mix-blend-mode: multiply;
+      opacity: .45;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1rem 0 5rem;
+    }
+
+    .page-title {
+      width: fit-content;
+      margin: 0 0 .5rem;
+      font-family: var(--font-accent);
+      font-size: var(--title-font-size);
+      font-weight: 400;
+      line-height: 1;
+      color: transparent;
+      background: linear-gradient(135deg, var(--color-violet-darker) 50%, var(--color-magenta-darkest));
+      background-clip: text;
+      filter: drop-shadow(.0625em .0625em 0 var(--color-teal-darker));
+    }
+
+    .desktop {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 26rem);
+      gap: .5rem;
+      align-items: start;
+    }
+
+    .window {
+      background: var(--color-white);
+      border: var(--border-thickness) solid var(--color-black);
+      color: var(--color-violet);
+      padding: var(--border-thickness);
+    }
+
+    .window + .window {
+      margin-block-start: .5rem;
+    }
+
+    .window__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: var(--border-thickness) calc(var(--border-thickness) * 2);
+      background: linear-gradient(to right, var(--color-lavender), var(--color-teal));
+      color: var(--color-violet);
+    }
+
+    .window__title {
+      margin: 0;
+      font: inherit;
+      font-size: 1.375rem;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .window__controls {
+      display: flex;
+      gap: .25rem;
+    }
+
+    .control,
+    .button-ui__content {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2rem;
+      min-height: 2rem;
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      background: var(--color-gray-lighter);
+      color: var(--color-violet);
+      box-shadow:
+        inset calc(var(--border-thickness) * -1) calc(var(--border-thickness) * -1) var(--color-gray-darker),
+        inset var(--border-thickness) var(--border-thickness) var(--color-white);
+    }
+
+    .window__body {
+      padding: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .button-ui {
+      display: inline-block;
+      color: var(--color-violet);
+      text-decoration: none;
+    }
+
+    .button-ui:hover,
+    .button-ui:focus-visible {
+      transform: translate3d(1px, 1px, 0);
+    }
+
+    .button-ui:hover .button-ui__content,
+    .button-ui:focus-visible .button-ui__content {
+      background: var(--color-mauve-lighter);
+      box-shadow:
+        inset calc(var(--border-thickness) * -1) calc(var(--border-thickness) * -1) var(--color-gray-lighter),
+        inset var(--border-thickness) var(--border-thickness) var(--color-gray-darker);
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      gap: .5rem;
+    }
+
+    .swatch {
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      background: var(--color-gray-lighter);
+      box-shadow: inset -.1875rem -.1875rem var(--color-gray-darker), inset .1875rem .1875rem var(--color-white);
+    }
+
+    .swatch__color {
+      height: 4rem;
+      border-block-end: var(--border-thickness) solid var(--color-violet-lighter);
+      background: var(--swatch);
+    }
+
+    .swatch__meta {
+      padding: .5rem;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .type-sample {
+      display: grid;
+      gap: .5rem;
+    }
+
+    .type-sample__accent {
+      font-family: var(--font-accent);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1;
+      filter: drop-shadow(.0625em .0625em 0 var(--color-teal-darker));
+    }
+
+    .type-sample__pixel {
+      font-size: 1.5rem;
+    }
+
+    .type-sample__code {
+      width: fit-content;
+      padding: .5rem;
+      border: var(--border-thickness) solid var(--color-lavender);
+      color: var(--color-violet-lighter);
+      background: var(--color-off-white);
+      font-family: var(--font-code);
+      font-size: 1rem;
+    }
+
+    .pixel-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .5rem;
+    }
+
+    .pixel-icon {
+      height: 7rem;
+      border: var(--border-thickness) solid var(--color-violet-lighter);
+      background:
+        linear-gradient(90deg, transparent 0 35%, var(--color-violet) 35% 65%, transparent 65%),
+        linear-gradient(0deg, var(--color-gray-darker) 0 18%, transparent 18%),
+        var(--color-gray-lighter);
+      box-shadow: inset -.1875rem -.1875rem var(--color-gray-darker), inset .1875rem .1875rem var(--color-white);
+      image-rendering: pixelated;
+    }
+
+    .pixel-icon:nth-child(2) {
+      background:
+        linear-gradient(90deg, transparent 0 20%, var(--color-magenta) 20% 36%, transparent 36% 64%, var(--color-teal-darker) 64% 80%, transparent 80%),
+        linear-gradient(0deg, var(--color-lavender) 0 18%, transparent 18%),
+        var(--color-teal-lighter);
+    }
+
+    .pixel-icon:nth-child(3) {
+      background:
+        radial-gradient(circle at 50% 36%, var(--color-magenta-lighter) 0 16%, transparent 17%),
+        linear-gradient(90deg, transparent 0 26%, var(--color-violet) 26% 74%, transparent 74%),
+        var(--color-mauve-lightest);
+    }
+
+    .taskbar {
+      position: fixed;
+      inset-inline: 0;
+      inset-block-end: 0;
+      z-index: 2;
+      display: flex;
+      gap: .1875rem;
+      padding: 0 .1875rem;
+      background: var(--color-gray);
+      border-block-start: var(--border-thickness) solid var(--color-violet-lighter);
+    }
+
+    .taskbar .button-ui__content {
+      min-height: 2.375rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: calc(100% - 1rem);
+      }
+
+      .desktop {
+        grid-template-columns: 1fr;
+      }
+
+      .pixel-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="page-title">Pixel Desktop</h1>
+    <div class="desktop">
+      <section class="window">
+        <header class="window__header">
+          <h2 class="window__title">Colors</h2>
+          <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+        </header>
+        <div class="window__body">
+          <div class="swatches">
+            <div class="swatch"><div class="swatch__color" style="--swatch:#716eba"></div><div class="swatch__meta">wallpaper<br>#716eba</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#17162b"></div><div class="swatch__meta">violet-darkest<br>#17162b</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#2c2b4b"></div><div class="swatch__meta">violet<br>#2c2b4b</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#a3a3c7"></div><div class="swatch__meta">lavender<br>#a3a3c7</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#9ddacb"></div><div class="swatch__meta">teal<br>#9ddacb</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#a75293"></div><div class="swatch__meta">magenta<br>#a75293</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#d7dde1"></div><div class="swatch__meta">gray-lighter<br>#d7dde1</div></div>
+            <div class="swatch"><div class="swatch__color" style="--swatch:#bdb6c4"></div><div class="swatch__meta">taskbar<br>#bdb6c4</div></div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <section class="window">
+          <header class="window__header">
+            <h2 class="window__title">Typography</h2>
+            <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+          </header>
+          <div class="window__body type-sample">
+            <div class="type-sample__accent">Sysfont Title</div>
+            <div class="type-sample__pixel">W95fa pixel body at generous line height.</div>
+            <div class="type-sample__code">Departure Mono code()</div>
+          </div>
+        </section>
+
+        <section class="window">
+          <header class="window__header">
+            <h2 class="window__title">Shapes</h2>
+            <div class="window__controls" aria-hidden="true"><span class="control">_</span><span class="control">□</span></div>
+          </header>
+          <div class="window__body">
+            <div class="pixel-row" aria-hidden="true">
+              <div class="pixel-icon"></div>
+              <div class="pixel-icon"></div>
+              <div class="pixel-icon"></div>
+            </div>
+            <p>Square corners, 3px borders, inset bevels, pixelated image rendering.</p>
+            <a class="button-ui" href="examples/index.html"><span class="button-ui__content">Open reference site -&gt;</span></a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="taskbar">
+    <a class="button-ui" href="#"><span class="button-ui__content">Preview</span></a>
+    <a class="button-ui" href="DESIGN.md"><span class="button-ui__content">DESIGN.md</span></a>
+    <a class="button-ui" href="examples/index.html"><span class="button-ui__content">Reference Site</span></a>
+  </footer>
+</body>
+</html>

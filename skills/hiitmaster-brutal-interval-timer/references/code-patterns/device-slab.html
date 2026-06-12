@@ -1,0 +1,60 @@
+<aside class="device-slab" aria-label="Training console preview">
+  <div class="device-top">ROUND 04</div>
+  <div class="device-time">00:32</div>
+  <div class="device-row"><span>Output</span><strong>92%</strong></div>
+  <div class="device-row"><span>Rest</span><strong>00:18</strong></div>
+  <div class="device-row active"><span>State</span><strong>Focus</strong></div>
+</aside>
+
+<style>
+  .device-slab {
+    width: min(300px, 100%);
+    min-height: 560px;
+    padding: 2rem 1.5rem;
+    border: 15px solid #000000;
+    border-radius: 20px;
+    background: #111111;
+    box-shadow: -20px 20px #000000;
+    color: #ffffff;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .device-slab:hover {
+    transform: rotate(0);
+  }
+
+  .device-top {
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #ff2d00;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .device-time {
+    margin: 2rem 0;
+    color: #ff2d00;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 0.9;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .device-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+  }
+
+  .device-row strong {
+    color: #ff2d00;
+  }
+
+  .device-row.active strong {
+    color: #00ff2a;
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 name: template-web-style-skill
-description: Reusable template for a generated web style-reference skill with a canonical DESIGN.md core. Use as a starting point when UIgod creates a new child skill from website, screenshot, code, or written style references.
+description: Reusable template for a generated web style-reference child skill with a DESIGN.md core. Use as a starting point when UIgod creates a child skill from website, screenshot, code, or written style references.
 ---
 
 # Template Web Style Skill
@@ -17,16 +17,17 @@ Default representative page type: replace with the page type this style expresse
 
 ## Read First
 
-- `DESIGN.md` for the canonical design system
-- `references/source-observations.md` for extraction notes
-- `references/source-screenshots-or-notes/` for optional source evidence
-- `references/code-patterns/` for reusable code fragments
-- `examples/applied/` for confirmed transfer examples, when available
-- `preview.html` for a quick token scan
+1. `DESIGN.md` for the style system
+2. `references/source-observations.md` for extraction notes
+3. `references/code-patterns/` for reusable snippets
+4. `preview.html` for a quick visual scan
+5. `examples/index.html` for transfer proof
 
 ## Style Priority
 
 Preserve the style's visual grammar before choosing a framework.
+
+Start from the `Signature Moves` section in `DESIGN.md`; a strong output should visibly preserve most of those moves.
 
 If a project has an existing framework, translate the examples into that framework while keeping the style logic intact.
 

@@ -1,0 +1,85 @@
+:root {
+  --ink: #111111;
+  --canvas: #cda5ef;
+  --canvas-pink: #ecadd4;
+  --canvas-blue: #96c7f2;
+  --canvas-yellow: #ecdd85;
+  --canvas-green: #97cf9c;
+  --canvas-brown: #ddb896;
+  --step--1: clamp(.9375rem, .871rem + .2955vw, 1.1rem);
+  --step-0: clamp(1.125rem, 1.0227rem + .4545vw, 1.375rem);
+  --step-1: clamp(1.35rem, 1.1991rem + .6705vw, 1.7188rem);
+  --step-2: clamp(1.62rem, 1.4038rem + .9608vw, 2.1484rem);
+  --step-3: clamp(1.944rem, 1.6406rem + 1.3483vw, 2.6855rem);
+  --step-6: clamp(3.3592rem, 2.5877rem + 3.429vw, 5.2452rem);
+  --space-xs: clamp(.375rem, .2983rem + .3409vw, .5625rem);
+  --space-s: clamp(.5rem, .3977rem + .4545vw, .75rem);
+  --space-m: clamp(.75rem, .5966rem + .6818vw, 1.125rem);
+  --space-l: clamp(1rem, .7955rem + .9091vw, 1.5rem);
+  --space-xl: clamp(1.5rem, 1.1932rem + 1.3636vw, 2.25rem);
+  --space-2xl: clamp(2rem, 1.5909rem + 1.8182vw, 3rem);
+  --space-3xl: clamp(3rem, 2.3864rem + 2.7273vw, 4.5rem);
+  --font-sans: "Atkinson Hyperlegible Soft", "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.35;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+body::before {
+  background-image: radial-gradient(var(--ink) 1.2px, transparent 1.4px);
+  background-size: 160px 110px;
+  background-position: 8px 18px;
+}
+
+body::after {
+  opacity: .26;
+  background-image:
+    radial-gradient(var(--ink) .9px, transparent 1px),
+    radial-gradient(var(--ink) .7px, transparent 1px);
+  background-size: 210px 150px, 140px 180px;
+  background-position: 80px 30px, 20px 100px;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: max(.1em, 2.5px);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-s) var(--space-l);
+  border: 3px solid var(--ink);
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--canvas);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}

@@ -26,7 +26,7 @@ Use this skill for:
 - `DESIGN.md` for the canonical design system
 - `references/source-observations.md` for the reference-site extraction notes
 - `references/code-patterns/` for reusable fragments
-- `examples/applied/` for confirmed transfer examples
+- `examples/index.html` for the transfer example
 - `preview.html` for a quick token scan
 
 ## Style Priority

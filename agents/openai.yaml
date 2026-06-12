@@ -1,0 +1,8 @@
+interface:
+  display_name: "UIgod"
+  short_description: "Extract websites into reusable UI style skills"
+  brand_color: "#FF2D00"
+  default_prompt: "Use $uigod to extract this website's visual style into a reusable child skill and fresh reference example."
+
+policy:
+  allow_implicit_invocation: true

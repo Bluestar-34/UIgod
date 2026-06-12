@@ -1,0 +1,94 @@
+<section class="civic-hero">
+  <div class="civic-hero__copy">
+    <h1>Plain help for complicated paperwork <span class="mark">today</span></h1>
+    <p>Use direct copy, large type, and one supportive sentence that explains who the guide helps.</p>
+    <div class="civic-hero__actions">
+      <a class="button" href="#">Browse guides -></a>
+      <a href="#">Join the community</a>
+    </div>
+  </div>
+  <div class="civic-hero__image" aria-hidden="true">
+    <span class="paper"></span>
+    <span class="stamp"></span>
+  </div>
+</section>
+
+<style>
+  .civic-hero {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-l);
+    overflow: hidden;
+  }
+
+  .civic-hero__copy {
+    display: flex;
+    max-width: 650px;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .civic-hero h1 {
+    margin: 0;
+    font-size: var(--step-6);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+
+  .mark {
+    position: relative;
+    display: inline-block;
+  }
+
+  .mark::after {
+    content: "";
+    position: absolute;
+    inset: -0.12em -0.2em -0.05em;
+    border: .07em solid currentColor;
+    border-radius: 50%;
+    transform: rotate(-4deg);
+  }
+
+  .civic-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-l);
+  }
+
+  .civic-hero__image {
+    position: relative;
+    min-width: 330px;
+    height: 340px;
+    mix-blend-mode: multiply;
+  }
+
+  .paper {
+    position: absolute;
+    inset: 44px 30px 30px 70px;
+    border: 4px solid var(--ink);
+    background:
+      repeating-linear-gradient(0deg, transparent 0 22px, var(--ink) 23px 24px),
+      var(--canvas);
+    transform: rotate(-18deg);
+  }
+
+  .stamp {
+    position: absolute;
+    right: 26px;
+    bottom: 78px;
+    width: 118px;
+    height: 118px;
+    border: 5px double var(--ink);
+    border-radius: 50%;
+    transform: rotate(18deg);
+  }
+
+  @media (max-width: 580px) {
+    .civic-hero__image { display: none; }
+  }
+</style>

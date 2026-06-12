@@ -67,14 +67,32 @@ spacing:
 
 Replace this section with the core explanation of the style family.
 
-State the default representative use cases for this style family. Do not define the source site as a page template.
-
 Cover:
 
 - visual atmosphere
 - density
 - emotional tone
 - what makes the style recognizable
+
+## Use Cases
+
+State default representative use cases for this style family.
+
+Do not define the source site as a page template.
+
+## Signature Moves
+
+List 5-8 concrete style behaviors that the transfer example must demonstrate.
+
+Use this shape:
+
+1. `[token/layout/component behavior]`
+2. `[token/layout/component behavior]`
+3. `[token/layout/component behavior]`
+4. `[token/layout/component behavior]`
+5. `[token/layout/component behavior]`
+
+Avoid vague mood words. Each move should be visible in `preview.html` or `examples/index.html`.
 
 ## Colors
 
@@ -105,25 +123,6 @@ Document:
 - grid behavior
 - image / text relationships
 
-## Elevation & Depth
-
-Document:
-
-- whether depth is flat, layered, editorial, glossy, or cinematic
-- shadows: **extract all box-shadow values from CSS** (including offset, blur, spread, color)
-- blurs
-- borders
-- hover transitions that change shadow (e.g., press-down effects)
-- custom cursor or interactive feedback animations
-
-## Shapes
-
-Document:
-
-- corner strategy
-- line strategy
-- pill usage or avoidance
-
 ## Components
 
 Document the recurring building blocks:
@@ -135,9 +134,28 @@ Document the recurring building blocks:
 - form / action behavior
 - footer
 
-## Do's and Don'ts
+## Depth, Borders & Shapes
 
-List the style-preserving rules and anti-patterns.
+Document:
+
+- whether depth is flat, layered, editorial, glossy, or cinematic
+- shadows: **extract all box-shadow values from CSS** (including offset, blur, spread, color)
+- blurs
+- borders
+- hover transitions that change shadow (e.g., press-down effects)
+- corner strategy
+- line strategy
+- pill usage or avoidance
+
+## Motion & Interaction
+
+Document:
+
+- hover states
+- focus states
+- transitions
+- custom cursor or interaction feedback
+- scroll/page transition behavior
 
 ## Responsive Behavior
 
@@ -148,11 +166,20 @@ Document:
 - what must stay visible
 - touch-target considerations if relevant
 
-## Iteration Guide
+## Do's and Don'ts
 
-Document how future agents should expand this style safely.
+List the style-preserving rules and anti-patterns.
 
-Applied examples belong in `examples/applied/` only after this skill has been used on a fresh prompt and the result has been confirmed. They should demonstrate style transfer, not source-site reconstruction.
+## Prompt Guide
+
+Give concise generation guidance:
+
+- preserve
+- adapt
+- avoid
+- default page type
+
+`examples/index.html` should demonstrate style transfer, not source-site reconstruction.
 
 ## Known Gaps
 

@@ -1,0 +1,28 @@
+<aside class="notice-banner">
+  <div class="notice-banner__icon" aria-hidden="true">!</div>
+  <p>Use this narrow banner for fundraising, deadlines, eligibility notes, or urgent guide updates.</p>
+</aside>
+
+<style>
+  .notice-banner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    border: 1px solid var(--ink);
+    background: var(--canvas);
+  }
+
+  .notice-banner__icon {
+    display: grid;
+    min-width: var(--space-2xl);
+    place-items: center;
+    background: var(--ink);
+    color: var(--canvas);
+    font-weight: 700;
+  }
+
+  .notice-banner p {
+    margin: 0;
+    padding: var(--space-s) var(--space-m);
+  }
+</style>

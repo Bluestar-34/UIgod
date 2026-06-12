@@ -137,6 +137,30 @@ The interface should feel like a quiet signal transmitted across a dark screen. 
 
 This style is not generic dark tech and not startup launch theater. It is closer to authored field notes for technical work.
 
+## Use Cases
+
+Best fits:
+
+- personal technical journal homepages
+- security writeup and lab-note hubs
+- AI experiment logs
+- research portfolios
+- reflective creator sites
+- knowledge-base portals with authored identity
+
+Avoid using it for ecommerce, bright SaaS marketing, playful consumer apps, dashboards that need dense tabular operations, or pages where anonymous neutrality matters more than authorial voice.
+
+## Signature Moves
+
+1. Near-black field-notes canvas with warm paper-ink text and faint ambient signal washes.
+2. Serif manifesto headline paired with monospaced labels, counters, nav, and metadata.
+3. First viewport split into an identity/profile rail and a wider manifesto or index field.
+4. Thin hairline borders define structure; shadows are rare and low-volume.
+5. Ranked stream rows replace card grids: cover, mono index, serif title, short note, arrow.
+6. Sparse signal accents in gold, blue, green, and ember mark state or emphasis.
+7. Slow repeated-text signal band interrupts the page like a transmission.
+8. Instrument-like utility UI, especially a slim scroll dock or compact index rail.
+
 ## Colors
 
 The palette is dark-first but not void-minimal.
@@ -168,7 +192,7 @@ Rules:
 - mono labels should feel precise and slightly technical
 - body text should read calmly over long passages
 
-Replacing the serif display layer with a generic grotesk collapses the identity immediately.
+Replacing the serif display layer with a generic grotesk collapses the identity immediately. If webfonts are unavailable, use Georgia/Songti for display and Segoe/Aptos for body rather than falling back to an all-sans system.
 
 ## Layout
 
@@ -185,30 +209,6 @@ Core moves:
 - small instrument-like floating utilities
 
 The first screen should feel like an authored portal into work, not a conversion hero.
-
-## Elevation & Depth
-
-Depth is subtle and mostly structural.
-
-Use:
-
-- paper-dark surfaces
-- thin line borders
-- light hover lift on tactile elements
-- restrained blur for sticky chrome and utility dock
-- low-volume shadow only when a surface needs a slight lift
-
-Do not build thick stacked cards, glossy planes, or dramatic z-depth layers.
-
-## Shapes
-
-This style uses a mixed shape language:
-
-- most information architecture is line-based and rectangular
-- image covers and some utility surfaces use moderate rounding
-- pills are acceptable only for instrumentation or compact utilities
-
-Rounded corners should usually stay within `8px` to `18px`.
 
 ## Components
 
@@ -261,6 +261,44 @@ Rows should feel editorial and airy rather than like product cards.
 - links and slim controls should dominate
 - filled buttons should be sparse and deliberate
 
+## Depth, Borders & Shapes
+
+Depth is subtle and mostly structural.
+
+Use:
+
+- paper-dark surfaces
+- thin line borders
+- light hover lift on tactile elements
+- restrained blur for sticky chrome and utility dock
+- low-volume shadow only when a surface needs a slight lift
+
+Do not build thick stacked cards, glossy planes, or dramatic z-depth layers.
+
+Shape language:
+
+This style uses a mixed shape language:
+
+- most information architecture is line-based and rectangular
+- image covers and some utility surfaces use moderate rounding
+- pills are acceptable only for instrumentation or compact utilities
+
+Rounded corners should usually stay within `8px` to `18px`.
+
+## Motion & Interaction
+
+Interaction is quiet, tactile, and instrument-like.
+
+- Header/nav hovers shift color to gold and lift by about 1-2px.
+- Stream rows and rail links use small horizontal nudges, not dramatic scaling.
+- Image covers may slightly increase contrast and scale on hover.
+- Signal bands move slowly and linearly; `46s linear infinite` is a useful reference rhythm.
+- Scroll docks reveal only when useful, then expose a vertical progress fill and thumb.
+- Focus rings use a 2px gold-tinted outline with clear offset.
+- Reduced-motion mode should collapse transitions and animations to near-instant behavior.
+
+Keep animation as a low-frequency signal. Do not add bouncy UI, scroll-jacking theatrics, neon pulses, or parallax spectacle.
+
 ## Do's and Don'ts
 
 ### Do
@@ -292,9 +330,13 @@ On smaller screens:
 
 The authored split structure should soften on mobile, but the rail-versus-field logic should still be legible.
 
-## Iteration Guide
+## Prompt Guide
 
-When expanding this style:
+Use this compact prompt when asking an agent to generate with this child skill:
+
+> Build a dark editorial technical-journal site in the Lonely Blue Field Notes style. Use a near-black canvas, warm ink text, serif manifesto headings, monospaced metadata, sparse gold/blue/green/ember signal accents, thin hairline borders, a profile or index rail, ranked stream rows, and a slow signal band. Keep it intimate, technically literate, and authored. Avoid glossy SaaS, neon cyberpunk, generic card grids, and copied source content.
+
+When expanding the style:
 
 - preserve the editorial split between identity and content
 - preserve the serif / mono / sans hierarchy

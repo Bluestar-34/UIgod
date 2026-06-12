@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff2d00" />
+    <title>Circuit Forge - Brutal Interval Command</title>
+    <meta
+      name="description"
+      content="A fresh transfer example for the hiitmaster-brutal-interval-timer style skill."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --canvas: #000000;
+        --canvas-soft: #0d0d0d;
+        --surface: #141414;
+        --surface-strong: #111111;
+        --ink: #ffffff;
+        --muted: rgba(255, 255, 255, 0.76);
+        --soft: rgba(255, 255, 255, 0.5);
+        --signal: #ff2d00;
+        --success: #00ff2a;
+        --line: rgba(255, 255, 255, 0.1);
+        --line-faint: rgba(255, 255, 255, 0.05);
+        --red-shadow: #ff2d004d;
+        --font-main: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-timer: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        overflow-x: clip;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        overflow-x: clip;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: var(--font-main);
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      :where(.shell, header, nav, main, section, article, aside, div, h1, h2, h3, p, a, button, span, strong, small, li) {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      a {
+        cursor: crosshair;
+      }
+
+      .progress-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: var(--scroll-progress, 0%);
+        height: 5px;
+        background: var(--signal);
+      }
+
+      .grid-overlay,
+      .noise-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .grid-overlay {
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+
+      .noise-overlay {
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .shell {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 5px;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line-faint);
+        background: rgba(0, 0, 0, 0.88);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        background: var(--signal);
+        color: #000000;
+        font-family: var(--font-timer);
+        font-weight: 900;
+      }
+
+      .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(12px, 2vw, 28px);
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .site-nav a {
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .site-nav a:hover {
+        color: var(--signal);
+        transform: translateY(-2px);
+      }
+
+      .status-chip {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12px;
+        border: 2px solid var(--signal);
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      main {
+        padding-bottom: 88px;
+      }
+
+      section {
+        padding: 9rem 0;
+        border-bottom: 1px solid var(--line-faint);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
+        gap: clamp(34px, 6vw, 80px);
+        align-items: center;
+        min-height: calc(100vh - 84px);
+        padding-top: 5rem;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 0.9rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-weight: 900;
+        line-height: 0.92;
+        overflow-wrap: normal;
+        word-break: normal;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 820px;
+        font-size: 5.35rem;
+      }
+
+      h2 {
+        max-width: 820px;
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      .hero-copy {
+        display: grid;
+        gap: 26px;
+      }
+
+      .hero-copy p {
+        max-width: 650px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.25rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        min-width: 220px;
+        min-height: 64px;
+        align-items: center;
+        justify-content: center;
+        padding: 1.35rem 2.2rem;
+        border-radius: 0;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+
+      .btn-primary {
+        border: 0;
+        background: var(--signal);
+        color: #000000;
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 5px #000000;
+        transform: translateY(-5px);
+      }
+
+      .btn-secondary {
+        border: 2px solid #ffffff;
+        background: transparent;
+        color: #ffffff;
+      }
+
+      .btn-secondary:hover {
+        background: #ffffff;
+        color: #000000;
+        transform: translateY(-5px);
+      }
+
+      .timer-console {
+        position: relative;
+        display: grid;
+        gap: 26px;
+        padding: clamp(28px, 4vw, 52px);
+        border: 5px solid var(--signal);
+        background: var(--canvas);
+        box-shadow: -20px 20px #000000;
+      }
+
+      .timer-console::after {
+        content: "LIVE";
+        position: absolute;
+        top: -18px;
+        right: -18px;
+        padding: 6px 12px;
+        background: var(--signal);
+        color: #000000;
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .timer-value {
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 9rem;
+        font-weight: 900;
+        line-height: 0.9;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .timer-label {
+        width: max-content;
+        padding-top: 14px;
+        border-top: 4px solid var(--signal);
+        font-size: 1.45rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .phase-list {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .phase-list li {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+        font-family: var(--font-timer);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .phase-list strong {
+        color: var(--signal);
+      }
+
+      .phase-list li[data-active="true"] span:last-child {
+        color: var(--success);
+        font-weight: 900;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 44px;
+      }
+
+      .section-head::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 8px;
+        background: var(--signal);
+      }
+
+      .section-head p {
+        max-width: 680px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.18rem;
+      }
+
+      .protocol-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .protocol-card {
+        position: relative;
+        display: grid;
+        min-height: 310px;
+        align-content: start;
+        gap: 18px;
+        padding: 2.2rem;
+        border: 1px solid var(--line);
+        border-radius: 0;
+        background: var(--surface);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .protocol-card:hover {
+        border-color: var(--signal);
+        box-shadow: 10px 10px var(--red-shadow);
+        transform: translateY(-10px);
+      }
+
+      .card-index {
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 3.8rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .protocol-card h3 {
+        display: inline-block;
+        padding-bottom: 12px;
+        border-bottom: 4px solid var(--signal);
+      }
+
+      .protocol-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .card-stat {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--soft);
+        font-family: var(--font-timer);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+      }
+
+      .command-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: center;
+      }
+
+      .command-board {
+        display: grid;
+        gap: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .command-row {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .command-row span:first-child {
+        color: var(--soft);
+        font-family: var(--font-timer);
+        font-weight: 900;
+      }
+
+      .command-row strong {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      .command-row span:last-child {
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-weight: 900;
+      }
+
+      .device-slab {
+        width: min(340px, 100%);
+        min-height: 600px;
+        margin: 0 auto;
+        padding: 2rem 1.4rem;
+        border: 15px solid #000000;
+        border-radius: 20px;
+        background: var(--surface-strong);
+        box-shadow: -20px 20px #000000;
+        transform: rotate(-3deg);
+        transition: transform 0.3s ease;
+      }
+
+      .device-slab:hover {
+        transform: rotate(0);
+      }
+
+      .device-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 4px solid var(--signal);
+        font-family: var(--font-timer);
+        font-size: 0.86rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .device-time {
+        margin: 2.2rem 0;
+        color: var(--signal);
+        font-family: var(--font-timer);
+        font-size: 4.8rem;
+        font-weight: 900;
+        line-height: 0.9;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .device-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .device-metric {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 16px 0;
+        border-top: 1px solid var(--line);
+        font-size: 0.92rem;
+        text-transform: uppercase;
+      }
+
+      .device-metric strong {
+        color: var(--signal);
+      }
+
+      .device-metric[data-state="green"] strong {
+        color: var(--success);
+      }
+
+      .split-cta {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 32px;
+        align-items: end;
+        padding: clamp(34px, 5vw, 64px);
+        border: 5px solid var(--signal);
+        background: var(--canvas);
+        box-shadow: 14px 14px var(--red-shadow);
+      }
+
+      .split-cta h2 {
+        max-width: 760px;
+      }
+
+      .split-cta p {
+        max-width: 620px;
+        margin: 18px 0 0;
+        color: var(--muted);
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 34px 0 50px;
+        color: var(--soft);
+        font-family: var(--font-timer);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+      }
+
+      @keyframes glitch {
+        0% {
+          transform: translate(0);
+        }
+
+        20% {
+          transform: translate(-3px, 3px);
+        }
+
+        40% {
+          transform: translate(-3px, -3px);
+        }
+
+        60% {
+          transform: translate(3px, 3px);
+        }
+
+        80% {
+          transform: translate(3px, -3px);
+        }
+
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      .glitch:hover {
+        animation: glitch 0.3s linear infinite;
+        color: var(--signal);
+      }
+
+      @media (max-width: 1100px) {
+        .hero,
+        .command-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 4.7rem;
+        }
+
+        .protocol-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 780px) {
+        .site-header {
+          grid-template-columns: 1fr;
+          justify-items: start;
+        }
+
+        .site-nav {
+          justify-content: flex-start;
+        }
+
+        section {
+          padding: 5.5rem 0;
+        }
+
+        h1,
+        h2 {
+          font-size: 3rem;
+        }
+
+        .timer-value {
+          font-size: 6.5rem;
+        }
+
+        .protocol-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .split-cta {
+          grid-template-columns: 1fr;
+        }
+
+        .actions,
+        .btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .shell {
+          width: min(358px, calc(100% - 32px));
+        }
+
+        body {
+          font-size: 16px;
+        }
+
+        h1,
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 1.45rem;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+
+        .timer-console {
+          padding: 28px 18px;
+          box-shadow: -10px 10px #000000;
+        }
+
+        .timer-console::after {
+          top: -16px;
+          right: 10px;
+        }
+
+        .timer-value {
+          font-size: 4.85rem;
+        }
+
+        .timer-label {
+          font-size: 1rem;
+        }
+
+        .phase-list li,
+        .command-row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+
+        .device-slab {
+          min-height: 500px;
+          border-width: 10px;
+          box-shadow: -12px 12px #000000;
+        }
+
+        .device-time {
+          font-size: 3.8rem;
+        }
+
+        footer {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-line" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <div class="shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Circuit Forge home">
+          <span class="brand-mark">CF</span>
+          <span>Circuit Forge</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#protocols">Protocols</a>
+          <a href="#command">Command</a>
+          <a href="#metrics">Metrics</a>
+          <a href="#start">Start</a>
+        </nav>
+        <span class="status-chip">Ready 04</span>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">interval command / no soft rounds</p>
+            <h1 class="glitch">Build sessions that hit like clockwork.</h1>
+            <p>
+              Circuit Forge turns training blocks into hard visible commands: work, recover, repeat, and
+              measure the next burst before the room cools down.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#start">Start Protocol</a>
+              <a class="btn btn-secondary" href="#protocols">Inspect Rounds</a>
+            </div>
+          </div>
+
+          <aside class="timer-console" aria-label="Live interval timer">
+            <div class="timer-value" data-timer>00:45</div>
+            <div class="timer-label" data-state>A C T I V E</div>
+            <ul class="phase-list" aria-label="Current protocol phases">
+              <li><strong>01</strong><span>Prime engine</span><span>done</span></li>
+              <li data-active="true"><strong>02</strong><span>Power burst</span><span>live</span></li>
+              <li><strong>03</strong><span>Short recovery</span><span>next</span></li>
+              <li><strong>04</strong><span>Final output</span><span>armed</span></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section id="protocols">
+          <div class="section-head">
+            <p class="eyebrow">protocol deck</p>
+            <h2>Three brutal blocks. No decorative calm.</h2>
+            <p>
+              Cards are slabs, not soft containers. Each one exposes the interval logic first and lets
+              red mark the next command.
+            </p>
+          </div>
+
+          <div class="protocol-grid">
+            <article class="protocol-card">
+              <span class="card-index">30</span>
+              <h3>Ignition Sprint</h3>
+              <p>Eight rounds built for acceleration, short rests, and fast state changes.</p>
+              <span class="card-stat">08 rounds / 30 work / 10 rest</span>
+            </article>
+            <article class="protocol-card">
+              <span class="card-index">45</span>
+              <h3>Output Wall</h3>
+              <p>A longer push pattern for rowers, bikes, ropes, and loaded carries.</p>
+              <span class="card-stat">06 rounds / 45 work / 15 rest</span>
+            </article>
+            <article class="protocol-card">
+              <span class="card-index">90</span>
+              <h3>Capacity Lock</h3>
+              <p>Dense mixed work with measured recovery before the next red line.</p>
+              <span class="card-stat">04 rounds / 90 work / 30 rest</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="command">
+          <div class="command-grid">
+            <div>
+              <div class="section-head">
+                <p class="eyebrow">command board</p>
+                <h2>Every state reads from across the room.</h2>
+                <p>
+                  A transfer page in this style should make time, phase, output, and next action instantly
+                  legible before it explains anything.
+                </p>
+              </div>
+
+              <div class="command-board" id="metrics">
+                <div class="command-row">
+                  <span>01</span>
+                  <strong>Average output holding above baseline</strong>
+                  <span>92%</span>
+                </div>
+                <div class="command-row">
+                  <span>02</span>
+                  <strong>Next recovery window</strong>
+                  <span>00:15</span>
+                </div>
+                <div class="command-row">
+                  <span>03</span>
+                  <strong>Active crew lanes</strong>
+                  <span>12</span>
+                </div>
+                <div class="command-row">
+                  <span>04</span>
+                  <strong>Failure point warning</strong>
+                  <span>armed</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="device-slab" aria-label="Circuit Forge console slab">
+              <div class="device-top"><span>Forge Unit</span><span>R04</span></div>
+              <div class="device-time">00:32</div>
+              <div class="device-grid">
+                <div class="device-metric"><span>Output</span><strong>92%</strong></div>
+                <div class="device-metric"><span>Cadence</span><strong>186</strong></div>
+                <div class="device-metric"><span>Rest</span><strong>00:18</strong></div>
+                <div class="device-metric" data-state="green"><span>State</span><strong>Focus</strong></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="start">
+          <div class="split-cta">
+            <div>
+              <p class="eyebrow">enter the floor</p>
+              <h2>Load the protocol before the room starts moving.</h2>
+              <p>
+                This is fresh content and a new IA built only to prove the extracted style can migrate
+                beyond the original reference.
+              </p>
+            </div>
+            <a class="btn btn-primary" href="#top">Reset Timer</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>Circuit Forge / transfer example</span>
+        <span>Generated with hiitmaster-brutal-interval-timer</span>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const timer = document.querySelector("[data-timer]");
+        const state = document.querySelector("[data-state]");
+        const states = ["A C T I V E", "F O C U S", "R E S T", "P R I M E"];
+        let seconds = 45;
+        let index = 0;
+
+        const renderProgress = () => {
+          const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          const progress = Math.round((window.scrollY / max) * 100);
+          root.style.setProperty("--scroll-progress", `${Math.min(100, Math.max(0, progress))}%`);
+        };
+
+        const renderTimer = () => {
+          if (!timer || !state) return;
+          const value = String(seconds).padStart(2, "0");
+          timer.textContent = `00:${value}`;
+          if (seconds % 10 === 0) {
+            index = (index + 1) % states.length;
+            state.textContent = states[index];
+          }
+          seconds = seconds <= 1 ? 45 : seconds - 1;
+        };
+
+        window.addEventListener("scroll", renderProgress, { passive: true });
+        window.addEventListener("resize", renderProgress);
+        renderProgress();
+        renderTimer();
+        window.setInterval(renderTimer, 1000);
+      })();
+    </script>
+  </body>
+</html>

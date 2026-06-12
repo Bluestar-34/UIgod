@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Namesake Soft Civic Guides Tokens</title>
+<style>
+  :root {
+    --ink: #111111;
+    --canvas: #cda5ef;
+    --pink: #ecadd4;
+    --blue: #96c7f2;
+    --yellow: #ecdd85;
+    --green: #97cf9c;
+    --brown: #ddb896;
+    --white-soft: #e1e1e1;
+    --step--1: clamp(.9375rem, .871rem + .2955vw, 1.1rem);
+    --step-0: clamp(1.125rem, 1.0227rem + .4545vw, 1.375rem);
+    --step-1: clamp(1.35rem, 1.1991rem + .6705vw, 1.7188rem);
+    --step-2: clamp(1.62rem, 1.4038rem + .9608vw, 2.1484rem);
+    --step-3: clamp(1.944rem, 1.6406rem + 1.3483vw, 2.6855rem);
+    --step-6: clamp(3.3592rem, 2.5877rem + 3.429vw, 5.2452rem);
+    --space-xs: clamp(.375rem, .2983rem + .3409vw, .5625rem);
+    --space-s: clamp(.5rem, .3977rem + .4545vw, .75rem);
+    --space-m: clamp(.75rem, .5966rem + .6818vw, 1.125rem);
+    --space-l: clamp(1rem, .7955rem + .9091vw, 1.5rem);
+    --space-xl: clamp(1.5rem, 1.1932rem + 1.3636vw, 2.25rem);
+    --space-2xl: clamp(2rem, 1.5909rem + 1.8182vw, 3rem);
+    --space-3xl: clamp(3rem, 2.3864rem + 2.7273vw, 4.5rem);
+    --font-sans: "Atkinson Hyperlegible Soft", "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { max-width: 100%; overflow-x: clip; }
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: var(--step-0);
+    line-height: 1.35;
+  }
+  p,
+  a,
+  strong,
+  small,
+  span { overflow-wrap: anywhere; }
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  body::before {
+    background-image: radial-gradient(var(--ink) 1.1px, transparent 1.3px);
+    background-size: 160px 110px;
+    background-position: 8px 18px;
+  }
+  body::after {
+    opacity: .25;
+    background-image:
+      radial-gradient(var(--ink) .8px, transparent 1px),
+      radial-gradient(var(--ink) .7px, transparent 1px);
+    background-size: 210px 150px, 140px 180px;
+    background-position: 80px 30px, 20px 100px;
+  }
+  a { color: inherit; text-underline-offset: max(.1em, 2.5px); }
+  .shell { width: calc(100% - 32px); max-width: 1200px; margin: 0 auto; }
+  .hero > *,
+  .notice > *,
+  .section > *,
+  .type-row > *,
+  footer .shell > * { min-width: 0; max-width: 100%; }
+  .top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-l);
+    flex-wrap: wrap;
+    padding: var(--space-l) 0;
+  }
+  .brand { font-size: var(--step-2); font-weight: 700; text-decoration: none; }
+  .nav { display: flex; gap: var(--space-s); flex-wrap: wrap; font-weight: 700; }
+  .nav a { padding: var(--space-xs) var(--space-s); border-radius: 5px; text-decoration: none; }
+  .nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--space-2xl);
+    align-items: center;
+    padding: var(--space-2xl) 0;
+  }
+  h1 {
+    margin: 0;
+    max-width: 12ch;
+    font-size: var(--step-6);
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+  .marked { position: relative; display: inline-block; }
+  .marked::after {
+    content: "";
+    position: absolute;
+    inset: -0.12em -0.2em -0.05em;
+    border: .07em solid currentColor;
+    border-radius: 50%;
+    transform: rotate(-4deg);
+  }
+  .hero p { width: 100%; max-width: 52ch; font-size: var(--step-1); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-l); }
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-s) var(--space-l);
+    border: 3px solid var(--ink);
+    border-radius: 5px;
+    background: var(--ink);
+    color: var(--canvas);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .button:hover { background: var(--canvas); color: var(--ink); }
+  .paper {
+    position: relative;
+    height: 330px;
+    mix-blend-mode: multiply;
+  }
+  .paper::before {
+    content: "";
+    position: absolute;
+    inset: 34px 34px 22px 72px;
+    border: 4px solid var(--ink);
+    background:
+      repeating-linear-gradient(0deg, transparent 0 22px, var(--ink) 23px 24px),
+      radial-gradient(var(--ink) 1px, transparent 1.2px) 0 0 / 9px 9px,
+      var(--canvas);
+    transform: rotate(-18deg);
+  }
+  .paper::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 72px;
+    width: 118px;
+    height: 118px;
+    border: 5px double var(--ink);
+    border-radius: 50%;
+    transform: rotate(18deg);
+  }
+  .notice {
+    display: grid;
+    grid-template-columns: minmax(44px, auto) minmax(0, 1fr);
+    border: 1px solid var(--ink);
+    margin: var(--space-xl) 0;
+  }
+  .notice span {
+    display: grid;
+    min-width: var(--space-2xl);
+    place-items: center;
+    background: var(--ink);
+    color: var(--canvas);
+    font-weight: 700;
+  }
+  .notice p { margin: 0; padding: var(--space-s) var(--space-m); overflow-wrap: break-word; }
+  .section { padding: var(--space-3xl) 0; }
+  .section h2 {
+    margin: 0 0 var(--space-l);
+    overflow-wrap: anywhere;
+    text-align: center;
+    text-wrap: balance;
+    font-size: var(--step-3);
+    line-height: 1.05;
+  }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: var(--space-m); }
+  .swatch { border: 1px solid var(--ink); border-radius: 5px; overflow: hidden; background: var(--canvas); }
+  .tone { height: 76px; border-bottom: 1px solid var(--ink); }
+  .swatch strong, .swatch small { display: block; padding: 0 var(--space-s); }
+  .swatch strong { padding-top: var(--space-s); }
+  .swatch small { padding-bottom: var(--space-s); }
+  .type { display: grid; gap: var(--space-m); }
+  .type-row { display: grid; grid-template-columns: 190px 1fr; gap: var(--space-l); align-items: baseline; border-top: 1px solid var(--ink); padding-top: var(--space-m); }
+  .label { font-size: var(--step--1); font-weight: 700; }
+  .sample-xl { font-size: var(--step-6); font-weight: 700; line-height: 1; letter-spacing: -.02em; }
+  .sample-md { font-size: var(--step-3); font-weight: 700; line-height: 1.05; letter-spacing: -.02em; }
+  .sample-body { max-width: 56ch; font-size: var(--step-0); }
+  .map {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+  }
+  .region { position: absolute; border: 1.5px solid var(--canvas); clip-path: polygon(4% 20%, 80% 4%, 96% 60%, 52% 96%, 12% 70%); }
+  .region.full { inset: 78px 38% 80px 43%; background: var(--ink); }
+  .region.hatch { inset: 50px 12% 105px 70%; background: repeating-linear-gradient(135deg, var(--ink) 0 4px, transparent 4px 9px); }
+  .region.dots { inset: 20px 42% 26px 7%; opacity: .28; background: radial-gradient(var(--ink) 1.5px, transparent 1.5px) 0 0 / 8px 8px; }
+  footer { background: var(--ink); color: var(--canvas); padding: var(--space-2xl) 0; overflow: hidden; }
+  footer .shell { display: flex; justify-content: space-between; gap: var(--space-xl); flex-wrap: wrap; }
+  @media (max-width: 720px) {
+    body { font-size: 1.0625rem; }
+    .shell { width: calc(100vw - 48px); max-width: calc(100vw - 48px); }
+    .hero { grid-template-columns: 1fr; }
+    h1 { max-width: 8.5ch; overflow-wrap: break-word; font-size: 3.1rem; letter-spacing: 0; }
+    .hero p,
+    .notice p,
+    .section h2 { overflow-wrap: anywhere; }
+    .hero p { font-size: 1.16rem; }
+    .section h2 { font-size: 2.25rem; }
+    .notice { grid-template-columns: 36px minmax(0, 1fr); }
+    .notice span { min-width: 36px; }
+    .actions { gap: var(--space-m); }
+    .paper { display: none; }
+    .type-row { grid-template-columns: 1fr; }
+    .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 420px) {
+    h1 { font-size: 2.88rem; }
+    .hero p { font-size: 1.1rem; }
+    .section h2 { font-size: 2rem; }
+  }
+  @media (max-width: 520px) {
+    .shell {
+      width: min(342px, calc(100vw - 48px));
+      max-width: min(342px, calc(100vw - 48px));
+      margin-left: 24px;
+      margin-right: auto;
+    }
+    .section h2 { text-align: left; }
+    .swatches { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <header class="top shell">
+    <a class="brand" href="#">Soft Civic Guides</a>
+    <nav class="nav" aria-label="Token navigation">
+      <a href="#colors">Colors</a>
+      <a href="#type">Type</a>
+      <a href="examples/index.html">Example</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <h1>Your guide is <span class="marked">clear</span> today</h1>
+        <p>This preview renders the style tokens and recurring components from DESIGN.md without copying the source site.</p>
+        <div class="actions">
+          <a class="button" href="#">Browse patterns -></a>
+          <a href="#">Read DESIGN.md</a>
+        </div>
+      </div>
+      <div class="paper" aria-hidden="true"></div>
+    </section>
+
+    <aside class="notice">
+      <span aria-hidden="true">!</span>
+      <p>Notice banners use one-pixel black borders, an inverse icon rail, and direct helpful copy.</p>
+    </aside>
+
+    <section class="section" id="colors">
+      <h2>Colors</h2>
+      <div class="swatches">
+        <div class="swatch"><div class="tone" style="background:#111"></div><strong>ink</strong><small>#111111</small></div>
+        <div class="swatch"><div class="tone" style="background:#cda5ef"></div><strong>purple</strong><small>#cda5ef</small></div>
+        <div class="swatch"><div class="tone" style="background:#ecadd4"></div><strong>pink</strong><small>#ecadd4</small></div>
+        <div class="swatch"><div class="tone" style="background:#96c7f2"></div><strong>blue</strong><small>#96c7f2</small></div>
+        <div class="swatch"><div class="tone" style="background:#ecdd85"></div><strong>yellow</strong><small>#ecdd85</small></div>
+        <div class="swatch"><div class="tone" style="background:#97cf9c"></div><strong>green</strong><small>#97cf9c</small></div>
+        <div class="swatch"><div class="tone" style="background:#ddb896"></div><strong>brown</strong><small>#ddb896</small></div>
+        <div class="swatch"><div class="tone" style="background:#e1e1e1"></div><strong>muted white</strong><small>#e1e1e1</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="type">
+      <h2>Typography</h2>
+      <div class="type">
+        <div class="type-row"><span class="label">display / step-6</span><span class="sample-xl">Names can change.</span></div>
+        <div class="type-row"><span class="label">heading / step-3</span><span class="sample-md">Plain steps for public systems.</span></div>
+        <div class="type-row"><span class="label">body / step-0</span><span class="sample-body">Large, readable body copy should explain what happens next, who the page serves, and what action is safe to take.</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Status Motif</h2>
+      <div class="map" aria-hidden="true">
+        <span class="region dots"></span>
+        <span class="region full"></span>
+        <span class="region hatch"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <strong>Soft Civic Guides</strong>
+      <span>black inverse footer / pastel text / no shadows</span>
+    </div>
+  </footer>
+</body>
+</html>

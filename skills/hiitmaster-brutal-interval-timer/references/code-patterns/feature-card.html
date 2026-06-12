@@ -1,0 +1,52 @@
+<article class="feature-card">
+  <span class="feature-icon" aria-hidden="true">45</span>
+  <h3>Work Blocks</h3>
+  <p>Short, high-output rounds with recovery windows exposed as command data.</p>
+</article>
+
+<style>
+  .feature-card {
+    display: flex;
+    min-height: 280px;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: #141414;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: #ff2d00;
+    box-shadow: 10px 10px #ff2d004d;
+    transform: translateY(-10px);
+  }
+
+  .feature-icon {
+    margin-bottom: 2rem;
+    color: #ff2d00;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .feature-card h3 {
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #ff2d00;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .feature-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.1rem;
+    line-height: 1.45;
+  }
+</style>

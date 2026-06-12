@@ -9,7 +9,7 @@ Dark editorial technical-journal style derived from `https://www.neurohack.blue/
 - `preview.html`: token specimens for colors, typography, and shapes
 - `references/source-observations.md`: source audit trail
 - `references/code-patterns/`: reusable component and section snippets
-- `examples/applied/`: confirmed transfer examples generated with this skill
+- `examples/index.html`: confirmed transfer example generated with this skill
 
 ## Examples
 
