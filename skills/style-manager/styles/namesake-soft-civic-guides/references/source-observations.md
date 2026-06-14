@@ -10,7 +10,7 @@
 
 ## Capture Method
 
-- Tool: `python tools/extract_style_evidence.py https://namesake.fyi/ --out inputs/namesake/evidence`
+- Tool: `python skills/uigod/tools/extract_style_evidence.py https://namesake.fyi/ --out inputs/namesake/evidence`
 - Browser/screenshots: Chrome headless, `1440x1200` desktop and `390x1000` mobile.
 - Missing evidence: full JavaScript support-map behavior was not replicated; static state and CSS behavior were observed.
 

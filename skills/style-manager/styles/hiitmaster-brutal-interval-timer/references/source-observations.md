@@ -12,7 +12,7 @@
 
 ## Capture Method
 
-- Tool: `python tools/extract_style_evidence.py https://hiitmaster.netlify.app/en/ --out inputs/hiitmaster/evidence`
+- Tool: `python skills/uigod/tools/extract_style_evidence.py https://hiitmaster.netlify.app/en/ --out inputs/hiitmaster/evidence`
 - Browser/screenshots: Chrome headless desktop and mobile captures. Initial captures caught timer states `READY` and `FOCUS`; later captures caught `PREPARE`.
 - Missing evidence: no runtime app interaction beyond visible page/timer states. Proprietary source screenshots were recorded as asset leads but are not reused in the child skill.
 

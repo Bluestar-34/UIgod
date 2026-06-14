@@ -5,7 +5,7 @@ Use this when extracting a style before writing `DESIGN.md`. The output is evide
 For URL or local HTML input, prefer the helper first:
 
 ```bash
-python tools/extract_style_evidence.py <url-or-html-file> --out inputs/<slug>/evidence
+python skills/uigod/tools/extract_style_evidence.py <url-or-html-file> --out inputs/<slug>/evidence
 ```
 
 Then inspect the saved HTML/CSS and screenshots manually when available.

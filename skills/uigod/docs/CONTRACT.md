@@ -2,6 +2,21 @@
 
 This is the only contract a generated web-style child skill must satisfy.
 
+## Namespace And Installation
+
+This repository follows a flat Superpowers-style visible skill namespace:
+
+```text
+skills/
+├── uigod/
+└── style-manager/
+    └── styles/
+        ├── some-style/
+        └── another-style/
+```
+
+`skills/uigod/` and `skills/style-manager/` are the top-level coordinator skills. Generated styles are managed packages under `skills/style-manager/styles/<style-name>/`; they keep nested `SKILL.md` files so agents can recognize specific styles when nested scanning is enabled.
+
 ## Design Target
 
 The child skill must capture a portable style grammar, not a page clone.
@@ -16,7 +31,7 @@ Define these before writing files:
 ## Required Structure
 
 ```text
-child-skill-name/
+skills/style-manager/styles/<style-name>/
 ├── SKILL.md
 ├── DESIGN.md
 ├── preview.html
@@ -87,13 +102,14 @@ Required sections:
 - Keep one style family per child skill.
 - Put prompt guidance in `DESIGN.md`; do not create separate prompt files.
 - Do not create zip packages unless the user explicitly asks.
+- Keep generated styles inside the manager library unless the user explicitly asks for a separate export.
 
 ## Final Gate
 
 Before calling a child skill ready:
 
 - Required files exist.
-- `python tools/validate_child_skill.py skills/<child-skill-name>` passes when working inside this repo.
+- `python skills/uigod/tools/validate_child_skill.py skills/style-manager/styles/<style-name>` passes when working inside this repo.
 - URL inputs have fetched HTML and all linked CSS files.
 - Main CSS selection is documented by size/relevance.
 - CSS variable chains are resolved to literal values.

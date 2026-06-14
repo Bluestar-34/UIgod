@@ -11,6 +11,8 @@ Invoke this skill automatically when the user gives a website, screenshot, HTML/
 
 Core output: a child skill folder where `DESIGN.md` is the primary design brain. The user should not need to run the extraction tools manually.
 
+UIgod and Style Manager are the top-level coordinator skills. Generated style packages live inside `skills/style-manager/styles/<style-name>/` and keep nested `SKILL.md` files so agents can recognize specific styles directly.
+
 ## Trigger Interpretation
 
 Treat these requests as UIgod work even when the user does not name the skill:
@@ -27,6 +29,7 @@ If the user asks for a normal website build without a reference style, do not us
 - Style grammar before source layout.
 - `DESIGN.md` before extra docs.
 - Transfer proof before claiming ready.
+- Two coordinator skills, many nested managed style skills.
 - Small package, strong defaults.
 - Act autonomously after trigger; ask only when the missing choice would change ownership, legality, or the core style target.
 
@@ -46,8 +49,10 @@ Single reference: preserve more unique character. Multiple references: extract s
 - Choose or create one child skill name in lowercase hyphen form.
 - State the reference set and the intended default page type.
 - If multiple references conflict, extract the shared style grammar and document excluded outliers.
-- Default output root inside this repo: `skills/<child-skill-name>/`.
+- Default install targets for this project: `skills/uigod/` and `skills/style-manager/`.
+- Default generated managed-style root inside this repo: `skills/style-manager/styles/<child-skill-name>/`.
 - Default evidence root inside this repo: `inputs/<slug>/`.
+- Keep generated styles under `skills/style-manager/styles/` unless the user explicitly asks to export/install that specific style somewhere else.
 
 ### 2. Capture
 
@@ -55,13 +60,13 @@ Single reference: preserve more unique character. Multiple references: extract s
 - For URL or local HTML input, use the bundled helper when available:
 
 ```bash
-python tools/extract_style_evidence.py <url-or-html-file> --out inputs/<slug>/evidence
+python skills/uigod/tools/extract_style_evidence.py <url-or-html-file> --out inputs/<slug>/evidence
 ```
 
 - Fetch HTML and all linked CSS files. Do not rely on the first CSS file.
 - Capture desktop and mobile screenshots when browser tools are available.
 - Save source notes/screenshots under `inputs/<slug>/` or the child skill's `references/source-screenshots-or-notes/` only when they add evidence.
-- Read `docs/REFERENCE-ANALYSIS-GUIDE.md` only when extraction details are unclear or evidence is incomplete.
+- Read `skills/uigod/docs/REFERENCE-ANALYSIS-GUIDE.md` only when extraction details are unclear or evidence is incomplete.
 
 ### 3. Extract
 
@@ -89,7 +94,8 @@ Write `DESIGN.md` as an agent-consumable design system in the spirit of awesome-
 
 ### 5. Package
 
-- Follow `docs/CONTRACT.md`; read it before final packaging.
+- Follow `skills/uigod/docs/CONTRACT.md`; read it before final packaging.
+- Use `skills/uigod/templates/web-style-skill/` only as a starter resource; rename `SKILL.template.md` to `SKILL.md` when creating a managed style package.
 - Keep `SKILL.md` short: trigger, read order, preserve/avoid rules.
 - Add `preview.html` as a token and component specimen page.
 - Add `references/code-patterns/` snippets only for repeatable mechanics.
@@ -97,13 +103,13 @@ Write `DESIGN.md` as an agent-consumable design system in the spirit of awesome-
 
 ### 6. Verify
 
-Run the final gate in `docs/CONTRACT.md`:
+Run the final gate in `skills/uigod/docs/CONTRACT.md`:
 
 - `preview.html` opens locally and shows real tokens/components.
 - `examples/index.html` works on desktop and mobile.
 - The example demonstrates at least five signature moves from `DESIGN.md`.
 - No source content, source layout, or proprietary raster assets are copied unless the user supplied them for reuse.
-- Run `python tools/validate_child_skill.py skills/<child-skill-name>` when working inside this repo.
+- Run `python skills/uigod/tools/validate_child_skill.py skills/style-manager/styles/<child-skill-name>` when working inside this repo.
 - Do not create a zip unless the user explicitly asks.
 
 ## Child Skill Output Contract
@@ -111,7 +117,7 @@ Run the final gate in `docs/CONTRACT.md`:
 Create this minimum structure:
 
 ```text
-skills/<child-skill-name>/
+skills/style-manager/styles/<child-skill-name>/
 +-- SKILL.md
 +-- DESIGN.md
 +-- preview.html
@@ -121,6 +127,8 @@ skills/<child-skill-name>/
 +-- examples/
     +-- index.html
 ```
+
+These folders are managed style packages with nested `SKILL.md` files. `style-manager` provides catalog selection; direct nested recognition is also allowed.
 
 Optional screenshots such as `preview.png`, `preview-mobile.png`, `examples/preview.png`, and `examples/preview-mobile.png` are encouraged after visual QA.
 
@@ -135,4 +143,4 @@ Optional screenshots such as `preview.png`, `preview-mobile.png`, `examples/prev
 
 ## Ready Definition
 
-A child skill is ready only when another agent can read its `SKILL.md` and `DESIGN.md`, then build a new site in the captured style without reopening the original reference.
+A managed style is ready only when another agent can read its `SKILL.md` and `DESIGN.md`, then build a new site in the captured style without reopening the original reference.
