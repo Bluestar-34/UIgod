@@ -1,8 +1,12 @@
 /.codegraph/
 /.claude/
 /.reasonix/
+/agents/
 /inputs/
+/outputs/
 /prototypes/
 /tools/
+/reasonix.toml
+/skills/style-manager/preferences.json
 /node_modules/
 .DS_Store
