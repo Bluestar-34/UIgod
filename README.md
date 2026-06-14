@@ -4,13 +4,21 @@ UIgod is a flat skills repository for turning website and UI references into reu
 
 The layout follows the same broad shape as the Superpowers skills directory: every installable skill lives at `skills/<skill-name>/` and owns its own `SKILL.md`.
 
-## Default Install
+## Quick AI Setup
 
-Install only the visible coordinator skills:
+Point your AI client at this repository's `skills/` directory, or copy/link the two coordinator skills into your local skills directory:
 
 ```text
 skills/uigod/
 skills/style-manager/
+```
+
+If your client supports a skills path setting, prefer referencing the repository directly so `git pull` updates the whole style library:
+
+```toml
+[skills]
+paths = ["path/to/UIgod/skills"]
+max_depth = 4
 ```
 
 `uigod` extracts reference evidence, writes `DESIGN.md`, builds preview pages, creates transfer examples, and generates managed style packages.
@@ -21,78 +29,79 @@ Managed styles live under `skills/style-manager/styles/`. They keep their own ne
 
 ## Usage
 
-### List Available Styles
+UIgod is meant to be used through AI/skill calls, not by asking users to run Python.
 
-Use the manager to show every bundled style with a short description:
+### List Styles
 
-```bash
-python skills/style-manager/tools/list_styles.py
+Ask:
+
+```text
+Use style-manager to list the available styles.
 ```
 
-Machine-readable output:
-
-```bash
-python skills/style-manager/tools/list_styles.py --json
-```
+Expected behavior: the agent reads the style library and returns style ids with short descriptions.
 
 ### Choose A Style
 
-If the user explicitly names a style, use that style.
+Ask:
 
-If the user asks to choose from the library, run the list command and ask them to pick one.
-
-If there is no conversation step, choose automatically:
-
-```bash
-python skills/style-manager/tools/list_styles.py --choose
+```text
+Use style-manager to help me choose a style for a dark personal knowledge-base homepage.
 ```
 
-Choose from a project brief or preference hint:
+If the user wants to choose manually, the agent should list the styles and wait.
 
-```bash
-python skills/style-manager/tools/list_styles.py --choose --prefer "dark editorial technical portfolio"
-```
-
-The default choice comes from `skills/style-manager/preferences.json` when present, otherwise from `preferences.example.json`.
+If there is no conversation step, the agent should use the user's configured preference when present, otherwise the default preference in `skills/style-manager/preferences.example.json`.
 
 ### Apply A Style
 
-After selecting a style, read:
-
-```text
-skills/style-manager/styles/<style-name>/SKILL.md
-skills/style-manager/styles/<style-name>/DESIGN.md
-```
-
-Use `references/source-observations.md` and `references/code-patterns/` only when deeper implementation detail is needed. Build fresh content in the selected style; do not clone the original reference site.
-
-Example prompt:
-
-```text
-Use style-manager to choose a style for a dark personal knowledge-base homepage, then build the page using the selected style.
-```
-
-Direct style prompt:
+Ask:
 
 ```text
 Use the lonely-blue-field-notes style to design a technical writing portfolio.
 ```
 
-### Generate A New Style
+or:
 
-Use `uigod` when adding a new reference style:
+```text
+Use style-manager to choose the best bundled style for a landing page about a writing tool, then build the page.
+```
+
+Expected behavior: the agent reads the selected style's `SKILL.md` and `DESIGN.md`, then builds fresh content in that style without cloning the original reference site.
+
+### Add A New Reference Style
+
+Ask:
 
 ```text
 Use uigod to extract the style from https://example.com and add it to the managed style library.
 ```
 
-The generated package should land under:
+Expected behavior: the agent captures evidence, writes a new package under:
 
 ```text
 skills/style-manager/styles/<new-style-name>/
 ```
 
-Run validation before publishing:
+Then it validates the package and updates the style gallery when appropriate.
+
+## Developer Commands
+
+The Python helpers are internal/developer tools. Normal users should call the skills in natural language.
+
+List styles during development:
+
+```bash
+python skills/style-manager/tools/list_styles.py
+```
+
+Choose non-interactively:
+
+```bash
+python skills/style-manager/tools/list_styles.py --choose --prefer "dark editorial technical portfolio"
+```
+
+Validate a managed style:
 
 ```bash
 python skills/uigod/tools/validate_child_skill.py skills/style-manager/styles/<new-style-name>
