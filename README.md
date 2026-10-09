@@ -6,7 +6,7 @@
 
 **看样片 · 选风格 · 复制提示词 · 开始制作**
 
-[![打开 UIgod 风格库](docs/images/gallery-desktop.png)](index.html)
+[![打开 UIgod 风格库](skills/uigod/docs/images/gallery-desktop.png)](index.html)
 
 本地双击 `index.html` 即可打开，无需安装依赖或启动服务。支持视频 / 网页筛选、风格搜索、样片播放和提示词复制。GitHub 中的 HTML 文件显示源码；要使用画廊，请下载到本地后打开。
 
@@ -16,11 +16,11 @@
 
 ### 网点海报动态 · 灰度思维母版
 
-[![查看灰度思维母版设计规则](skills/neuroblue-halftone-motion/references/frames/04-30.9s.jpg)](skills/neuroblue-halftone-motion/DESIGN.md)
+[![查看灰度思维母版设计规则](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/04-30.9s.jpg)](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md)
 
 巨型中文黑体、黑白网点主体、单色信号、关键词驱动的运动。适合认知、心理与技术解释，可换配色、主体和画幅。
 
-**[看迁移样片](skills/neuroblue-halftone-motion/examples/transfer.mp4)** · [交互预览](skills/neuroblue-halftone-motion/preview.html) · [风格说明与更多提示词](skills/neuroblue-halftone-motion/DESIGN.md#prompt-guide) · [原作关键帧](skills/neuroblue-halftone-motion/references/frames/contact-sheet.jpg)
+**[看迁移样片](skills/style-manager/styles/neuroblue-halftone-motion/examples/transfer.mp4)** · [交互预览](skills/style-manager/styles/neuroblue-halftone-motion/preview.html) · [风格说明与更多提示词](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md#prompt-guide) · [原作关键帧](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/contact-sheet.jpg)
 
 > 状态：10 秒纯视觉迁移样例已验证，无配音和音乐。原作截图、迁移样例分开保存；不代表完整一分钟成片已验收。
 
@@ -43,10 +43,10 @@
 
 | 效果预览 | 风格 | 使用入口 |
 |---|---|---|
-| [![机械红黑](skills/hiitmaster-brutal-interval-timer/examples/preview.png)](skills/hiitmaster-brutal-interval-timer/examples/index.html) | **机械红黑** · 强数字、硬边界、运动计时 | [风格说明](skills/hiitmaster-brutal-interval-timer/DESIGN.md) |
-| [![深夜技术手记](skills/lonely-blue-field-notes/examples/preview.png)](skills/lonely-blue-field-notes/examples/index.html) | **深夜技术手记** · 深色编辑版式、衬线标题 | [风格说明](skills/lonely-blue-field-notes/DESIGN.md) |
-| [![温暖公共指南](skills/namesake-soft-civic-guides/examples/preview.png)](skills/namesake-soft-civic-guides/examples/index.html) | **温暖公共指南** · 柔和中性色、清晰信息层级 | [风格说明](skills/namesake-soft-civic-guides/DESIGN.md) |
-| [![像素桌面](skills/nicchan-pixel-desktop-portfolio/examples/preview.png)](skills/nicchan-pixel-desktop-portfolio/examples/index.html) | **像素桌面** · 复古窗口、像素图形 | [风格说明](skills/nicchan-pixel-desktop-portfolio/DESIGN.md) |
+| [![机械红黑](skills/style-manager/styles/hiitmaster-brutal-interval-timer/examples/preview.png)](skills/style-manager/styles/hiitmaster-brutal-interval-timer/examples/index.html) | **机械红黑** · 强数字、硬边界、运动计时 | [风格说明](skills/style-manager/styles/hiitmaster-brutal-interval-timer/DESIGN.md) |
+| [![深夜技术手记](skills/style-manager/styles/lonely-blue-field-notes/examples/preview.png)](skills/style-manager/styles/lonely-blue-field-notes/examples/index.html) | **深夜技术手记** · 深色编辑版式、衬线标题 | [风格说明](skills/style-manager/styles/lonely-blue-field-notes/DESIGN.md) |
+| [![温暖公共指南](skills/style-manager/styles/namesake-soft-civic-guides/examples/preview.png)](skills/style-manager/styles/namesake-soft-civic-guides/examples/index.html) | **温暖公共指南** · 柔和中性色、清晰信息层级 | [风格说明](skills/style-manager/styles/namesake-soft-civic-guides/DESIGN.md) |
+| [![像素桌面](skills/style-manager/styles/nicchan-pixel-desktop-portfolio/examples/preview.png)](skills/style-manager/styles/nicchan-pixel-desktop-portfolio/examples/index.html) | **像素桌面** · 复古窗口、像素图形 | [风格说明](skills/style-manager/styles/nicchan-pixel-desktop-portfolio/DESIGN.md) |
 
 网页条目沿用现有版本，本次未重新验收；网页风格不自动等于已验证的视频风格。
 
@@ -69,19 +69,19 @@
 说明你选了哪一种，再按我的文案制作。找不到合适风格时说明需要新建。
 ```
 
-当前本机已安装 Claude 与 Codex 入口。迁移到其他电脑时，将完整 `uigod` 文件夹放入助手的 skills 目录，保留内部 `skills/`、`docs/` 和 `tools/`。风格库提供设计规则，生产工作流负责配音、字幕与渲染。
+当前本机已安装 Claude 与 Codex 入口。迁移到其他电脑时，将完整 `uigod` 文件夹放入助手的 skills 目录，保留内部 `skills/`、`skills/uigod/docs/` 和 `skills/uigod/tools/`。风格库提供设计规则，生产工作流负责配音、字幕与渲染。
 
 ## 收录与维护
 
 每个风格保存：**设计规则 + 制作提示词 + 原作证据 + 可预览样例**。新增风格写入 `catalog.json`，重建画廊后同步副本。
 
-- [AI 入口](SKILL.md) · [机器可读风格目录](catalog.json)
-- [视频收录合同](docs/VIDEO-CONTRACT.md) · [网页收录合同](docs/CONTRACT.md)
-- [历史网页画廊](docs/legacy-gallery.md)
+- [风格提炼入口](skills/uigod/SKILL.md) · [风格选择入口](skills/style-manager/SKILL.md) · [机器可读风格目录](catalog.json)
+- [视频收录合同](skills/uigod/docs/VIDEO-CONTRACT.md) · [网页收录合同](skills/uigod/docs/CONTRACT.md)
+- [历史网页画廊](skills/uigod/docs/legacy-gallery.md)
 
 ```powershell
-python tools/build_gallery.py
-python tools/sync_library.py
+python skills/uigod/tools/build_gallery.py
+python skills/uigod/tools/sync_library.py
 ```
 
 主仓库：`C:/Users/asus/.codex/skills/UIgod`。创作合集：`F:/Obsi-neuroBlue/08_创作/创作Skills/uigod`。Claude 安装版：`C:/Users/asus/.claude/skills/uigod`。

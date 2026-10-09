@@ -27,7 +27,7 @@
         "interval",
         "timer"
       ],
-      "path": "skills/hiitmaster-brutal-interval-timer",
+      "path": "skills/style-manager/styles/hiitmaster-brutal-interval-timer",
       "status": "legacy",
       "notes": "既有网页条目，保留原文件；未在本次重新验收。"
     },
@@ -46,7 +46,7 @@
         "field",
         "notes"
       ],
-      "path": "skills/lonely-blue-field-notes",
+      "path": "skills/style-manager/styles/lonely-blue-field-notes",
       "status": "legacy",
       "notes": "既有网页条目，保留原文件；未在本次重新验收。"
     },
@@ -65,7 +65,7 @@
         "civic",
         "guides"
       ],
-      "path": "skills/namesake-soft-civic-guides",
+      "path": "skills/style-manager/styles/namesake-soft-civic-guides",
       "status": "legacy",
       "notes": "既有网页条目，保留原文件；未在本次重新验收。"
     },
@@ -84,7 +84,7 @@
         "desktop",
         "portfolio"
       ],
-      "path": "skills/nicchan-pixel-desktop-portfolio",
+      "path": "skills/style-manager/styles/nicchan-pixel-desktop-portfolio",
       "status": "legacy",
       "notes": "既有网页条目，保留原文件；未在本次重新验收。"
     },
@@ -110,7 +110,7 @@
         "认知",
         "语义动效"
       ],
-      "path": "skills/neuroblue-halftone-motion",
+      "path": "skills/style-manager/styles/neuroblue-halftone-motion",
       "status": "sample-verified",
       "variables": [
         "topic",
