@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: lonely-blue-field-notes-design
-description: "A dark editorial technical-journal system built on near-black paper (#060708), warm ink text (#f1e8d8), serif display headlines, monospaced metadata, and four restrained signal accents: gold, blue, green, and ember. The style feels solitary, technically literate, and quietly cinematic. It prefers rails, ranked content streams, authored asymmetry, and instrument-like utility UI over glossy product-marketing layouts."
+description: "A dark editorial technical-journal system built on near-black paper (#060708), warm ink text (#f1e8d8), serif display headlines, monospaced metadata, and four signal accents: gold, blue, green, and ember. The default mode feels solitary, technically literate, restrained, and quietly cinematic. The optional Signal Brutalist mode is more individual and graphic, using stronger blue/green/ember structural marks, matte slab backgrounds, archival grain, register ticks, and asymmetric field-note composition without becoming neon cyberpunk."
 
 colors:
   primary: "#bf9641"
@@ -19,6 +19,20 @@ colors:
   signal-green: "#5a8364"
   signal-ember: "#9b443c"
   signal-rose: "#9b4e64"
+
+signalBrutalist:
+  canvas: "#07090b"
+  canvas-deep: "#030406"
+  ink: "#fff2dd"
+  muted: "#e3d0ad"
+  blue: "#245cff"
+  green: "#13d979"
+  ember: "#ff3d2e"
+  gold: "#f4bc46"
+  slab: "#0b1015"
+  hairline: "rgba(255, 242, 221, 0.18)"
+  noiseOpacity: 0.08
+  backgroundDensity: "medium-high"
 
 typography:
   display-xl:
@@ -161,6 +175,27 @@ Avoid using it for ecommerce, bright SaaS marketing, playful consumer apps, dash
 7. Slow repeated-text signal band interrupts the page like a transmission.
 8. Instrument-like utility UI, especially a slim scroll dock or compact index rail.
 
+## Intensity Modes
+
+### Calm Field Notes
+
+Use this by default. Keep the original quiet technical-journal mood: sparse color, lots of dark negative space, warm serif headlines, precise mono metadata, rails, streams, and restrained motion.
+
+### Signal Brutalist
+
+Use this when the prompt asks for stronger personality, 野兽派, brutalist, blue/green/red, more background elements, harder contrast, or a less polite version of the style.
+
+Signal Brutalist is not cyberpunk. It should feel like a private research notebook damaged by signal artifacts and print registration marks:
+
+- off-black matte paper rather than pure black
+- stronger blue / green / ember, used as structural ink
+- hard-edge slabs, vertical bars, index ticks, torn strips, side registers, scan lines, and low-alpha paper grain
+- serif headlines may use subtle red/blue offset shadows, but not glowing gradients
+- small mono labels may sit in stamped boxes, skew slightly, or use color-keyed borders
+- keep one large quiet field per page so the composition does not become a cockpit
+
+When applying Signal Brutalist, read `references/signal-brutalist-backgrounds.md` for background recipes and copyable CSS primitives.
+
 ## Colors
 
 The palette is dark-first but not void-minimal.
@@ -177,6 +212,15 @@ Accent behavior is tightly controlled:
 - `signal-rose` is secondary and should remain rare
 
 These signal colors should not become a rainbow interface. They are markers, not decoration.
+
+In Signal Brutalist mode, increase the visibility of blue / green / ember but keep them functional:
+
+- blue: primary structural mark, side rail, active edge, title offset
+- green: status/signal trace, small rule, secondary register
+- ember: warning, fracture, punch line, alternate title offset
+- gold: warm editorial emphasis and quote highlight
+
+Never use all accents as equal full-page gradients. Use 1-3 hard marks per viewport plus grain or slabs. If the background starts to look like a generic neon mesh, remove the gradient and return to matte slabs.
 
 ## Typography
 
@@ -209,6 +253,14 @@ Core moves:
 - small instrument-like floating utilities
 
 The first screen should feel like an authored portal into work, not a conversion hero.
+
+Signal Brutalist layout adds controlled graphic pressure:
+
+- place one active signal edge on the left or right, not both at full intensity
+- use asymmetric spacing: a narrow rail, a large silent text field, and one hard offset strip
+- let background elements align with content axes; do not float random ornaments
+- use boxy stamped labels for small metadata when the page needs attitude
+- avoid centered poster layouts unless the page is a quote or closing statement
 
 ## Components
 
@@ -285,6 +337,13 @@ This style uses a mixed shape language:
 
 Rounded corners should usually stay within `8px` to `18px`.
 
+For Signal Brutalist, reduce rounding:
+
+- major slabs and cards: `0px` to `4px`
+- utility pills can remain rounded only if they behave like instrumentation
+- use offset shadows as flat ink blocks, not blurred glow
+- prefer 1px hairlines, 3-8px signal bars, and hard-edged background rectangles
+
 ## Motion & Interaction
 
 Interaction is quiet, tactile, and instrument-like.
@@ -308,6 +367,7 @@ Keep animation as a low-frequency signal. Do not add bouncy UI, scroll-jacking t
 - use rails, lists, ranks, and thin borders
 - reserve signal colors for sparse emphasis
 - use subtle hover motion and slow signal motion
+- when asked for more personality, use the Signal Brutalist variant with matte slab backgrounds, grain, register ticks, and stronger blue/green/ember structural marks
 
 ### Don't
 
@@ -317,6 +377,7 @@ Keep animation as a low-frequency signal. Do not add bouncy UI, scroll-jacking t
 - do not overuse nested cards, giant shadows, or soft blob gradients
 - do not center everything into a generic template
 - do not make every action a pill button
+- do not use ugly multi-color mesh gradients or generic grid wallpaper on dark pages; use hard slabs, paper noise, and precise signal marks instead
 
 ## Responsive Behavior
 
@@ -336,12 +397,16 @@ Use this compact prompt when asking an agent to generate with this child skill:
 
 > Build a dark editorial technical-journal site in the Lonely Blue Field Notes style. Use a near-black canvas, warm ink text, serif manifesto headings, monospaced metadata, sparse gold/blue/green/ember signal accents, thin hairline borders, a profile or index rail, ranked stream rows, and a slow signal band. Keep it intimate, technically literate, and authored. Avoid glossy SaaS, neon cyberpunk, generic card grids, and copied source content.
 
+Use this compact prompt for the expressive variant:
+
+> Build in the Signal Brutalist variant of Lonely Blue Field Notes. Keep the warm serif / mono / sans hierarchy and authored field-note structure, but increase personality with matte off-black backgrounds, paper grain, hard-edge slabs, side registers, index ticks, torn strips, and clearly visible blue / green / ember structural marks. Avoid neon glow, rainbow gradients, generic grid wallpaper, and SaaS cards.
+
 When expanding the style:
 
 - preserve the editorial split between identity and content
 - preserve the serif / mono / sans hierarchy
 - add new components as quiet structural extensions, not as novelty widgets
-- keep signal colors sparse and meaningful
+- keep signal colors sparse and meaningful in Calm mode; make them more visible but still structural in Signal Brutalist mode
 - prefer list and rail patterns over card-heavy expansion
 
 If adapting to another stack, keep the layout and typography behavior intact before translating micro-details.

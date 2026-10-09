@@ -1,0 +1,39 @@
+{
+  "status": "sample-verified",
+  "visual_review": true,
+  "decode_pass": true,
+  "browser_errors": [],
+  "font_loaded": true,
+  "deterministic_seek": true,
+  "mobile_no_horizontal_overflow": true,
+  "example_iframe_loaded": true,
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  },
+  "limitations": [
+    "纯视觉10秒示例，无配音和音乐",
+    "浏览器移动端等比显示，不等于竖屏成片已验证",
+    "不是用户确认的正式视频"
+  ],
+  "review_notes": "已查看六帧接触表、移动端截图及源片十二帧：文字可读、主次明确、网点主体与黑白切换成立。只验证短视觉机制，未验证正式一分钟视频或音频。",
+  "signature_moves_demonstrated": [
+    "巨型中文黑体层级",
+    "黑白场切换",
+    "网点轮廓",
+    "单色信号",
+    "消失与回归的语义动作",
+    "快变后稳定阅读"
+  ]
+}

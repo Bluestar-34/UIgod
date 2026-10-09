@@ -1,8 +1,7 @@
 interface:
-  display_name: "UIgod"
-  short_description: "Extract websites into reusable UI style skills"
+  display_name: "UIgod · 专业风格库"
+  short_description: "提炼和调用网页、图片与视频的视觉风格及制作提示词"
   brand_color: "#FF2D00"
-  default_prompt: "Use $uigod to extract this website's visual style into a reusable child skill and fresh reference example."
-
+  default_prompt: "Use $uigod to match or extract a reusable visual style, then apply its design and motion rules to the new content."
 policy:
   allow_implicit_invocation: true

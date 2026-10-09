@@ -1,0 +1,54 @@
+{
+  "source": "F:\\Obsi-neuroBlue\\08_创作\\02-内容库\\vibe知识大赏\\灰度思维\\project\\renders\\灰度思维-发布版.mp4",
+  "sha256": "68bcd6fa8d01567d830ed4a266fa3253fdc13dbaeaeb76fd4e535688367ecb25",
+  "frames": [
+    {
+      "time": 0,
+      "file": "00-0s.jpg"
+    },
+    {
+      "time": 2.3,
+      "file": "01-2.3s.jpg"
+    },
+    {
+      "time": 8.6,
+      "file": "02-8.6s.jpg"
+    },
+    {
+      "time": 21.3,
+      "file": "03-21.3s.jpg"
+    },
+    {
+      "time": 30.9,
+      "file": "04-30.9s.jpg"
+    },
+    {
+      "time": 44.3,
+      "file": "05-44.3s.jpg"
+    },
+    {
+      "time": 57.2,
+      "file": "06-57.2s.jpg"
+    },
+    {
+      "time": 70.6,
+      "file": "07-70.6s.jpg"
+    },
+    {
+      "time": 96.9,
+      "file": "08-96.9s.jpg"
+    },
+    {
+      "time": 104.1,
+      "file": "09-104.1s.jpg"
+    },
+    {
+      "time": 118,
+      "file": "10-118s.jpg"
+    },
+    {
+      "time": 121.8,
+      "file": "11-121.8s.jpg"
+    }
+  ]
+}

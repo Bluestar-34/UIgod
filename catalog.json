@@ -1,0 +1,129 @@
+{
+  "version": 2,
+  "purpose": "专业视觉风格、可执行提示词与视频动效库",
+  "default_video_preferences": {
+    "first_frame_approval": true,
+    "voice": true,
+    "minimum_seconds": 60,
+    "avoid": [
+      "HyperFrames",
+      "无意义HUD",
+      "装饰小字"
+    ]
+  },
+  "entries": [
+    {
+      "id": "hiitmaster-brutal-interval-timer",
+      "name": "hiitmaster-brutal-interval-timer",
+      "aliases": [
+        "hiitmaster-brutal-interval-timer"
+      ],
+      "media": [
+        "web"
+      ],
+      "tags": [
+        "hiitmaster",
+        "brutal",
+        "interval",
+        "timer"
+      ],
+      "path": "skills/hiitmaster-brutal-interval-timer",
+      "status": "legacy",
+      "notes": "既有网页条目，保留原文件；未在本次重新验收。"
+    },
+    {
+      "id": "lonely-blue-field-notes",
+      "name": "lonely-blue-field-notes",
+      "aliases": [
+        "lonely-blue-field-notes"
+      ],
+      "media": [
+        "web"
+      ],
+      "tags": [
+        "lonely",
+        "blue",
+        "field",
+        "notes"
+      ],
+      "path": "skills/lonely-blue-field-notes",
+      "status": "legacy",
+      "notes": "既有网页条目，保留原文件；未在本次重新验收。"
+    },
+    {
+      "id": "namesake-soft-civic-guides",
+      "name": "namesake-soft-civic-guides",
+      "aliases": [
+        "namesake-soft-civic-guides"
+      ],
+      "media": [
+        "web"
+      ],
+      "tags": [
+        "namesake",
+        "soft",
+        "civic",
+        "guides"
+      ],
+      "path": "skills/namesake-soft-civic-guides",
+      "status": "legacy",
+      "notes": "既有网页条目，保留原文件；未在本次重新验收。"
+    },
+    {
+      "id": "nicchan-pixel-desktop-portfolio",
+      "name": "nicchan-pixel-desktop-portfolio",
+      "aliases": [
+        "nicchan-pixel-desktop-portfolio"
+      ],
+      "media": [
+        "web"
+      ],
+      "tags": [
+        "nicchan",
+        "pixel",
+        "desktop",
+        "portfolio"
+      ],
+      "path": "skills/nicchan-pixel-desktop-portfolio",
+      "status": "legacy",
+      "notes": "既有网页条目，保留原文件；未在本次重新验收。"
+    },
+    {
+      "id": "neuroblue-halftone-motion",
+      "name": "网点海报动态 · 灰度思维母版",
+      "aliases": [
+        "灰度思维",
+        "灰度思维风格",
+        "网点海报",
+        "黑白红知识动效"
+      ],
+      "media": [
+        "video",
+        "image"
+      ],
+      "tags": [
+        "halftone",
+        "kinetic-typography",
+        "海报",
+        "网点",
+        "高反差",
+        "认知",
+        "语义动效"
+      ],
+      "path": "skills/neuroblue-halftone-motion",
+      "status": "sample-verified",
+      "variables": [
+        "topic",
+        "script",
+        "subject",
+        "signal",
+        "aspect_ratio",
+        "duration",
+        "voice",
+        "music"
+      ],
+      "evidence": "references/frames/index.json",
+      "verification": "examples/verification.json"
+    }
+  ]
+}

@@ -3,6 +3,11 @@
 .reasonix/
 inputs/
 prototypes/
-tools/
+tools/*
+!tools/validate_video_style.py
+!tools/sync_library.py
+!tools/verify_halftone_sample.py
 node_modules/
 .DS_Store
+
+!tools/build_gallery.py
