@@ -1,0 +1,2 @@
+# Preserve imported snapshot bytes so IMPORT.json hashes survive cross-platform clones.
+collections/awesome-opus5-5-videos/** -text
