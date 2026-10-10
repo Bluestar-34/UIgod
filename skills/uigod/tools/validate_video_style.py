@@ -2,10 +2,14 @@
 import json,sys
 from pathlib import Path
 p=Path(sys.argv[1]);errors=[]
-for name in ['SKILL.md','DESIGN.md','style.json','preview.html','references/source-observations.md','references/frames/index.json','references/code-patterns','examples/index.html']:
+for name in ['SKILL.md','DESIGN.md','style.json','preview.html','references/source-observations.md','references/frames/index.json','examples/index.html']:
     if not (p/name).exists():errors.append('missing '+name)
 if not errors:
     data=json.loads((p/'style.json').read_text(encoding='utf-8'))
+    for key in ['sources','deliverables']:
+        if key not in data:errors.append('missing metadata '+key)
+    for key,rel in data.get('deliverables',{}).items():
+        if not (p/rel.split('#')[0]).is_file():errors.append('missing deliverable '+key+': '+rel)
     if 'video' not in data.get('media',[]):errors.append('media must contain video')
     if data.get('status') not in ['draft','sample-verified','production-verified']:errors.append('invalid status')
     for frame in json.loads((p/'references/frames/index.json').read_text(encoding='utf-8'))['frames']:

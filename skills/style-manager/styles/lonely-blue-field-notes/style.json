@@ -1,0 +1,36 @@
+{
+  "id": "lonely-blue-field-notes",
+  "name": "lonely-blue-field-notes",
+  "aliases": [
+    "lonely-blue-field-notes"
+  ],
+  "media": [
+    "web"
+  ],
+  "tags": [
+    "lonely",
+    "blue",
+    "field",
+    "notes"
+  ],
+  "path": "skills/style-manager/styles/lonely-blue-field-notes",
+  "status": "legacy",
+  "notes": "既有网页条目，保留原文件；未在本次重新验收。",
+  "deliverables": {
+    "cover": "examples/preview.png",
+    "preview": "preview.html",
+    "example": "examples/index.html",
+    "prompt": "DESIGN.md#prompt-guide",
+    "source_notes": "references/source-observations.md"
+  },
+  "sources": [
+    {
+      "role": "visual-reference",
+      "path": "references/source-observations.md",
+      "verification": "legacy-not-rechecked",
+      "use_for": [
+        "web-style"
+      ]
+    }
+  ]
+}

@@ -2,9 +2,13 @@
 
 ## Sources
 
+创作源地址（用户提供）：[抖音灰度思维参考视频](https://www.douyin.com/jingxuan/search/%E7%81%B0%E5%BA%A6%E6%80%9D%E7%BB%B4?aid=bc2a1580-7c23-4f0b-8657-2eb472c8d99a&modal_id=7693969558939421994&type=general)。视频 ID：7693969558939421994。网页工具未能读取其内容，未下载、转写或核验作者；仅用于选题/文案来源追溯，不是本包视觉证据。
+
+实际视觉母版仍是下列用户本地制作成片，不能把源抖音的图片自动当作审美参考。
+
 用户作品：F:/Obsi-neuroBlue/08_创作/02-内容库/vibe知识大赏/灰度思维/project/
 主视频 renders/灰度思维-发布版.mp4；同时参照 public/film.css、public/film.js、src/scenes.html、timing.json、制作记录.md。
-ffprobe 实测：H264/AAC，1920×1080，30fps，125.266667 秒。库中不复制大型成片与字体；下列关键帧从发布版重新提取，frames/index.json 含采样时间与源文件 SHA256。
+ffprobe 实测：H264/AAC，1920×1080，30fps，125.266667 秒。库中不复制大型成片；为预览仅附一个必要字体及授权；下列关键帧从发布版重新提取，frames/index.json 含采样时间与源文件 SHA256。
 
 ## Capture Method
 
@@ -37,3 +41,7 @@ public/film.css 是实际风格主文件；index.html 是构建产物，避免�
 ## Verification
 
 验证状态与结果见 style.json 和 examples/verification.json。未验证声音与一分钟完整迁移，不声称制作质量已获用户认可。
+
+## Final content
+
+references/文案.md 为本地发布版 script.json 中的最终台词，不是本次从抖音转写的文本。examples/文案.md 对应十秒迁移样例；封面使用 examples/frame-0s.png。只保留最终样例和必要的原作关键帧，清理重复预览截图。

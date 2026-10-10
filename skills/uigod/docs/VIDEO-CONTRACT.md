@@ -1,5 +1,7 @@
 # 视频风格收录合同
 
+文件取舍统一遵守 [作品与风格包标准](WORK-CONTRACT.md)，本合同只补充视频特有要求。
+
 沿用 skills/style-manager/styles/<style-id>/；网页仍使用 CONTRACT.md，不强迫视频实现网页组件。
 
 ## 必需文件
@@ -8,10 +10,11 @@
 - DESIGN.md：视觉与运动主规则，包含 5–8 个可识别特征、角色化令牌、版式、主体、材质、动效、节奏、字幕与声音、变量、反例、Prompt Guide、Known Gaps。
 - references/source-observations.md：来源、版本、采样时间、源码依据、提取/推断/修订区分。标明静态截图无法验证的内容。
 - references/frames/：来自真实成片的代表性关键帧与时间索引。
-- references/code-patterns/：只放可重复使用的独立机制；不复制整套旧工程。
+- references/code-patterns/：可选，只放真实可重复使用的代码机制；不强制空目录或单独说明文件。
 - preview.html：本地可查看的视觉与动效样本。
 - examples/index.html：换主题的迁移样例。已导出时可附 transfer.mp4；验证样例不冒充用户批准的正式片。
-- style.json：id、media、aliases、tags、可改变量、证据与验证状态。
+- style.json：id、media、aliases、tags、sources、deliverables、可改变量、证据与验证状态。
+- references/文案.md 与 examples/文案.md：原作品已提供的最终制作文案和当前样例文案，明确用途。
 
 ## 实际工作
 

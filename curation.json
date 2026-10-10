@@ -1,0 +1,8 @@
+{
+  "default_view": "all",
+  "selected_by": "user",
+  "featured_ids": [
+    "neuroblue-halftone-motion"
+  ],
+  "notes": "精选只由用户明确挑选；上游 highlighted 不等于用户精选。"
+}

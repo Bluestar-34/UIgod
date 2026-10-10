@@ -33,5 +33,39 @@
     "music"
   ],
   "evidence": "references/frames/index.json",
-  "verification": "examples/verification.json"
+  "verification": "examples/verification.json",
+  "deliverables": {
+    "cover": "examples/frame-0s.png",
+    "preview": "preview.html",
+    "example": "examples/index.html",
+    "prompt": "DESIGN.md#prompt-guide",
+    "source_notes": "references/source-observations.md",
+    "video": "examples/transfer.mp4",
+    "script": "references/文案.md",
+    "example_script": "examples/文案.md",
+    "verification": "examples/verification.json"
+  },
+  "sources": [
+    {
+      "role": "creative-origin",
+      "url": "https://www.douyin.com/jingxuan/search/%E7%81%B0%E5%BA%A6%E6%80%9D%E7%BB%B4?aid=bc2a1580-7c23-4f0b-8657-2eb472c8d99a&modal_id=7693969558939421994&type=general",
+      "video_id": "7693969558939421994",
+      "provided_by": "user",
+      "verification": "user-provided-unverified",
+      "use_for": [
+        "content-provenance"
+      ],
+      "visual_reference": false
+    },
+    {
+      "role": "visual-reference",
+      "path": "F:/Obsi-neuroBlue/08_创作/02-内容库/vibe知识大赏/灰度思维/project/renders/灰度思维-发布版.mp4",
+      "provided_by": "user",
+      "verification": "frames-and-code-inspected",
+      "use_for": [
+        "visual-style",
+        "motion-style"
+      ]
+    }
+  ]
 }

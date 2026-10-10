@@ -8,15 +8,33 @@
 
 [![打开 UIgod 风格库](skills/uigod/docs/images/gallery-desktop.png)](index.html)
 
-本地双击 `index.html` 即可打开，无需安装依赖或启动服务。支持视频 / 网页筛选、风格搜索、样片播放和提示词复制。GitHub 中的 HTML 文件显示源码；要使用画廊，请下载到本地后打开。
+本地双击 `index.html` 即可打开，无需安装依赖或启动服务。默认展示全部，支持精选 / 全部切换、媒介筛选、全文搜索、样片预览和提示词复制。GitHub 中的 HTML 文件显示源码；要使用画廊，请下载到本地后打开。
 
 [浏览视频风格](#视频风格) · [浏览网页风格](#网页风格) · [交给-Claude](#开始制作) · [收录新风格](#收录与维护)
+
+## 全部与精选
+
+当前包含 **5 个自有风格包 + 513 条外部视频参考**。
+
+- **全部**：默认入口，展示全部条目，包括外部参考。
+- **精选**：只展示你明确挑过的作品；初始精选为“灰度思维母版”。
+- 在卡片上点击“加入精选 / 取消精选”即可挑选。网页选择保存在本浏览器；点击“导出精选”可获得 curation.json，替换仓库同名文件后重建画廊即可同步到其他设备。
+
+### Awesome Opus 5.5 Videos 全量收录
+
+已收录 [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos) 的全部 513 条数据、513 份提示词文件及上游 README、MIT 授权。保留原作者、原帖、海报、原作与复刻预览地址，以及提示词不完整标记。远程视频保留链接，不重复下载或把作者作品冒充本库样片。
+
+[原始清单](collections/awesome-opus5-5-videos/data/videos.json) · [逐条提示词](collections/awesome-opus5-5-videos/prompts/) · [导入版本与完整性记录](collections/awesome-opus5-5-videos/IMPORT.json) · [上游说明及作者署名](collections/awesome-opus5-5-videos/README.md)
+
+“外部参考”尚未逐条审美分析，也不等于 513 个已验证风格。挑为精选后仍保留其验证状态。
 
 ## 视频风格
 
 ### 网点海报动态 · 灰度思维母版
 
 [![查看灰度思维母版设计规则](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/04-30.9s.jpg)](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md)
+
+[创作源视频](https://www.douyin.com/jingxuan/search/%E7%81%B0%E5%BA%A6%E6%80%9D%E7%BB%B4?aid=bc2a1580-7c23-4f0b-8657-2eb472c8d99a&modal_id=7693969558939421994&type=general)（用户提供，仅作来源记录；视觉母版仍是本地成片）。
 
 巨型中文黑体、黑白网点主体、单色信号、关键词驱动的运动。适合认知、心理与技术解释，可换配色、主体和画幅。
 
@@ -76,11 +94,14 @@
 每个风格保存：**设计规则 + 制作提示词 + 原作证据 + 可预览样例**。新增风格写入 `catalog.json`，重建画廊后同步副本。
 
 - [风格提炼入口](skills/uigod/SKILL.md) · [风格选择入口](skills/style-manager/SKILL.md) · [机器可读风格目录](catalog.json)
+- [每个作品放什么、不放什么](skills/uigod/docs/WORK-CONTRACT.md)
 - [视频收录合同](skills/uigod/docs/VIDEO-CONTRACT.md) · [网页收录合同](skills/uigod/docs/CONTRACT.md)
 - [历史网页画廊](skills/uigod/docs/legacy-gallery.md)
 
 ```powershell
+python skills/uigod/tools/import_opus_videos.py
 python skills/uigod/tools/build_gallery.py
+python skills/uigod/tools/validate_library.py
 python skills/uigod/tools/sync_library.py
 ```
 

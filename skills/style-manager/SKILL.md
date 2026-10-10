@@ -79,3 +79,7 @@ When applying a style, briefly name the selected style and why it fits before bu
 In the full repo, read ../../catalog.json for media, aliases and verification status. Match an explicit Chinese alias such as 灰度思维 to neuroblue-halftone-motion. If catalog.json is unavailable in a two-skill installation, list styles/ and read the selected style.json and DESIGN.md. Do not choose a web-only style as an already verified video style.
 
 Apply the style to the latest user script; preserve visual and motion grammar while changing content. Video defaults: narration, at least one minute, actual t=0 first-frame approval before full production, no HyperFrames. Avoid decorative small labels, HUD and Unicode arrow decorations in the library frontend. Read the style's Known Gaps; sample-verified is not user-approved full production.
+
+## Imported references and user curation
+
+In the full repository, catalog.json includes collections/ external-reference entries beyond styles/. Read prompt_file for the original prompt and preserve author, source and prompt_partial. Do not apply the full style-package contract to an imported reference or claim it was visually validated. curation.json records only user-picked favorites; default browsing is all. A favorite is a preference, not a verification status.

@@ -1,0 +1,36 @@
+{
+  "id": "nicchan-pixel-desktop-portfolio",
+  "name": "nicchan-pixel-desktop-portfolio",
+  "aliases": [
+    "nicchan-pixel-desktop-portfolio"
+  ],
+  "media": [
+    "web"
+  ],
+  "tags": [
+    "nicchan",
+    "pixel",
+    "desktop",
+    "portfolio"
+  ],
+  "path": "skills/style-manager/styles/nicchan-pixel-desktop-portfolio",
+  "status": "legacy",
+  "notes": "既有网页条目，保留原文件；未在本次重新验收。",
+  "deliverables": {
+    "cover": "examples/preview.png",
+    "preview": "preview.html",
+    "example": "examples/index.html",
+    "prompt": "DESIGN.md#prompt-guide",
+    "source_notes": "references/source-observations.md"
+  },
+  "sources": [
+    {
+      "role": "visual-reference",
+      "path": "references/source-observations.md",
+      "verification": "legacy-not-rechecked",
+      "use_for": [
+        "web-style"
+      ]
+    }
+  ]
+}
