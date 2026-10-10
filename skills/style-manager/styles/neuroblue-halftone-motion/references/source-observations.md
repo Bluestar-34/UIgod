@@ -44,4 +44,9 @@ public/film.css 是实际风格主文件；index.html 是构建产物，避免�
 
 ## Final content
 
-references/文案.md 为本地发布版 script.json 中的最终台词，不是本次从抖音转写的文本。examples/文案.md 对应十秒迁移样例；封面使用 examples/frame-0s.png。只保留最终样例和必要的原作关键帧，清理重复预览截图。
+references/文案.md 为本地发布版 script.json 中的最终台词，不是本次从抖音转写的文本。examples/文案.md 对应十秒迁移样例；展示封面使用 references/showcase-v2/frame-14-at-124s.png，来自用户指定的 snapshots/v2；examples/frame-0s.png 仅为迁移样例首帧。只保留最终样例和必要的原作关键帧，清理重复预览截图。
+
+
+## 展示图选择
+
+展示入口为 showcase.html，展示用户指定 v2 中的 124s、8.6s、44.3s、96.9s 四张原图；时间、源目录与 SHA-256 见 references/showcase-v2/index.json。展示截图保留原作 HUD 与小字；它们属于来源证据，不改变新片默认去除多余装饰的规则。

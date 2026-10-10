@@ -193,8 +193,8 @@
       "evidence": "references/frames/index.json",
       "verification": "examples/verification.json",
       "deliverables": {
-        "cover": "examples/frame-0s.png",
-        "preview": "preview.html",
+        "cover": "references/showcase-v2/frame-14-at-124s.png",
+        "preview": "showcase.html",
         "example": "examples/index.html",
         "prompt": "DESIGN.md#prompt-guide",
         "source_notes": "references/source-observations.md",
@@ -225,7 +225,14 @@
             "motion-style"
           ]
         }
-      ]
+      ],
+      "display_name": "灰度思维",
+      "summary": "黑白网点塑形，超大文字推进，朱红在转折处爆发。用分屏对照、人物侧影与球体变化，把抽象判断做成紧凑的动态海报。",
+      "showcase": {
+        "index": "references/showcase-v2/index.json",
+        "kind": "original-project-stills",
+        "source_version": "snapshots/v2"
+      }
     },
     {
       "id": "opus-external-ajith-io-890146",

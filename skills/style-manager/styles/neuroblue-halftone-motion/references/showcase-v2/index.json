@@ -1,0 +1,34 @@
+{
+  "source": "F:/Obsi-neuroBlue/08_创作/02-内容库/vibe知识大赏/灰度思维/project/snapshots/v2",
+  "purpose": "用户指定 v2 原作截图，用于作品展示；保留原图，不是新主题迁移样例。",
+  "frames": [
+    {
+      "file": "frame-14-at-124s.png",
+      "time": "124.0s",
+      "title": "收束 · 看得见灰色",
+      "description": "网点球体承接结尾，红色只落在关键判断上。",
+      "sha256": "c490baa51490345011eb2c4f265b0559110ebbda1bed5f3621b0fee03b76ed6e"
+    },
+    {
+      "file": "frame-02-at-8.6s.png",
+      "time": "8.6s",
+      "title": "对照 · 非黑即白",
+      "description": "用黑白分屏把二元判断直接变成画面结构。",
+      "sha256": "13f0df2d3db5d55f394d8ebe84835dcb6774eaf2c87d51125a1afc18a0d4bb84"
+    },
+    {
+      "file": "frame-07-at-44.3s.png",
+      "time": "44.3s",
+      "title": "关系 · 信任的刻度",
+      "description": "人物侧影、灰阶刻度与文字建立同一条解释线索；画面数值属于原作示意。",
+      "sha256": "f0f4fcb203799c09d20f723237c01e374cafd63d2a077c61485652fef8f31a58"
+    },
+    {
+      "file": "frame-10-at-96.9s.png",
+      "time": "96.9s",
+      "title": "转折 · 集体反转",
+      "description": "倾斜红色字块压住对照方阵，形成明确的视觉爆点。",
+      "sha256": "275f0eb1020a3a81ed588f9ac1b267121e86323e89b35f9807ca2bd959e06da4"
+    }
+  ]
+}

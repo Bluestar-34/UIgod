@@ -30,15 +30,17 @@
 
 ## 视频风格
 
-### 网点海报动态 · 灰度思维母版
+### 灰度思维 · 黑白网点与朱红重音
 
-[![查看灰度思维母版设计规则](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/04-30.9s.jpg)](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md)
+[![查看灰度思维母版设计规则](skills/style-manager/styles/neuroblue-halftone-motion/references/showcase-v2/frame-14-at-124s.png)](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md)
 
 [创作源视频](https://www.douyin.com/jingxuan/search/%E7%81%B0%E5%BA%A6%E6%80%9D%E7%BB%B4?aid=bc2a1580-7c23-4f0b-8657-2eb472c8d99a&modal_id=7693969558939421994&type=general)（用户提供，仅作来源记录；视觉母版仍是本地成片）。
 
-巨型中文黑体、黑白网点主体、单色信号、关键词驱动的运动。适合认知、心理与技术解释，可换配色、主体和画幅。
+黑白网点塑形，超大文字推进，朱红在转折处爆发。用分屏对照、人物侧影与球体变化，把抽象判断做成紧凑的动态海报。
 
-**[看迁移样片](skills/style-manager/styles/neuroblue-halftone-motion/examples/transfer.mp4)** · [交互预览](skills/style-manager/styles/neuroblue-halftone-motion/preview.html) · [风格说明与更多提示词](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md#prompt-guide) · [原作关键帧](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/contact-sheet.jpg)
+展示图选自原工程 `snapshots/v2`：尾声海报、黑白分屏、信任侧影与红色反转。适合认知、心理与知识解释；新作品可替换主题、主体和强调色。
+
+**[看原作展示](skills/style-manager/styles/neuroblue-halftone-motion/showcase.html)** · [看迁移样片](skills/style-manager/styles/neuroblue-halftone-motion/examples/transfer.mp4) · [交互预览](skills/style-manager/styles/neuroblue-halftone-motion/preview.html) · [风格说明与更多提示词](skills/style-manager/styles/neuroblue-halftone-motion/DESIGN.md#prompt-guide) · [原作关键帧](skills/style-manager/styles/neuroblue-halftone-motion/references/frames/contact-sheet.jpg)
 
 > 状态：10 秒纯视觉迁移样例已验证，无配音和音乐。原作截图、迁移样例分开保存；不代表完整一分钟成片已验收。
 
