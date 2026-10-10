@@ -1,0 +1,3137 @@
+{
+  "version": 1,
+  "entries": {
+    "hiitmaster-brutal-interval-timer": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "reviewed",
+      "display_name": "机械红黑",
+      "summary": "高对比数字、硬朗边界与运动计时界面。",
+      "content_type": "界面设计",
+      "visual_tags": []
+    },
+    "lonely-blue-field-notes": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "reviewed",
+      "display_name": "深夜技术手记",
+      "summary": "深色编辑版式、衬线标题与信号色。",
+      "content_type": "界面设计",
+      "visual_tags": []
+    },
+    "namesake-soft-civic-guides": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "reviewed",
+      "display_name": "温暖公共指南",
+      "summary": "柔和中性色、衬线标题与清晰的信息层级。",
+      "content_type": "界面设计",
+      "visual_tags": []
+    },
+    "nicchan-pixel-desktop-portfolio": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "reviewed",
+      "display_name": "像素桌面",
+      "summary": "复古桌面、像素图形与窗口式界面。",
+      "content_type": "界面设计",
+      "visual_tags": []
+    },
+    "neuroblue-halftone-motion": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "reviewed",
+      "display_name": "灰度思维",
+      "summary": "黑白网点塑形，超大文字推进，朱红在转折处爆发。用分屏对照、人物侧影与球体变化，把抽象判断做成紧凑的动态海报。",
+      "content_type": "知识讲解",
+      "visual_tags": [
+        "黑白网点",
+        "巨型文字",
+        "高反差"
+      ]
+    },
+    "opus-external-ajith-io-890146": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-koldo2k-778767": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leonabboud-358051": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-himanshutwtxs-882858": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ror-fly-880547": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-twoclipping-402193": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kenn-937232": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anabology-491441": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-moritzkremb-466494": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-deedydas-252537": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-melvynx-638493": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ajith-io-208546": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sudo-kiran-335993": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-daniel-mac8-306214": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-prasad-pilla-496049": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mandelduck-768972": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itsolelehmann-762215": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xvalure-331584": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-verbove-268381": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ayushunleashed-084755": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gandamu-ml-220530": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ishaaqahamed-107563": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dannnnnok-716687": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-codestackr-328129": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-heyiammallik-293397": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ajith-io-562538": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ann-nnng-852885": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ajith-io-615243": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xfemyn-137833": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-misbahsy-882277": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xchuckstock-879327": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-twoclipping-000267": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-morse-369333": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-prasenx-693512": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-brainextends-606193": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pankajkumar-dev-718609": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sudeepsd-158453": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nolkeeg-635633": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-wallt-white-942703": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-1littlecoder-378066": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ezshine-750731": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xscoffie-779830": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lukasersil-726495": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-raphaelaubryy-190360": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-levabashidze-184909": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-bthreeagency-827092": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-linearuncle-971663": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alexalbert-274839": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zacxbt-944604": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lexnlin-241739": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-songkeys-384673": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-michaelzsguo-782312": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jackfriks-338762": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sab8a-475686": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-theattnlayer-471834": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itisrazak-332386": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-twoclipping-496100": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-viktoroddy-402509": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kloss-xyz-941143": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-thismacapital-375808": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ndhabarde11-686104": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-majidmanzarpour-927543": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-monokern-832979": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zheke-622583": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-axtonliu-290566": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-demonugc-525162": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alex-prompter-997524": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-emollick-019567": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dale-vaz-879074": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gabrielbuzziv-057430": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chatgptastra-807540": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kloss-xyz-067876": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-eyishazyer-129686": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-stephanlivera-470926": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-spearwtf-029058": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-majorbaguette-834228": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-miskinho-956105": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-felipemoller-936736": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mdaman010-111079": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ho-ba-761062": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-howdevelop-733090": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-miaai-lab-774895": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hqmank-241156": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iamtanzil-675031": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gouthamjay8-910269": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-marklaunches-041046": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kmasiff-549880": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-redpersongpt-284430": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-triglyceee-161719": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mounnna-497266": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-henkvaness-975279": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vfnuness-704448": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-johnsavage-ai-427263": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-froessell-562325": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rammanq-034553": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-polydao-566862": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ratheejaisal-154698": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-visheshbaghell-119508": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-wani-shola-459278": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-robvjourney-237474": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zaqailo-835623": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-paukraft-585863": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aisongman-461057": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mattiapomelli-229129": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-levon96-651291": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-roxsav2-073412": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-teslachartz-887985": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-blushpetal795-170220": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-bilimfili1-459762": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-amitsingha89-780553": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sayan-shanky-868515": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lester-tyy-480587": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sahilvermaai-189237": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pound75423-464968": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alexwtlf-981005": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-souravbhar871-477361": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ved-cj-066575": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mustaphafenzar-973906": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gautam-mer1-530003": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-doubleunplussed-181894": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-bizibeast-505124": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-motiondsgnr-313960": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-karanb192-032177": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-groundcontrol-230877": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-designbyfusun-559069": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tak3sh8-441895": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jasonzhou1993-515541": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ceowinkz-683602": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-akbuilds-150675": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vanshwtfff-992798": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-web3wesley-365164": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sudiyasa-076027": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kentcdodds-858193": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-xanderwow-a-597063": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-astrothewizard-618782": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-seflless-929329": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nolit64-347627": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leadnotifi-960983": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tolgayhickiran-935120": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iammxfschr-955831": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kangaroohere-818789": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sachaarbonel-673648": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-manuelogomigo-052364": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mrtanviir-132205": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-marouanegazouzi-131257": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chrisjdimarco-808196": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dzhohola-249003": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-madhav-xo-524440": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jhylee95-452427": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-astrodevil-392708": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hicallmechai-878304": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-johnsavage-ai-041677": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-phonggt-377247": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anxuanng-990790": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-1littlecoder-914649": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-shinskinakamoto-589043": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-m1n9-k7-295601": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-m1n9-k7-466682": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-madebyjmayala-649220": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sagarmohansingh-322168": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-annacher-433425": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-paranoidamerica-686717": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-slvdev-975986": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-crazyalphaaa-480622": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gizakdag-239768": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nummanali-340931": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-advait-jayant-712107": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-abhinayguptha-259981": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-blue-clarity-449603": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-reflex-cloud-304046": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-3xtihor-159839": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dansushik-289121": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-macrohou-733862": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-samuel-spitz-503053": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-adamdesgns-768014": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-stewchan2-369810": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ghinaiya-nirmal-308943": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-l3d1c-752011": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sahildesigner23-307120": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-cansincengiz-me-424245": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kikelopezdesign-173471": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-safarkhanshuvo-059752": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leonkohli-191220": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-thegrootdev-966114": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-charliie-334026": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-samaote-124569": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-fionntobin-479597": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leanzubrezki-766171": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-onewaysidewalks-440008": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-bhanujraj-928454": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-andginja-618685": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anas0ra-952637": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-monokern-613142": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nezbuilds-294391": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-umangratani-840800": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sudo-kiran-254201": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-buildfastwithai-597035": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kyonax-on-tech-049316": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aistocksavvy-483320": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-xelandre-687413": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-praburajkennady-972967": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-techyoutbe-588678": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sudo-kiran-696074": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-fire-ozgur-130104": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iamtanzil-120030": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gdgtify-929495": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sanjeevn72-457691": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-madpencil-753990": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tcballard-268605": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itsuki-dev-618392": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-opener-ai-843891": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dris1153-101043": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-loicrambo-980558": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hugon001-609629": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mehul4795-417532": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sarut0bisasuke-069973": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-raphaelaubryy-687877": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-techhalla-498547": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tomandrieu96707-875264": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ai-baymax-416787": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mtvneo-148436": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hanifproduktif-829311": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rneayan-406275": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rneayan-441493": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hoyoyoda-543147": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rendesr-676116": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-faroukzy-138551": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xnfrith-068999": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hsanat-012699": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-davidshulmanfl-842921": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-drrickio-009558": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-andre-lucaxxs-846347": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-davidmarcus-686217": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-supremebeme-306746": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vahidf24-121886": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ishuagra02-922825": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-1stnoel-603851": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-retropunkai-277590": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jake11moran-414633": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chrisjdimarco-524106": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-andriyfernandes-807308": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-techtactician-144474": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xevinho-436195": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-parkerrex-701462": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-justincooperman-188876": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rames-jusso-776559": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-deifosv-786581": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anirockshady-032809": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mycodecoach-459574": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pbteja1998-651644": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anjmaxx-459455": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-buildfastwithai-582551": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kantamk-176511": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mattbean-917572": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-niegramotny-197521": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-suryarajendhran-730437": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-maxalexweber-459784": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-eric-khun-667455": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-micheleharmonic-244175": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-abderrahmen-g-899031": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lepadev-475414": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anilraok-009118": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-modaalbuilder-868989": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-charlesmendez-476517": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-viggle-pinoc-434495": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jrayon-054015": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nikolajankovic-616097": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ehsanik-162993": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-fornyapayzeka-795431": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kamstudiolabs-440893": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gonzalomacagno-344202": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kamstudiolabs-877996": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zeezomb-726206": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kamstudiolabs-100086": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ishuagra02-678129": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-palashbagchi11-389221": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nemtudo-614053": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-fornyapayzeka-135914": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xrathi-511319": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ryzoft-887481": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ercankeskinx-897906": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-x4b47x-034026": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xlangeai-178533": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-stephanferraro-224281": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chudry223-081860": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-voxyz-ai-345550": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-explorations-iq-921682": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nybobs-680050": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-garmdotcom-987439": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-cyrilxbt-149036": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-miguel07code-091611": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kureshirfan-386691": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-amberpromptai-345137": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iniyanai-856596": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-acoramaa-053577": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kgonia7-746268": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nathanwilbanks-981110": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hunzai-842605": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-konstantinsaifo-501736": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rakhsh-tech-544921": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-arthurkatcher-604161": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-moguzbulbul-215591": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-irinatoxi-962937": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-konstantinsaifo-587629": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-stefanostraus-971191": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-demitiyageekzen-818523": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-gmgmgm1545-245507": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jarvis11x-544635": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kewai386772-276947": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nft-chen-350878": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xsolty-735200": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-curieuxexplorer-272483": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-myonisto-923578": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-truenyl-447745": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-builtbysketch-114092": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-per-simmons-944727": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nicolamanzini-156628": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xwast3-222104": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-wzarok-283635": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-goofyninjaaa-315331": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-friskyggg-054427": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ai-ba-reza-113363": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-souradip3000-800291": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-techartist-786274": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lribes4-742305": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-eigeorguy-813651": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kum1ta-740521": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vectorcrossprod-436573": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sanjay-khadka07-620029": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ksmialowski-473410": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-acoramaa-248467": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-maruo-0314-998343": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aayush4soni-644283": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-allforbigfire-029657": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ewashoku-201053": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ajthemongol-318512": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-happycapyai-634965": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mrblock-096062": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-op7418-814408": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-janlaywss-379361": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xpai-eth-635565": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-op7418-818226": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-akokoi1-469188": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ggsimm-535814": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chukinice-426722": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mozetech-471882": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-janeloic-905802": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mgfeller-779161": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-danielkan-059523": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-agentgamesbot-355554": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-curieuxexplorer-519730": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-redp314-642106": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jasperdeboer-157391": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-curieuxexplorer-772215": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rehan-shei-839416": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rush3rx-342153": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-maxthelion-649723": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zacxbt-234711": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jstjs-129051": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dreyk0o0-165270": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-boona11-415751": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dmowlin-221566": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nqaze-939886": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kenjiphang-750512": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-anduraio-570761": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kepochnik-237752": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-angie-carel-954689": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-loverwnl-712109": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-deeprajo1-834106": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vibechine-465008": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-blitast-studio-257328": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aniketjart-094296": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-waseemkhalo-636267": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-taylorbereiter-189192": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-smallhusk-272056": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lisp-mi-139812": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itsjdraven-557760": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-izmaelmag-282849": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-llama3dstudio-012980": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-hellovyom-800659": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-realfedeuru-475858": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-brainwavepub-812667": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alex-vainshtein-195332": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-brenbuilds-386902": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mayuresh-empire-687553": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tonnusos-006126": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-codrops-340299": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zhang-baoqing-920413": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sciencedegens-843325": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mattworkman-309357": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-washow-cfo-175311": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-timguignard-623571": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jesscaroline7-955094": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-joao-felixl-809438": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-vince-builds-355650": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mappletour-334921": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-thayto-dev-739735": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jayjohnsonai-117305": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itsahmedharoon-544194": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-stokebuilder-356793": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ik-builds-585923": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-petert-540960": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-petert-635793": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-petert-350098": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pauloalonso-477996": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-danilowm-412022": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-georgejimenez98-431559": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-majin-appsheet-693327": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-javi-llofriu-059888": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jake11moran-825416": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-georgejimenez98-427173": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pwntastickev-664257": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-henritoivar-445215": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-shushant-l-619370": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-papaneco-life-541187": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-papaneco-life-038225": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-jetbrains-754812": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-l3d1c-632524": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tardigrade111-160686": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-wustep-884086": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-apoorvjain25-309680": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pranavclickks-254816": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rpa-dake-593915": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-devarshukani-341827": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-zakisbuilding-495680": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aschapmann-724497": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itsyashf-692347": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-elliot-garreffa-446825": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dannyverkissen-101463": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-theviableedge-869918": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-chapi13-131449": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-qinelke-271655": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-genelab-999-088672": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-inoue-aix-234322": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-daniel-haida-636937": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-pisajeski-168993": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dustindavis-644806": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-signalz-jp-918002": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-djadkison-394122": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-mousszy-baby-014197": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-fr-sorrentino-871017": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-proanaliteg-458642": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kingokings-992769": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dys-hay-749645": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ambiguous-ai-389509": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-heymrzak-349060": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ambiguous-ai-505873": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-lnkiai-544254": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tejasthange3-128242": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-helloshiva0801-438284": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-itakahashikun-990109": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-als-link-301108": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-cboyack-407181": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-salmanr2d2-661615": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-piyushaaryan2-196586": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-thuggy-juice-072370": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ninjaswebcom-684126": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tequilafunks-127728": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iammukeshm-421585": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-yarhmm-341449": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-t4k1ra-cg-110846": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-francoxavier33-341663": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tony-tt-872147": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-thallisribeiro-829318": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tycenjm-098014": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-samissudo-927179": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-imthatcarlos-133592": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-iamshankhadeep-506266": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-safaelmali-004843": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-localjulius-625706": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alanschwegler-629665": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-seantiffonnet-675262": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-priyansh0327-206409": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-goldiez2599-685869": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-bridgemindai-286423": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-arumii-movie-622720": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-arumii-movie-249613": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-justinbuilds-412401": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dheepanratnam-706454": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-soumymaheshwri-825921": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-joaquimcassano-778239": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-kzmucx-402052": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tankazunori0914-156748": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-liu8in-891423": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ideavim-986785": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leandroriviello-827135": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xlangeai-597929": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-maxhirsch13-600983": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-xamfonos-004331": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-saadpastadev-347341": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-envoldev-017555": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-dengent-412996": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-apoorvjain25-150112": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-smitjaineditor-843957": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-argbeknwn-466818": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-leowenai-125931": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-humzaakhalid-537875": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-xenit-v0-532873": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-sonali-sahu-09-350200": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aijipusi75693-284735": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-seri-nonnon-231813": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-tetsu-tetsu333-576886": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-0xrapzz-433554": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-rishit30g-568278": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-alex-leiro-867087": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-asei-ikarashi-437835": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-nehalmax-802479": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-colecornelll-047465": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-allodev-069765": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-aylmerth-356252": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-falcong-j-277506": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-saxxyweb3-690124": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    },
+    "opus-external-ayumi-t820-871023": {
+      "added_at": "2026-10-10T12:16:32.561308+08:00",
+      "updated_at": "2026-10-10T12:16:32.561308+08:00",
+      "date_basis": "initial-governance-migration",
+      "naming_status": "pending"
+    }
+  }
+}

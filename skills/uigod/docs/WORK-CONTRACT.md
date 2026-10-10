@@ -2,6 +2,8 @@
 
 适用于库中的每个 styles/<id>/。库保存可复用的最终内容，制作过程留在实际项目或临时目录。既有网页包兼容原合同，不因缺少视频文件被判无效。
 
+本文件约定正式风格包的交付文件；分类、排序、编辑权威与精选/收藏以库根 docs/LIBRARY-RULES.md 为准。
+
 ## 每个条目必须有
 
 | 内容 | 唯一存放位置 | 要求 |
@@ -11,10 +13,10 @@
 | 风格与提示词 | DESIGN.md | 视觉规则、可改变量、反例和 Prompt Guide；不另建同内容提示词文件 |
 | 来源与分析依据 | references/source-observations.md | 区分创作来源、视觉母版与迁移样例；注明用户提供/已读取/未核验 |
 | 一张封面 | deliverables.cover 指定文件 | 使用真实预览截图，点击可进入预览 |
-| 可用预览 | preview.html | 本地可打开；脚本与必要依赖可自包含或放 assets/ |
+| 可用预览 | deliverables.preview 指定文件 | 本地可打开；脚本与必要依赖可自包含或放 assets/ |
 | 新内容验证 | examples/index.html | 新主题/内容的迁移示例；未完成则状态 draft，不装成已验证 |
 
-gallery 与 catalog 使用 style.json 的文件指针，不根据文件名猜测。已有包允许原文件名，新增包优先 cover.png。保持一份权威文件，不为了统一名字再复制一份。
+gallery 与 catalog 使用 style.json 的文件指针和 editorial.json 的人工整理，不根据文件名猜测。已有包允许原文件名，新增包优先 cover.png。保持一份权威文件，不为了统一名字再复制一份。
 
 ## 视频额外需要
 
@@ -57,4 +59,4 @@ sources 中每项写 role、url 或 path、provided_by、verification、use_for�
 
 外部参考尚未提炼，不强制伪造 DESIGN.md、SKILL.md 或本地样片。用户选为精选也不自动变成已验证风格；需要进一步分析再建正式风格包。重复提示词对应不同作品时保留各自记录，不用去重抹掉作者或效果差异。
 
-curation.json 只记录用户精选，默认 default_view=all。上游 highlighted、热度、模型推荐均不算用户精选。网页“加入精选/取消精选”是用户操作，保存在本浏览器，可导出 curation.json 保存到仓库；浏览器不会静默改写磁盘文件。
+公开精选由维护者管理，保存于 curation.json；默认 default_view=all。上游推荐不自动进入精选。网页“收藏/取消收藏”仅改变浏览器私人收藏，可导出 bookmarks.json，不写公开精选。分类、更新、日期、归档的权威规则见库根 docs/LIBRARY-RULES.md。

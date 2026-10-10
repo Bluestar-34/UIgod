@@ -10,3 +10,7 @@
 /skills/style-manager/preferences.json
 /node_modules/
 .DS_Store
+
+/sync.local.json
+/preferences.local.json
+__pycache__/

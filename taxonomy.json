@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "media": [
+    "video",
+    "web",
+    "image",
+    "interactive"
+  ],
+  "content_types": [
+    "知识讲解",
+    "视觉演示",
+    "品牌宣传",
+    "界面设计",
+    "游戏体验",
+    "待分类"
+  ],
+  "visual_tags": [
+    "黑白网点",
+    "巨型文字",
+    "高反差",
+    "三维",
+    "粒子",
+    "拼贴",
+    "极简",
+    "像素",
+    "渐变",
+    "线条",
+    "纸张质感"
+  ],
+  "availability": [
+    "available",
+    "unknown",
+    "broken"
+  ],
+  "naming_status": [
+    "pending",
+    "reviewed"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "video": {
+    "narration": true,
+    "min_duration_seconds": 60,
+    "first_frame_approval": true,
+    "excluded_tools": [],
+    "avoid_decorative_labels": true
+  }
+}

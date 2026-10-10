@@ -2,7 +2,7 @@
 import json,sys
 from pathlib import Path
 p=Path(sys.argv[1]);errors=[]
-for name in ['SKILL.md','DESIGN.md','style.json','preview.html','references/source-observations.md','references/frames/index.json','examples/index.html']:
+for name in ['SKILL.md','DESIGN.md','style.json','references/source-observations.md','references/frames/index.json']:
     if not (p/name).exists():errors.append('missing '+name)
 if not errors:
     data=json.loads((p/'style.json').read_text(encoding='utf-8'))

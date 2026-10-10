@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from datetime import datetime
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,13 @@ def style_info(path: Path) -> dict[str, str]:
 
 
 def list_styles() -> list[dict[str, str]]:
+    repo=ROOT.parents[1]
+    if (repo/'catalog.json').exists():
+        catalog=json.loads(read_text(repo/'catalog.json'))
+        featured=json.loads(read_text(repo/'curation.json'))['featured_ids']
+        entries=[e for e in catalog['entries'] if not e.get('hidden')]
+        entries.sort(key=lambda e:(0 if e['id'] in featured else 1,featured.index(e['id']) if e['id'] in featured else -datetime.fromisoformat(e['added_at']).timestamp(),e['id']))
+        return [{'id':e['id'],'name':e.get('display_name',e['name']),'description':e['summary'],'preview':e.get('preview_url') or e['path']+'/'+e['deliverables']['preview'],'path':e['path'],'media':e['media'],'content_type':e['content_type'],'kind':e['kind'],'status':e['status'],'featured':e['id'] in featured} for e in entries]
     if not STYLES_DIR.exists():
         return []
     styles = []
@@ -127,13 +135,18 @@ def main() -> int:
     parser.add_argument("--json", action="store_true", help="Output JSON instead of Markdown.")
     parser.add_argument("--choose", action="store_true", help="Output one selected style.")
     parser.add_argument("--prefer", default="", help="Brief or preference text used for selection.")
+    parser.add_argument('--media',default='',help='video, web, image or interactive')
+    parser.add_argument('--search',default='',help='Search names, summaries and IDs')
+    parser.add_argument('--featured',action='store_true',help='Only public maintainer picks')
+    parser.add_argument('--limit',type=int,default=30,help='Maximum listed entries; 0 lists all')
     args = parser.parse_args()
 
     preferences = load_preferences()
     styles = list_styles()
+    styles=[s for s in styles if (not args.media or args.media in s.get('media',[])) and (not args.featured or s.get('featured')) and (not args.search or args.search.lower() in ' '.join([s['id'],s['name'],s['description']]).lower())]
 
     if args.choose:
-        selected = choose_style(styles, args.prefer, preferences)
+        selected = choose_style([s for s in styles if s.get('kind','style-package')=='style-package'], args.prefer, preferences)
         if args.json:
             print(json.dumps(selected or {}, ensure_ascii=False, indent=2))
         elif selected:
@@ -142,6 +155,7 @@ def main() -> int:
             print("No managed styles found.")
         return 0 if selected else 1
 
+    if args.limit>0:styles=styles[:args.limit]
     if args.json:
         print(json.dumps(styles, ensure_ascii=False, indent=2))
     else:

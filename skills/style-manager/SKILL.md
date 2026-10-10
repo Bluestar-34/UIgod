@@ -14,7 +14,7 @@ It keeps individual style packages inside `styles/<style-name>/` so users get on
 When the user asks to list or choose a style, run:
 
 ```bash
-python skills/style-manager/tools/list_styles.py
+python skills/style-manager/tools/list_styles.py --limit 30
 ```
 
 When the user asks to build or restyle something with a managed style:
@@ -78,8 +78,8 @@ When applying a style, briefly name the selected style and why it fits before bu
 
 In the full repo, read ../../catalog.json for media, aliases and verification status. Match an explicit Chinese alias such as 灰度思维 to neuroblue-halftone-motion. If catalog.json is unavailable in a two-skill installation, list styles/ and read the selected style.json and DESIGN.md. Do not choose a web-only style as an already verified video style.
 
-Apply the style to the latest user script; preserve visual and motion grammar while changing content. Video defaults: narration, at least one minute, actual t=0 first-frame approval before full production, no HyperFrames. Avoid decorative small labels, HUD and Unicode arrow decorations in the library frontend. Read the style's Known Gaps; sample-verified is not user-approved full production.
+Apply the style to the latest user script; preserve visual and motion grammar while changing content. Video production settings come from the current workspace and root preferences.local.json when present; do not turn the example profile into mandatory production constraints. Avoid Unicode arrow decorations in the library frontend. Read the style's Known Gaps; sample-verified is not user-approved full production.
 
 ## Imported references and user curation
 
-In the full repository, catalog.json includes collections/ external-reference entries beyond styles/. Read prompt_file for the original prompt and preserve author, source and prompt_partial. Do not apply the full style-package contract to an imported reference or claim it was visually validated. curation.json records only user-picked favorites; default browsing is all. A favorite is a preference, not a verification status.
+In the full repository, catalog.json includes collections/ external-reference entries beyond styles/. Read prompt_file for the original prompt and preserve author, source and prompt_partial. Do not apply the full style-package contract to an imported reference or claim it was visually validated. curation.json records public maintainer picks in array order; default browsing is all. Browser bookmarks are separate and cannot modify public curation. Neither is a verification status. Read root docs/LIBRARY-RULES.md before maintenance; human edits go to editorial.json and generated catalog/index files must be rebuilt. Use --search, --media, --featured and --limit (0 for all) to query the full catalog; --choose only selects formal style packages.

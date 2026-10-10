@@ -1,8 +1,8 @@
 {
   "default_view": "all",
-  "selected_by": "user",
+  "selected_by": "maintainer",
   "featured_ids": [
     "neuroblue-halftone-motion"
   ],
-  "notes": "精选只由用户明确挑选；上游 highlighted 不等于用户精选。"
+  "notes": "featured_ids 的数组顺序即公开精选顺序；个人收藏仅保存在浏览器。"
 }

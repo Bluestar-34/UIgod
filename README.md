@@ -8,17 +8,20 @@
 
 [![打开 UIgod 风格库](skills/uigod/docs/images/gallery-desktop.png)](index.html)
 
-本地双击 `index.html` 即可打开，无需安装依赖或启动服务。默认展示全部，支持精选 / 全部切换、媒介筛选、全文搜索、样片预览和提示词复制。GitHub 中的 HTML 文件显示源码；要使用画廊，请下载到本地后打开。
+本地双击 `index.html` 即可打开，无需安装依赖或启动服务。默认展示全部，支持全部 / 精选 / 收藏切换、媒介筛选、全文搜索、样片预览和提示词复制。GitHub 中的 HTML 文件显示源码；要使用画廊，请下载到本地后打开。
 
 [浏览视频风格](#视频风格) · [浏览网页风格](#网页风格) · [交给-Claude](#开始制作) · [收录新风格](#收录与维护)
 
-## 全部与精选
+## 浏览与维护规则
 
-当前包含 **5 个可复用风格包 + 513 条外部视频参考**。
+- **全部**：默认展示全部有效条目；公开精选置顶，其余按首次收录时间倒序，固定 ID 决定同序条目先后。
+- **精选**：由维护者明确挑选并排列，当前为“灰度思维”。精选不等于已经复现验证。
+- **收藏**：浏览者在卡片点击“收藏 / 取消收藏”，仅保存在当前浏览器，可导出 bookmarks.json，不改变公开精选。
+- **分类**：媒介、内容类型、视觉标签、技术标签分开；未分析的作品标“待命名”，用途不明确时归“待分类”。
 
-- **全部**：默认入口，展示全部条目，包括外部参考。
-- **精选**：默认展示维护者挑选的作品；当前收录“灰度思维母版”。浏览者也可在本地调整精选清单。
-- 在卡片上点击“加入精选 / 取消精选”即可挑选。网页选择保存在本浏览器；点击“导出精选”可获得 curation.json，替换仓库同名文件后重建画廊即可同步到其他设备。
+当前包含 **5 个可复用风格包 + 513 条外部视频参考**。人工整理与上游原始数据独立保存，同步不覆盖名称、简介、精选与首次收录时间。
+
+[仓库规则](docs/LIBRARY-RULES.md) · [贡献与维护流程](CONTRIBUTING.md) · [AI 修改规则](AGENTS.md) · [维护记录](docs/MAINTENANCE-LOG.md)
 
 ### Awesome Opus 5.5 Videos 全量收录
 
@@ -52,9 +55,9 @@
 
 先读取 neuroblue-halftone-motion 风格包的 SKILL.md、DESIGN.md 和参考帧。保留巨型黑体、网点轮廓、高反差与语义动效，主体和分镜根据新内容设计。
 
-如需换色，只替换强调色，保持整体视觉语言。默认去掉 HUD、标尺和装饰小字。技术自由选择，不使用 HyperFrames，优先复用 vibe-knowledge-video 的生产工具。
+如需换色，只替换强调色，保持整体视觉语言。工具选择与是否保留装饰细节遵循当前项目要求和本地偏好。
 
-默认配音、至少一分钟。先展示真实 t=0 首帧、完整文案、预计时长和开场动态构想，等我确认后继续全片。
+按工作区要求与 preferences.local.json 确定声音、时长和首帧确认方式；需要确认时先提交真实 t=0 画面与完整文案。
 ```
 
 </details>
@@ -93,7 +96,7 @@
 
 ## 收录与维护
 
-每个风格保存：**设计规则 + 制作提示词 + 原作证据 + 可预览样例**。新增风格写入 `catalog.json`，重建画廊后同步副本。
+每个正式风格保存：**设计规则 + 制作提示词 + 原作证据 + 可预览样例**。新增风格登记 style.json 和 editorial.json，再生成 catalog.json 与画廊；不要直接编辑生成文件。
 
 - [风格提炼入口](skills/uigod/SKILL.md) · [风格选择入口](skills/style-manager/SKILL.md) · [机器可读风格目录](catalog.json)
 - [每个作品放什么、不放什么](skills/uigod/docs/WORK-CONTRACT.md)
@@ -101,12 +104,12 @@
 - [历史网页画廊](skills/uigod/docs/legacy-gallery.md)
 
 ```powershell
-python skills/uigod/tools/import_opus_videos.py
+python skills/uigod/tools/build_catalog.py
 python skills/uigod/tools/build_gallery.py
 python skills/uigod/tools/validate_library.py
-python skills/uigod/tools/sync_library.py
+python -m unittest discover -s skills/uigod/tests
 ```
 
-主仓库：`C:/Users/asus/.codex/skills/UIgod`。创作合集：`F:/Obsi-neuroBlue/08_创作/创作Skills/uigod`。Claude 安装版：`C:/Users/asus/.claude/skills/uigod`。
+更新外部清单时运行 `python skills/uigod/tools/import_opus_videos.py`。本地同步目标配置见 sync.example.json；个人制作偏好见 preferences.example.json，实际 local 配置不提交。
 
 入口组织参考 [Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar) 的样片画廊与风格提示词导航；设计规则、素材与用户确认流程以本库为准。

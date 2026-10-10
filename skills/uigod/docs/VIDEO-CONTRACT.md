@@ -11,7 +11,7 @@
 - references/source-observations.md：来源、版本、采样时间、源码依据、提取/推断/修订区分。标明静态截图无法验证的内容。
 - references/frames/：来自真实成片的代表性关键帧与时间索引。
 - references/code-patterns/：可选，只放真实可重复使用的代码机制；不强制空目录或单独说明文件。
-- preview.html：本地可查看的视觉与动效样本。
+- deliverables.preview 指定文件：本地可查看的作品展示或动效样本，静帧必须标注用途，不冒充动画。
 - examples/index.html：换主题的迁移样例。已导出时可附 transfer.mp4；验证样例不冒充用户批准的正式片。
 - style.json：id、media、aliases、tags、sources、deliverables、可改变量、证据与验证状态。
 - references/文案.md 与 examples/文案.md：原作品已提供的最终制作文案和当前样例文案，明确用途。
@@ -20,7 +20,7 @@
 
 先查看成片采样与源码，提炼规则再做新主题样例。视频必须记录时序、节拍及语义锚点，不能只写色板。技术实现是证据，不是强制框架。
 
-catalog.json 负责检索：id/name/aliases/media/tags/path/status。别名可含原项目名，但主题相关性不能代替风格匹配。
+catalog.json 为生成检索目录。权威元数据来自 style.json、collections 和 editorial.json；分类与排序遵守库根 docs/LIBRARY-RULES.md。别名可含原项目名，但主题相关性不能代替风格匹配。
 
 ## 验证与状态
 
